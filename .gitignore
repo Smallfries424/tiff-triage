@@ -42,3 +42,8 @@ next-env.d.ts
 
 # Scraper/rubric bookkeeping, not source
 data/.axes-batch-id
+
+# TIFF's programmer's notes, scraped. Used by the app and kept locally, but not
+# republished here — it is their editorial writing, not our data. Regenerate with
+# scripts/scrape-synopses.mjs.
+data/synopses.json

@@ -84,7 +84,11 @@ scripts/assign-axes.mjs      Batch API rubric pass -> data/axes.json
 scripts/build-lineup.mjs     merge -> data/lineup.json
 ```
 
-Outputs are committed, so the app builds without re-running any of it.
+Outputs are committed, so the app builds without re-running any of it — with one exception.
+`data/synopses.json` holds TIFF's programmer's notes verbatim and is **not** committed: that is
+TIFF's editorial writing, not this project's data. The app quotes short extracts and links back to
+tiff.net for each film. To populate it locally, run `scripts/scrape-synopses.mjs`; without it, film
+pages fall back to the short rationale.
 
 ## Running it
 
