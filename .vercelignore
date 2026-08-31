@@ -1,0 +1,14 @@
+# NOTE: creating this file REPLACES Vercel's defaults, so the standard excludes
+# have to be listed explicitly — otherwise node_modules, a stale .next and
+# .env.local all get uploaded, which produced a 20-second "successful" build
+# serving 404s.
+node_modules
+.next
+.env
+.env.*
+.git
+
+# Project-specific: build-time only, never needed at runtime.
+/legacy
+/scripts
+/supabase

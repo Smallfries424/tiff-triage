@@ -1,0 +1,115 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/lib/useAuth";
+import { usePlan } from "@/lib/usePlan";
+import { useProbe } from "@/lib/useProbe";
+import { pushMerged } from "@/lib/sync";
+import styles from "./account.module.css";
+
+export default function AccountPage() {
+  const { user, loading, signIn, signOut, isConfigured } = useAuth();
+  const { reactions, replaceAll: replaceProbe } = useProbe();
+  const { keys, replaceAll: replacePlan } = usePlan();
+
+  const [email, setEmail] = useState("");
+  const [sent, setSent] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [syncNote, setSyncNote] = useState<string | null>(null);
+
+  // On first sign-in, fold whatever is on this device into the account rather
+  // than letting either side clobber the other.
+  useEffect(() => {
+    if (!user) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const merged = await pushMerged(createClient(), user.id, reactions, keys);
+        if (cancelled) return;
+        replaceProbe(merged.reactions);
+        replacePlan(merged.plan);
+        setSyncNote(
+          `Synced — ${Object.keys(merged.reactions).length} probe answers, ${merged.plan.length} planned screenings.`,
+        );
+      } catch (e) {
+        if (!cancelled) setSyncNote(`Sync failed: ${(e as Error).message}`);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // Runs on sign-in only; local edits sync individually after that.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id]);
+
+  if (!isConfigured) {
+    return (
+      <main className="wrap">
+        <div className={`card empty ${styles.box}`}>
+          <p>Accounts aren&rsquo;t configured on this deployment. Everything still works locally.</p>
+        </div>
+      </main>
+    );
+  }
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
+    setError(null);
+    const { error } = await signIn(email.trim());
+    setBusy(false);
+    if (error) setError(error.message);
+    else setSent(true);
+  };
+
+  return (
+    <main className="wrap">
+      <header className={styles.head}>
+        <p className="eyebrow">Account</p>
+        <h1>{user ? "You're signed in" : "Sync across devices"}</h1>
+      </header>
+
+      <div className={`card ${styles.box}`}>
+        {loading ? (
+          <p className={styles.muted}>Checking&hellip;</p>
+        ) : user ? (
+          <>
+            <p className={styles.who}>{user.email}</p>
+            {syncNote && <p className={styles.muted}>{syncNote}</p>}
+            <button className="toggle" onClick={() => void signOut()}>Sign out</button>
+            <p className={styles.fine}>
+              Signing out leaves your answers on this device — it doesn&rsquo;t erase them.
+            </p>
+          </>
+        ) : sent ? (
+          <>
+            <p><b>Check your email.</b></p>
+            <p className={styles.muted}>
+              We sent a sign-in link to {email}. It expires in an hour. No password needed.
+            </p>
+          </>
+        ) : (
+          <>
+            <p className={styles.muted}>
+              You don&rsquo;t need an account to use this. Sign in only if you want your probe and
+              plan on more than one device — handy when you&rsquo;re at the festival with your phone.
+            </p>
+            <form onSubmit={submit} className={styles.form}>
+              <input
+                type="email" required value={email} placeholder="you@example.com"
+                onChange={(e) => setEmail(e.target.value)} aria-label="Email address"
+                className={styles.input}
+              />
+              <button className="toggle" disabled={busy || !email.trim()}>
+                {busy ? "Sending…" : "Send sign-in link"}
+              </button>
+            </form>
+            {error && <p className={styles.error}>{error}</p>}
+          </>
+        )}
+      </div>
+    </main>
+  );
+}

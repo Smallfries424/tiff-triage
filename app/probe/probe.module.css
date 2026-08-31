@@ -1,0 +1,198 @@
+.head {
+  padding: 44px 0 22px;
+}
+
+.progress {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  margin-bottom: 20px;
+  background: color-mix(in srgb, var(--ground) 90%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.count {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  padding: 15px 18px 16px;
+  border-left: 3px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.done {
+  border-left-color: var(--accent);
+}
+
+.filmhead {
+  margin-bottom: 11px;
+}
+
+.title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+  font-variation-settings: "SOFT" 30;
+}
+
+.year {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.choice {
+  font: 500 12.5px/1 var(--sans);
+  padding: 8px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: background 0.13s, border-color 0.13s, color 0.13s;
+}
+
+.choice:hover {
+  border-color: var(--muted);
+}
+
+.choice[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: transparent;
+  color: var(--on-accent);
+}
+
+/* Skipping has to feel as legitimate as answering, or people guess instead. */
+.unseen {
+  margin-left: auto;
+  border-style: dashed;
+  color: var(--muted);
+}
+
+.unseen[aria-pressed="true"] {
+  background: var(--surface-2);
+  border-style: solid;
+  border-color: var(--line-2);
+  color: var(--ink-2);
+}
+
+.summary {
+  padding: 20px 22px 22px;
+  margin-bottom: 60px;
+}
+
+.pending {
+  color: var(--muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+.readings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.readings li {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 14.5px;
+  color: var(--ink-2);
+}
+
+.axisName {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.strength {
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+
+.meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin: 16px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 620px) {
+  .readings li {
+    grid-template-columns: 1fr auto;
+  }
+  .axisName {
+    grid-column: 1 / -1;
+  }
+  .unseen {
+    margin-left: 0;
+  }
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--accent);
+  color: var(--on-accent);
+  text-decoration: none;
+  font: 600 13.5px/1 var(--sans);
+  padding: 12px 20px;
+  border-radius: 8px;
+}

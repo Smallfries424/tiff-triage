@@ -1,0 +1,5124 @@
+[
+  {
+    "id": 1,
+    "title": "Bad Lieutenant: Tokyo",
+    "programme": "Special Presentations",
+    "directors": "Takashi Miike",
+    "countries": [
+      "United States of America",
+      "Japan"
+    ],
+    "languages": [
+      "English",
+      "Japanese"
+    ],
+    "premium": true,
+    "probe": {
+      "reaction": "yes",
+      "note": "interesting concept and engaging",
+      "why": "Takashi Miike -- stylized, ultraviolent genre cinema with arthouse cred"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 100,
+      "reason": "Your pick. Miike ultraviolence with arthouse cred."
+    },
+    "slug": "bad-lieutenant-tokyo"
+  },
+  {
+    "id": 2,
+    "title": "Black Sunflowers",
+    "programme": "TIFF Docs",
+    "directors": "James Marcus Haney",
+    "countries": [
+      "Ukraine",
+      "United States of America"
+    ],
+    "languages": [
+      "Ukrainian",
+      "Russian",
+      "English"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "yes",
+      "note": "Always interested ot learn something form around the world",
+      "why": "Ukraine war documentary -- heavy, real-world conflict journalism"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 100,
+      "reason": "Your pick. Ukraine war doc."
+    },
+    "slug": "black-sunflowers"
+  },
+  {
+    "id": 3,
+    "title": "Bucking Fastard",
+    "programme": "Special Presentations",
+    "directors": "Werner Herzog",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": {
+      "reaction": "yes",
+      "note": "I like the actors and the theme is cool, enjoy absurdist",
+      "why": "Werner Herzog going absurdist/comedic -- a weird auteur swerve"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 100,
+      "reason": "Your pick. Herzog doing absurdist comedy."
+    },
+    "slug": "bucking-fastard"
+  },
+  {
+    "id": 4,
+    "title": "Coward",
+    "programme": "Special Presentations",
+    "directors": "Lukas Dhont",
+    "countries": [
+      "Belgium",
+      "France",
+      "Netherlands"
+    ],
+    "languages": [
+      "French",
+      "Dutch"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "yes",
+      "note": "looks moving",
+      "why": "Lukas Dhont (Close, Girl) -- intense, emotionally heavy Cannes-pedigree drama"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 100,
+      "reason": "Your pick. Lukas Dhont emotional heavyweight."
+    },
+    "slug": "coward"
+  },
+  {
+    "id": 5,
+    "title": "Musk",
+    "programme": "TIFF Docs",
+    "directors": "Alex Gibney",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "yes",
+      "note": "fan of musk, love documentaries",
+      "why": "Alex Gibney (Going Clear, Enron) tackling a controversial tech figure -- political/current-events doc"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 100,
+      "reason": "Your pick. Gibney doc on a controversial tech figure."
+    },
+    "slug": "musk"
+  },
+  {
+    "id": 6,
+    "title": "Rapinoe",
+    "programme": "TIFF Docs",
+    "directors": "Rebeca Huntt",
+    "countries": [
+      "United Kingdom",
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "yes",
+      "note": "",
+      "why": "Feel-good sports character doc, much lighter than Musk"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 100,
+      "reason": "Your pick. Feel-good sports doc."
+    },
+    "slug": "rapinoe"
+  },
+  {
+    "id": 7,
+    "title": "The Face of Horror",
+    "programme": "Midnight Madness",
+    "directors": "Anna Biller",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "yes",
+      "note": "Interesting and mysterious",
+      "why": "Anna Biller (The Love Witch) -- stylized, arty horror rather than straight scares"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 100,
+      "reason": "Your pick. Anna Biller's stylized horror."
+    },
+    "slug": "the-face-of-horror"
+  },
+  {
+    "id": 8,
+    "title": "Edward Said: Between Worlds",
+    "programme": "TIFF Docs",
+    "directors": "Maiken Baird",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 90,
+      "reason": "Bio-doc on Said. Learn-about-the-world in its purest form."
+    },
+    "slug": "edward-said-between-worlds"
+  },
+  {
+    "id": 9,
+    "title": "The Ultra Runner",
+    "programme": "TIFF Docs",
+    "directors": "Mila Aung-Thwin",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "Romanian",
+      "Italian",
+      "German"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 90,
+      "reason": "Endurance sports doc — the Rapinoe-shaped slot."
+    },
+    "slug": "the-ultra-runner"
+  },
+  {
+    "id": 10,
+    "title": "Union Town",
+    "programme": "TIFF Docs",
+    "directors": "Barbara Kopple",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 90,
+      "reason": "Barbara Kopple (Harlan County USA). Living legend of the labour doc."
+    },
+    "slug": "union-town"
+  },
+  {
+    "id": 11,
+    "title": "Fjord",
+    "programme": "Special Presentations",
+    "directors": "Cristian Mungiu",
+    "countries": [
+      "Romania",
+      "France",
+      "Norway",
+      "Sweden",
+      "Denmark"
+    ],
+    "languages": [
+      "Romanian",
+      "Norwegian",
+      "English",
+      "Swedish"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 89,
+      "reason": "Mungiu (4 Months, R.M.N.). Moral thriller — rigorous, never boring."
+    },
+    "slug": "fjord"
+  },
+  {
+    "id": 12,
+    "title": "Look Back",
+    "programme": "Special Presentations",
+    "directors": "Hirokazu Kore-eda",
+    "countries": [
+      "Japan"
+    ],
+    "languages": [
+      "Japanese"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 89,
+      "reason": "Kore-eda. Humanist and quietly devastating; accessible, not slow."
+    },
+    "slug": "look-back"
+  },
+  {
+    "id": 13,
+    "title": "Arrested Memory",
+    "programme": "Midnight Madness",
+    "directors": "SABU",
+    "countries": [
+      "Taiwan",
+      "Japan"
+    ],
+    "languages": [
+      "Mandarin",
+      "Taiwanese",
+      "Japanese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 88,
+      "reason": "SABU — kinetic Japanese genre, direct Miike neighbour."
+    },
+    "slug": "arrested-memory"
+  },
+  {
+    "id": 14,
+    "title": "Ladies and Gentlemen, Brian Mulroney",
+    "programme": "Midnight Madness",
+    "directors": "Matthew Rankin",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 88,
+      "reason": "Matthew Rankin (Universal Language). Canadian deadpan absurdism. Midnight Madness."
+    },
+    "slug": "ladies-and-gentlemen-brian-mulroney"
+  },
+  {
+    "id": 15,
+    "title": "Drifter",
+    "programme": "Discovery",
+    "directors": "Sung Kang",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English",
+      "Korean"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "yes",
+      "note": "Mainstream but cool",
+      "why": "Sung Kang (Fast & Furious's Han) directing a small indie -- actor-turned-director passion project"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 87,
+      "reason": "Your pick. Sung Kang's indie directing debut."
+    },
+    "slug": "drifter"
+  },
+  {
+    "id": 16,
+    "title": "Ink",
+    "programme": "Special Presentations",
+    "directors": "Danny Boyle",
+    "countries": [
+      "United Kingdom",
+      "France",
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 87,
+      "reason": "Danny Boyle. Kinetic, mainstream-plus, never slow."
+    },
+    "slug": "ink"
+  },
+  {
+    "id": 17,
+    "title": "Neil Peart: No One's Disciple",
+    "programme": "Special Presentations",
+    "directors": "Sam Dunn, Scot McFadyen",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 87,
+      "reason": "Rush's drummer, by the Metal: A Headbanger's Journey team."
+    },
+    "slug": "neil-peart-no-ones-disciple"
+  },
+  {
+    "id": 18,
+    "title": "The Assassin(s)",
+    "programme": "Gala Presentations",
+    "directors": "Hur Jin-ho",
+    "countries": [
+      "South Korea"
+    ],
+    "languages": [
+      "Korean",
+      "Japanese"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 87,
+      "reason": "Hur Jin-ho period assassin thriller. Handsome Korean genre."
+    },
+    "slug": "the-assassins"
+  },
+  {
+    "id": 19,
+    "title": "Wild Horse Nine",
+    "programme": "Special Presentations",
+    "directors": "Martin McDonagh",
+    "countries": [
+      "United States of America",
+      "Chile"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 87,
+      "reason": "Martin McDonagh. Absurdist, profane, savage — the single closest match to 'I enjoy absurdist' in the whole lineup."
+    },
+    "slug": "wild-horse-nine"
+  },
+  {
+    "id": 20,
+    "title": "Glaxo",
+    "programme": "Special Presentations",
+    "directors": "Benjamín Naishtat",
+    "countries": [
+      "Argentina",
+      "Brazil"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 86,
+      "reason": "Naishtat (Rojo). Political paranoia in genre clothing."
+    },
+    "slug": "glaxo"
+  },
+  {
+    "id": 21,
+    "title": "Julián",
+    "programme": "Centrepiece",
+    "directors": "Louise Bagnall",
+    "countries": [
+      "Luxembourg",
+      "Ireland",
+      "Canada",
+      "Denmark"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "yes",
+      "note": "romace and love film, ut LGBTQ it looks good but I don’t want all the movies to be LGBTQ they have to be good if recommended",
+      "why": "Louise Bagnall (Oscar-nommed for Late Afternoon) -- melancholic arthouse animation, not kids' fare"
+    },
+    "legacy": {
+      "verdict": "yes",
+      "score": 86,
+      "reason": "Your pick. Melancholic arthouse animation."
+    },
+    "slug": "julian"
+  },
+  {
+    "id": 22,
+    "title": "Minotaur",
+    "programme": "Special Presentations",
+    "directors": "Andrey Zvyagintsev",
+    "countries": [
+      "France",
+      "Germany",
+      "Latvia"
+    ],
+    "languages": [
+      "Russian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 86,
+      "reason": "Zvyagintsev (Leviathan, Loveless). Bleak and controlled but genuinely gripping."
+    },
+    "slug": "minotaur"
+  },
+  {
+    "id": 23,
+    "title": "Mr. Nelson, Did You Kill People?",
+    "programme": "Special Presentations",
+    "directors": "Shinya Tsukamoto",
+    "countries": [
+      "Japan"
+    ],
+    "languages": [
+      "English",
+      "Vietnamese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 86,
+      "reason": "Shinya Tsukamoto (Tetsuo). Extreme, stylized, punishing."
+    },
+    "slug": "mr-nelson-did-you-kill-people"
+  },
+  {
+    "id": 24,
+    "title": "Paradise Lost",
+    "programme": "Special Presentations",
+    "directors": "Yeon Sang-ho",
+    "countries": [
+      "South Korea"
+    ],
+    "languages": [
+      "Korean"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 86,
+      "reason": "Yeon Sang-ho (Train to Busan). Propulsive Korean genre."
+    },
+    "slug": "paradise-lost"
+  },
+  {
+    "id": 25,
+    "title": "Phoolan",
+    "programme": "Special Presentations",
+    "directors": "Richie Mehta",
+    "countries": [
+      "India"
+    ],
+    "languages": [
+      "Hindi"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 86,
+      "reason": "Richie Mehta (Delhi Crime). Bandit Queen story — real, brutal, gripping."
+    },
+    "slug": "phoolan"
+  },
+  {
+    "id": 26,
+    "title": "The Beloved",
+    "programme": "Special Presentations",
+    "directors": "Rodrigo Sorogoyen",
+    "countries": [
+      "Spain"
+    ],
+    "languages": [
+      "Spanish",
+      "English",
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 86,
+      "reason": "Sorogoyen (As Bestas). Tightening-vice thriller-drama, unbearably tense."
+    },
+    "slug": "the-beloved"
+  },
+  {
+    "id": 27,
+    "title": "A Talent for Murder",
+    "programme": "Gala Presentations",
+    "directors": "Anton Corbijn",
+    "countries": [
+      "United Kingdom",
+      "Italy"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 85,
+      "reason": "Anton Corbijn (Control, The American). Immaculately stylish thriller."
+    },
+    "slug": "a-talent-for-murder"
+  },
+  {
+    "id": 28,
+    "title": "Being Heumann",
+    "programme": "Gala Presentations",
+    "directors": "Siân Heder",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 85,
+      "reason": "Siân Heder (CODA) on Judy Heumann. Disability-rights history, crowd-pleaser."
+    },
+    "slug": "being-heumann"
+  },
+  {
+    "id": 29,
+    "title": "Hope",
+    "programme": "Special Events",
+    "directors": "Na Hong-jin",
+    "countries": [
+      "South Korea"
+    ],
+    "languages": [
+      "Korean"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 85,
+      "reason": "Na Hong-jin (The Wailing, The Chaser). Relentless Korean genre filmmaking. Only ONE public screening."
+    },
+    "slug": "hope"
+  },
+  {
+    "id": 30,
+    "title": "Tenzing",
+    "programme": "Gala Presentations",
+    "directors": "Jennifer Peedom",
+    "countries": [
+      "United States of America",
+      "Australia"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 85,
+      "reason": "Jennifer Peedom on Tenzing Norgay. Everest from the other side of history."
+    },
+    "slug": "tenzing"
+  },
+  {
+    "id": 31,
+    "title": "Alpha Gang",
+    "programme": "Special Presentations",
+    "directors": "David Zellner, Nathan Zellner",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 84,
+      "reason": "Zellner brothers (Sasquatch Sunset). Deadpan absurdist sci-fi — squarely your lane."
+    },
+    "slug": "alpha-gang"
+  },
+  {
+    "id": 32,
+    "title": "Everest: The Other Side",
+    "programme": "Special Presentations",
+    "directors": "Jimmy Chin, Elizabeth Chai Vasarhelyi",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 84,
+      "reason": "Jimmy Chin & Chai Vasarhelyi (Free Solo). Adventure doc, white-knuckle."
+    },
+    "slug": "everest-the-other-side"
+  },
+  {
+    "id": 33,
+    "title": "Josephine",
+    "programme": "Special Presentations",
+    "directors": "Beth de Araújo",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 84,
+      "reason": "Beth de Araújo (Soft & Quiet). Real-time, brutal, no fat on it."
+    },
+    "slug": "josephine"
+  },
+  {
+    "id": 34,
+    "title": "Stuffed",
+    "programme": "Discovery",
+    "directors": "Theo Rhys",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 84,
+      "reason": "Taxidermy musical horror-comedy. Exactly as unhinged as it sounds."
+    },
+    "slug": "stuffed"
+  },
+  {
+    "id": 35,
+    "title": "The Debut",
+    "programme": "Special Presentations",
+    "directors": "Jesse Eisenberg",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 84,
+      "reason": "Jesse Eisenberg after A Real Pain. Sharp, funny, humane."
+    },
+    "slug": "the-debut"
+  },
+  {
+    "id": 36,
+    "title": "Dorothy",
+    "programme": "Centrepiece",
+    "directors": "Karthik Subbaraj",
+    "countries": [
+      "India"
+    ],
+    "languages": [
+      "Tamil"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 82,
+      "reason": "Karthik Subbaraj (Jigarthanda). Stylish, maximalist Tamil genre."
+    },
+    "slug": "dorothy"
+  },
+  {
+    "id": 37,
+    "title": "Inherit",
+    "programme": "Centrepiece",
+    "directors": "Banjong Pisanthanakun",
+    "countries": [
+      "Thailand"
+    ],
+    "languages": [
+      "Thai"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 82,
+      "reason": "Banjong Pisanthanakun (Shutter, The Medium). Thai horror that actually works."
+    },
+    "slug": "inherit"
+  },
+  {
+    "id": 38,
+    "title": "Prima Facie",
+    "programme": "Gala Presentations",
+    "directors": "Susanna White",
+    "countries": [
+      "Australia",
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 82,
+      "reason": "The Jodie Comer courtroom monologue play, filmed. Emotionally overwhelming."
+    },
+    "slug": "prima-facie"
+  },
+  {
+    "id": 39,
+    "title": "Ba's Book",
+    "programme": "TIFF Docs",
+    "directors": "Ashley Duong",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "Vietnamese",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "Vietnamese-Canadian family doc."
+    },
+    "slug": "bas-book"
+  },
+  {
+    "id": 40,
+    "title": "Like Magic",
+    "programme": "TIFF Docs",
+    "directors": "Melissa Saavedra Gil",
+    "countries": [
+      "Colombia",
+      "Argentina",
+      "Uruguay"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "TIFF Docs, Colombia."
+    },
+    "slug": "like-magic"
+  },
+  {
+    "id": 41,
+    "title": "Low Lies The Land",
+    "programme": "TIFF Docs",
+    "directors": "Emanuele Gerosa",
+    "countries": [
+      "Denmark",
+      "Italy"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "TIFF Docs."
+    },
+    "slug": "low-lies-the-land"
+  },
+  {
+    "id": 42,
+    "title": "Rescue",
+    "programme": "TIFF Docs",
+    "directors": "Sine Plambech",
+    "countries": [
+      "Denmark",
+      "Italy",
+      "Germany",
+      "Sweden",
+      "Iceland"
+    ],
+    "languages": [
+      "Arabic",
+      "English",
+      "Italian",
+      "German"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "Mediterranean migrant rescue doc. Frontline reporting."
+    },
+    "slug": "rescue"
+  },
+  {
+    "id": 43,
+    "title": "Still Night, Burning House",
+    "programme": "TIFF Docs",
+    "directors": "Carol Nguyen",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "Vietnamese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "Carol Nguyen doc."
+    },
+    "slug": "still-night-burning-house"
+  },
+  {
+    "id": 44,
+    "title": "Tehran, Under the Skin",
+    "programme": "TIFF Docs",
+    "directors": "Afsaneh Salari",
+    "countries": [
+      "France",
+      "Iran",
+      "Sweden"
+    ],
+    "languages": [
+      "Persian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "Doc from inside Iran."
+    },
+    "slug": "tehran-under-the-skin"
+  },
+  {
+    "id": 45,
+    "title": "The Final Act",
+    "programme": "TIFF Docs",
+    "directors": "Sophie Deraspe",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "Sophie Deraspe doc."
+    },
+    "slug": "the-final-act"
+  },
+  {
+    "id": 46,
+    "title": "The Hummingbird Paints Fragrant Songs",
+    "programme": "TIFF Docs",
+    "directors": "Èlia Gasull Balada, Matteo Norzi",
+    "countries": [
+      "Peru",
+      "United States of America",
+      "Qatar"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "Amazonian doc — deep unfamiliar territory."
+    },
+    "slug": "the-hummingbird-paints-fragrant-songs"
+  },
+  {
+    "id": 47,
+    "title": "Turtle Island Rap",
+    "programme": "TIFF Docs",
+    "directors": "Alexandra Lazarowich",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "Diné"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 76,
+      "reason": "Indigenous hip-hop doc, Diné language."
+    },
+    "slug": "turtle-island-rap"
+  },
+  {
+    "id": 48,
+    "title": "Gentle Monster",
+    "programme": "Special Presentations",
+    "directors": "Marie Kreutzer",
+    "countries": [
+      "Austria"
+    ],
+    "languages": [
+      "German",
+      "English",
+      "French"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 75,
+      "reason": "Marie Kreutzer (Corsage). Sharp, stylish, faintly wicked."
+    },
+    "slug": "gentle-monster"
+  },
+  {
+    "id": 49,
+    "title": "Happily Ever After",
+    "programme": "Special Presentations",
+    "directors": "Feng-I Fiona Roan",
+    "countries": [
+      "Taiwan"
+    ],
+    "languages": [
+      "Chinese"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 75,
+      "reason": "Feng-I Fiona Roan (American Girl). Emotional family drama that hits hard."
+    },
+    "slug": "happily-ever-after"
+  },
+  {
+    "id": 50,
+    "title": "Possible Love",
+    "programme": "Special Presentations",
+    "directors": "Lee Chang-dong",
+    "countries": [
+      "South Korea"
+    ],
+    "languages": [
+      "Korean"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 75,
+      "reason": "Lee Chang-dong (Burning). Deliberate pace, but the payoff is enormous."
+    },
+    "slug": "possible-love"
+  },
+  {
+    "id": 51,
+    "title": "The Idiot(s)",
+    "programme": "Special Presentations",
+    "directors": "Michał Englert, Małgorzata Szumowska",
+    "countries": [
+      "Poland",
+      "Germany"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 75,
+      "reason": "Szumowska. Provocative and formally bold without being inert."
+    },
+    "slug": "the-idiots"
+  },
+  {
+    "id": 52,
+    "title": "Bleeding Hearts",
+    "programme": "TIFF Docs",
+    "directors": "Andrew Morgan",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "Andrew Morgan (The True Cost) issue doc."
+    },
+    "slug": "bleeding-hearts"
+  },
+  {
+    "id": 53,
+    "title": "Cheyenne",
+    "programme": "TIFF Docs",
+    "directors": "Taimi Arvidson",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "TIFF Docs character portrait."
+    },
+    "slug": "cheyenne"
+  },
+  {
+    "id": 54,
+    "title": "Darlene Love: I Know Where I've Been",
+    "programme": "TIFF Docs",
+    "directors": "Barry Avrich",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "Music doc on a great, long-overlooked voice."
+    },
+    "slug": "darlene-love-i-know-where-ive-been"
+  },
+  {
+    "id": 55,
+    "title": "Gail",
+    "programme": "TIFF Docs",
+    "directors": "Michael Maxxis",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "TIFF Docs character portrait."
+    },
+    "slug": "gail"
+  },
+  {
+    "id": 56,
+    "title": "HALF",
+    "programme": "Midnight Madness",
+    "directors": "Samjad",
+    "countries": [
+      "India"
+    ],
+    "languages": [
+      "Malayalam",
+      "Hindi",
+      "English",
+      "Telugu",
+      "Tamil"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "Malayalam genre film in Midnight Madness — unfamiliar AND fast."
+    },
+    "slug": "half"
+  },
+  {
+    "id": 57,
+    "title": "Re/Pair",
+    "programme": "TIFF Docs",
+    "directors": "Lacey Schwartz Delgado",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "TIFF Docs."
+    },
+    "slug": "re-pair"
+  },
+  {
+    "id": 58,
+    "title": "The Pervert's Guide to Utopias",
+    "programme": "TIFF Docs",
+    "directors": "Sophie Fiennes",
+    "countries": [
+      "Ireland",
+      "United Kingdom",
+      "Slovenia",
+      "Netherlands",
+      "Norway"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "Sophie Fiennes. Ideas doc that's genuinely playful."
+    },
+    "slug": "the-perverts-guide-to-utopias"
+  },
+  {
+    "id": 59,
+    "title": "The Spiral",
+    "programme": "Midnight Madness",
+    "directors": "Paolo Strippoli",
+    "countries": [
+      "Italy",
+      "France",
+      "Belgium"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "Italian genre horror in Midnight Madness."
+    },
+    "slug": "the-spiral"
+  },
+  {
+    "id": 60,
+    "title": "Vintage Violence",
+    "programme": "Midnight Madness",
+    "directors": "Eugene Kotlyarenko",
+    "countries": [
+      "United States of America",
+      "Japan"
+    ],
+    "languages": [
+      "English",
+      "Japanese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 74,
+      "reason": "Kotlyarenko. Chaotic online-brain satire, Midnight Madness."
+    },
+    "slug": "vintage-violence"
+  },
+  {
+    "id": 61,
+    "title": "Bunker",
+    "programme": "Gala Presentations",
+    "directors": "Florian Zeller",
+    "countries": [
+      "France",
+      "Spain"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 73,
+      "reason": "Florian Zeller (The Father). Psychological pressure-cooker."
+    },
+    "slug": "bunker"
+  },
+  {
+    "id": 62,
+    "title": "A Good Little Soldier",
+    "programme": "Special Presentations",
+    "directors": "Stéphane Brizé",
+    "countries": [
+      "France"
+    ],
+    "languages": [
+      "French",
+      "Italian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 72,
+      "reason": "Stéphane Brizé. Social-realist drama with real anger behind it."
+    },
+    "slug": "a-good-little-soldier"
+  },
+  {
+    "id": 63,
+    "title": "Kick On",
+    "programme": "Midnight Madness",
+    "directors": "Nick Kozakis",
+    "countries": [
+      "Australia"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 72,
+      "reason": "Australian Midnight Madness genre."
+    },
+    "slug": "kick-on"
+  },
+  {
+    "id": 64,
+    "title": "Le Faux Soir",
+    "programme": "Special Presentations",
+    "directors": "Michaël R. Roskam",
+    "countries": [
+      "Belgium",
+      "France"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 72,
+      "reason": "Roskam (Bullhead). WWII resistance caper — true story, high energy."
+    },
+    "slug": "le-faux-soir"
+  },
+  {
+    "id": 65,
+    "title": "Obsession",
+    "programme": "Special Events",
+    "directors": "Curry Barker",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 72,
+      "reason": "Curry Barker horror. Only ONE public screening."
+    },
+    "slug": "obsession"
+  },
+  {
+    "id": 66,
+    "title": "River",
+    "programme": "Midnight Madness",
+    "directors": "Joshua Giuliano",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 72,
+      "reason": "Midnight Madness horror."
+    },
+    "slug": "river"
+  },
+  {
+    "id": 67,
+    "title": "The Unknown",
+    "programme": "Special Presentations",
+    "directors": "Arthur Harari",
+    "countries": [
+      "France"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 72,
+      "reason": "Arthur Harari (Onoda). Propulsive, muscular storytelling."
+    },
+    "slug": "the-unknown"
+  },
+  {
+    "id": 68,
+    "title": "A Long Winter",
+    "programme": "Special Presentations",
+    "directors": "Andrew Haigh",
+    "countries": [
+      "Canada",
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 70,
+      "reason": "Andrew Haigh (All of Us Strangers). Quiet but wrecking. One of your LGBTQ slots — earns it."
+    },
+    "slug": "a-long-winter"
+  },
+  {
+    "id": 69,
+    "title": "I Play Rocky",
+    "programme": "Special Presentations",
+    "directors": "Peter Farrelly",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 70,
+      "reason": "How Stallone forced Rocky into existence. Mainstream but cool."
+    },
+    "slug": "i-play-rocky"
+  },
+  {
+    "id": 70,
+    "title": "The Stunt Driver",
+    "programme": "Special Presentations",
+    "directors": "Michael Dowse",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 70,
+      "reason": "Michael Dowse. Canadian, fun, fast."
+    },
+    "slug": "the-stunt-driver"
+  },
+  {
+    "id": 71,
+    "title": "Villeneuve: The Rise of a Legend",
+    "programme": "Gala Presentations",
+    "directors": "Yan Lanouette Turgeon",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "French",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 70,
+      "reason": "Gilles Villeneuve. Motorsport legend, Canadian myth."
+    },
+    "slug": "villeneuve-the-rise-of-a-legend"
+  },
+  {
+    "id": 72,
+    "title": "Your Mother Your Mother Your Mother",
+    "programme": "Special Presentations",
+    "directors": "Bassam Tariq",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 70,
+      "reason": "Bassam Tariq (Mogul Mowgli). Formally inventive, propulsive."
+    },
+    "slug": "your-mother-your-mother-your-mother"
+  },
+  {
+    "id": 73,
+    "title": "Brace Your Heart",
+    "programme": "Platform",
+    "directors": "Amanda Kernell",
+    "countries": [
+      "Sweden",
+      "Norway",
+      "Denmark",
+      "Iceland",
+      "Bulgaria"
+    ],
+    "languages": [
+      "Northern Sami",
+      "Swedish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 69,
+      "reason": "Amanda Kernell (Sami Blood). Northern Sami — unfamiliar and emotional."
+    },
+    "slug": "brace-your-heart"
+  },
+  {
+    "id": 74,
+    "title": "Djinn Wedding",
+    "programme": "Platform",
+    "directors": "Ferit Karahan",
+    "countries": [
+      "Turkey"
+    ],
+    "languages": [
+      "Turkish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 69,
+      "reason": "Ferit Karahan (Brother's Keeper). Tense Turkish drama."
+    },
+    "slug": "djinn-wedding"
+  },
+  {
+    "id": 75,
+    "title": "The Smell of Apples",
+    "programme": "Platform",
+    "directors": "John Trengove",
+    "countries": [
+      "South Africa",
+      "Netherlands",
+      "Chile"
+    ],
+    "languages": [
+      "Afrikaans",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 69,
+      "reason": "John Trengove (The Wound). Apartheid-era, tense."
+    },
+    "slug": "the-smell-of-apples"
+  },
+  {
+    "id": 76,
+    "title": "Conversation With The Sea",
+    "programme": "Centrepiece",
+    "directors": "Muayad Alayan",
+    "countries": [
+      "Palestine"
+    ],
+    "languages": [
+      "Arabic",
+      "Hebrew",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Muayad Alayan, Palestinian. Political and personal."
+    },
+    "slug": "conversation-with-the-sea"
+  },
+  {
+    "id": 77,
+    "title": "Man in Motion: The Rick Hansen Story",
+    "programme": "Gala Presentations",
+    "directors": "Adrian Buitenhuis",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Rick Hansen's Man in Motion tour. Inspirational true story."
+    },
+    "slug": "man-in-motion-the-rick-hansen-story"
+  },
+  {
+    "id": 78,
+    "title": "Marie Madeleine",
+    "programme": "Centrepiece",
+    "directors": "Géssica Généus",
+    "countries": [
+      "France",
+      "Haiti",
+      "Belgium",
+      "Canada",
+      "Luxembourg"
+    ],
+    "languages": [
+      "Haitian",
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Géssica Généus, Haitian. Fierce."
+    },
+    "slug": "marie-madeleine"
+  },
+  {
+    "id": 79,
+    "title": "Misty Green",
+    "programme": "Gala Presentations",
+    "directors": "Chris Rock",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Chris Rock directing. Comedy with teeth."
+    },
+    "slug": "misty-green"
+  },
+  {
+    "id": 80,
+    "title": "Rehearsals for a Revolution",
+    "programme": "Centrepiece",
+    "directors": "Pegah Ahangarani",
+    "countries": [
+      "Czech Republic",
+      "Spain"
+    ],
+    "languages": [
+      "Persian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Iranian dissident theatre-in-exile."
+    },
+    "slug": "rehearsals-for-a-revolution"
+  },
+  {
+    "id": 81,
+    "title": "Run Terry Run",
+    "programme": "Gala Presentations",
+    "directors": "Sean Menard",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Terry Fox. Canadian sports story."
+    },
+    "slug": "run-terry-run"
+  },
+  {
+    "id": 82,
+    "title": "The City of the Living",
+    "programme": "Centrepiece",
+    "directors": "Edoardo Gabbriellini",
+    "countries": [
+      "Italy"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Adaptation of the Roman true-crime case. Cold, propulsive."
+    },
+    "slug": "the-city-of-the-living"
+  },
+  {
+    "id": 83,
+    "title": "The Secret Lives of Baba Segi's Wives",
+    "programme": "Centrepiece",
+    "directors": "Daniel Oriahi",
+    "countries": [
+      "Nigeria"
+    ],
+    "languages": [
+      "Yoruba",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Nigerian polygamy drama, Yoruba. Juicy and specific."
+    },
+    "slug": "the-secret-lives-of-baba-segis-wives"
+  },
+  {
+    "id": 84,
+    "title": "Thirteen in Gaza",
+    "programme": "Centrepiece",
+    "directors": "Hosam Abu Dan",
+    "countries": [
+      "Palestine"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Palestinian film shot in Gaza. Urgent."
+    },
+    "slug": "thirteen-in-gaza"
+  },
+  {
+    "id": 85,
+    "title": "Trees are Watching",
+    "programme": "Centrepiece",
+    "directors": "Bahman Ghobadi",
+    "countries": [
+      "Turkey"
+    ],
+    "languages": [
+      "Kurdish",
+      "Turkish",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Bahman Ghobadi, Kurdish. Only ONE public screening."
+    },
+    "slug": "trees-are-watching"
+  },
+  {
+    "id": 86,
+    "title": "Viva Carmen",
+    "programme": "Centrepiece",
+    "directors": "Sébastien Laudenbach",
+    "countries": [
+      "France"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "Laudenbach hand-drawn arthouse animation — Julián's neighbour."
+    },
+    "slug": "viva-carmen"
+  },
+  {
+    "id": 87,
+    "title": "Woman Unknown",
+    "programme": "Centrepiece",
+    "directors": "May el-Toukhy",
+    "countries": [
+      "Denmark"
+    ],
+    "languages": [
+      "Danish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 68,
+      "reason": "May el-Toukhy (Queen of Hearts). Uncomfortable, propulsive, morally messy."
+    },
+    "slug": "woman-unknown"
+  },
+  {
+    "id": 88,
+    "title": "In Waves",
+    "programme": "Discovery",
+    "directors": "Phuong Mai Nguyen",
+    "countries": [
+      "France",
+      "Belgium"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 67,
+      "reason": "Adult arthouse animation — the Julián slot."
+    },
+    "slug": "in-waves"
+  },
+  {
+    "id": 89,
+    "title": "In the Heart of the South",
+    "programme": "Platform",
+    "directors": "Nyla Innuksuk",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 67,
+      "reason": "Nyla Innuksuk (Slash/Back). Genre energy, Indigenous voice."
+    },
+    "slug": "in-the-heart-of-the-south"
+  },
+  {
+    "id": 90,
+    "title": "Carrie",
+    "programme": "Primetime",
+    "directors": "Mike Flanagan",
+    "countries": [
+      "Canada",
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 66,
+      "reason": "Mike Flanagan's Carrie. Prestige horror."
+    },
+    "slug": "carrie"
+  },
+  {
+    "id": 91,
+    "title": "The Lost Children Of Tuam",
+    "programme": "Centrepiece",
+    "directors": "Frank Berry",
+    "countries": [
+      "Ireland"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 66,
+      "reason": "Frank Berry on the Tuam mother-and-baby home scandal. True and furious."
+    },
+    "slug": "the-lost-children-of-tuam"
+  },
+  {
+    "id": 92,
+    "title": "2.6 Seconds: Death in the Outback",
+    "programme": "Primetime",
+    "directors": "Darren Dale",
+    "countries": [
+      "Australia"
+    ],
+    "languages": [
+      "English",
+      "Warlpiri"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "yes",
+      "score": 65,
+      "reason": "Investigation into a police killing in the Northern Territory. Doc-grade real-world."
+    },
+    "slug": "2-6-seconds-death-in-the-outback"
+  },
+  {
+    "id": 93,
+    "title": "All of a Sudden",
+    "programme": "Special Presentations",
+    "directors": "Ryûsuke Hamaguchi",
+    "countries": [
+      "France",
+      "Japan",
+      "Germany",
+      "Belgium"
+    ],
+    "languages": [
+      "French",
+      "Japanese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 54,
+      "reason": "Hamaguchi is one of the best living filmmakers, but he is LONG and talky. Break your no-slow rule only for this one."
+    },
+    "slug": "all-of-a-sudden"
+  },
+  {
+    "id": 94,
+    "title": "Anchors Aweigh",
+    "programme": "Midnight Madness",
+    "directors": "Matt Barats",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 54,
+      "reason": "Midnight Madness oddity from a comedian. Could be a riot, could be nothing."
+    },
+    "slug": "anchors-aweigh"
+  },
+  {
+    "id": 95,
+    "title": "Bitter Christmas",
+    "programme": "Special Presentations",
+    "directors": "Pedro Almodóvar",
+    "countries": [
+      "Spain"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "maybe",
+      "note": "did not like pedro almodovar",
+      "why": "Pedro Almodovar, Spanish -- classic foreign-language auteur drama"
+    },
+    "legacy": {
+      "verdict": "maybe",
+      "score": 54,
+      "reason": "Your pick — but you flagged you don't like Almodóvar. Probably skip."
+    },
+    "slug": "bitter-christmas"
+  },
+  {
+    "id": 96,
+    "title": "Rogue Trooper",
+    "programme": "Midnight Madness",
+    "directors": "Duncan Jones",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "maybe",
+      "note": "Cool animation, action and sci-fi looks interesting",
+      "why": "Duncan Jones (Moon, Source Code) doing genre sci-fi -- tests appetite for mainstream-ish genre thrills"
+    },
+    "legacy": {
+      "verdict": "maybe",
+      "score": 54,
+      "reason": "Your pick. Duncan Jones genre sci-fi animation."
+    },
+    "slug": "rogue-trooper"
+  },
+  {
+    "id": 97,
+    "title": "Always Lalisa",
+    "programme": "Gala Presentations",
+    "directors": "Sue Kim",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English",
+      "Thai",
+      "Korean"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "maybe",
+      "note": "not my typical topic, but could be cool",
+      "why": "K-pop (BLACKPINK's Lisa) concert documentary -- pure pop-culture/fandom axis"
+    },
+    "legacy": {
+      "verdict": "maybe",
+      "score": 52,
+      "reason": "Your pick. K-pop concert doc, outside your usual."
+    },
+    "slug": "always-lalisa"
+  },
+  {
+    "id": 98,
+    "title": "Everybody Wants to F*ck Me",
+    "programme": "Special Presentations",
+    "directors": "Jonathan Schey",
+    "countries": [
+      "United Kingdom",
+      "France"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 52,
+      "reason": "Provocation as a title. High variance."
+    },
+    "slug": "everybody-wants-to-fck-me"
+  },
+  {
+    "id": 99,
+    "title": "Angh",
+    "programme": "Platform",
+    "directors": "Theja Rio",
+    "countries": [
+      "India"
+    ],
+    "languages": [
+      "Konyak"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "maybe",
+      "note": "we definitely arent afraid to go somewhere unfamiliar",
+      "why": "Drama in Konyak, an indigenous language from Nagaland India -- tests willingness to go somewhere totally unfamiliar"
+    },
+    "legacy": {
+      "verdict": "maybe",
+      "score": 51,
+      "reason": "Your pick. Konyak-language drama from Nagaland — the 'somewhere unfamiliar' test."
+    },
+    "slug": "angh"
+  },
+  {
+    "id": 100,
+    "title": "Hombre al agua",
+    "programme": "Special Presentations",
+    "directors": "Gael García Bernal",
+    "countries": [
+      "Mexico"
+    ],
+    "languages": [
+      "Spanish",
+      "Portuguese"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 51,
+      "reason": "Gael García Bernal directing."
+    },
+    "slug": "hombre-al-agua"
+  },
+  {
+    "id": 101,
+    "title": "Everytime",
+    "programme": "Centrepiece",
+    "directors": "Sandra Wollner",
+    "countries": [
+      "Germany",
+      "Austria"
+    ],
+    "languages": [
+      "German"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 50,
+      "reason": "Sandra Wollner (The Trouble with Being Born). Cold and eerie; will either grip you or lose you."
+    },
+    "slug": "everytime"
+  },
+  {
+    "id": 102,
+    "title": "Flies",
+    "programme": "Centrepiece",
+    "directors": "Fernando Eimbcke",
+    "countries": [
+      "Mexico"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 50,
+      "reason": "Eimbcke deadpan minimalism. Funny if you're on its wavelength, slow if you're not."
+    },
+    "slug": "flies"
+  },
+  {
+    "id": 103,
+    "title": "Intermission",
+    "programme": "Centrepiece",
+    "directors": "Yonfan",
+    "countries": [
+      "Hong Kong"
+    ],
+    "languages": [
+      "Chinese",
+      "English",
+      "Japanese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 50,
+      "reason": "Yonfan's ornate Hong Kong animation. Gorgeous and dreamy, possibly too dreamy."
+    },
+    "slug": "intermission"
+  },
+  {
+    "id": 104,
+    "title": "Atonement",
+    "programme": "Gala Presentations",
+    "directors": "Reed Van Dyk",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 49,
+      "reason": "War drama, US/Arabic."
+    },
+    "slug": "atonement"
+  },
+  {
+    "id": 105,
+    "title": "Diary of a Mad Old Man",
+    "programme": "Gala Presentations",
+    "directors": "Wayne Wang",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "Japanese",
+      "Mandarin"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 49,
+      "reason": "Wayne Wang adapting Tanizaki. Could be great, could be airless."
+    },
+    "slug": "diary-of-a-mad-old-man"
+  },
+  {
+    "id": 106,
+    "title": "Elsinore",
+    "programme": "Special Presentations",
+    "directors": "Simon Stone",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 49,
+      "reason": "Simon Stone's Hamlet. Theatrical and intense, could tip either way."
+    },
+    "slug": "elsinore"
+  },
+  {
+    "id": 107,
+    "title": "It's My Time",
+    "programme": "Gala Presentations",
+    "directors": "Bai Xue",
+    "countries": [
+      "China"
+    ],
+    "languages": [
+      "Mandarin",
+      "Cantonese"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 49,
+      "reason": "Bai Xue, China."
+    },
+    "slug": "its-my-time"
+  },
+  {
+    "id": 108,
+    "title": "The Housewife",
+    "programme": "Special Presentations",
+    "directors": "Ben Shirinian",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 49,
+      "reason": "US Special Presentation, unknown quantity."
+    },
+    "slug": "the-housewife"
+  },
+  {
+    "id": 109,
+    "title": "The Liberation",
+    "programme": "Special Presentations",
+    "directors": "Guy Nattiv",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 49,
+      "reason": "Guy Nattiv historical drama."
+    },
+    "slug": "the-liberation"
+  },
+  {
+    "id": 110,
+    "title": "Clarissa",
+    "programme": "Special Presentations",
+    "directors": "Arie Esiri, Chuko Esiri",
+    "countries": [
+      "Nigeria",
+      "United States of America"
+    ],
+    "languages": [
+      "English",
+      "Nigerian Pidgin"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 48,
+      "reason": "The Esiri brothers (Eyimofe). Beautiful, humanist, measured."
+    },
+    "slug": "clarissa"
+  },
+  {
+    "id": 111,
+    "title": "In Alaska",
+    "programme": "Special Presentations",
+    "directors": "Vinnie Karetak, Jaap van Heusden",
+    "countries": [
+      "Netherlands",
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "Inuktitut"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 48,
+      "reason": "Inuktitut-language, Canada/Netherlands."
+    },
+    "slug": "in-alaska"
+  },
+  {
+    "id": 112,
+    "title": "It Will Happen Tonight",
+    "programme": "Special Presentations",
+    "directors": "Nanni Moretti",
+    "countries": [
+      "Italy",
+      "France",
+      "Spain"
+    ],
+    "languages": [
+      "Italian",
+      "English",
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 48,
+      "reason": "Nanni Moretti. Very Italian, very talky."
+    },
+    "slug": "it-will-happen-tonight"
+  },
+  {
+    "id": 113,
+    "title": "La Bola Negra",
+    "programme": "Special Presentations",
+    "directors": "Javier Calvo, Javier Ambrossi",
+    "countries": [
+      "Spain",
+      "France"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 48,
+      "reason": "Los Javis, Spain. Flamboyant, camp — very Almodóvar-adjacent, which you flagged."
+    },
+    "slug": "la-bola-negra"
+  },
+  {
+    "id": 114,
+    "title": "The Age of Goodbyes",
+    "programme": "Special Presentations",
+    "directors": "Edmund Yeo",
+    "countries": [
+      "Taiwan",
+      "Malaysia"
+    ],
+    "languages": [
+      "Mandarin",
+      "Cantonese",
+      "Malay",
+      "Thai",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 48,
+      "reason": "Edmund Yeo, Taiwan/Malaysia."
+    },
+    "slug": "the-age-of-goodbyes"
+  },
+  {
+    "id": 115,
+    "title": "The Road Not Taken",
+    "programme": "Special Presentations",
+    "directors": "Peter Ho-Sun Chan",
+    "countries": [
+      "China"
+    ],
+    "languages": [
+      "Chinese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 48,
+      "reason": "Peter Ho-Sun Chan. Big Chinese emotional drama."
+    },
+    "slug": "the-road-not-taken"
+  },
+  {
+    "id": 116,
+    "title": "Whatcha Want",
+    "programme": "Special Presentations",
+    "directors": "Mina Shum",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "Cantonese",
+      "Mandarin"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 48,
+      "reason": "Mina Shum, Canadian."
+    },
+    "slug": "whatcha-want"
+  },
+  {
+    "id": 117,
+    "title": "All About Corinne",
+    "programme": "Gala Presentations",
+    "directors": "Marc Fitoussi",
+    "countries": [
+      "France"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "Marc Fitoussi. Light French comedy-drama."
+    },
+    "slug": "all-about-corinne"
+  },
+  {
+    "id": 118,
+    "title": "All That She Wants",
+    "programme": "Special Presentations",
+    "directors": "Scarlett Bermingham, Andrew Rhymer",
+    "countries": [
+      "United States of America",
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "US comedy."
+    },
+    "slug": "all-that-she-wants"
+  },
+  {
+    "id": 119,
+    "title": "Closing Night",
+    "programme": "Special Presentations",
+    "directors": "Cody Fern",
+    "countries": [
+      "Australia",
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "Cody Fern's directing debut."
+    },
+    "slug": "closing-night"
+  },
+  {
+    "id": 120,
+    "title": "Club Kid",
+    "programme": "Special Presentations",
+    "directors": "Jordan Firstman",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "Jordan Firstman. Queer nightlife comedy, energetic but slight."
+    },
+    "slug": "club-kid"
+  },
+  {
+    "id": 121,
+    "title": "Faith",
+    "programme": "Special Presentations",
+    "directors": "Paul Andrew Williams",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "Paul Andrew Williams. Gritty British drama."
+    },
+    "slug": "faith"
+  },
+  {
+    "id": 122,
+    "title": "Love of Your Life",
+    "programme": "Special Presentations",
+    "directors": "Rachel Morrison",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "Rachel Morrison, cinematographer turned director."
+    },
+    "slug": "love-of-your-life"
+  },
+  {
+    "id": 123,
+    "title": "Report to Mother",
+    "programme": "TIFF Classics",
+    "directors": "John Abraham",
+    "countries": [
+      "India"
+    ],
+    "languages": [
+      "Malayalam"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 46,
+      "reason": "Restored John Abraham. Malayalam classic, radical and strange."
+    },
+    "slug": "report-to-mother"
+  },
+  {
+    "id": 124,
+    "title": "Spirit Guardians: The Last Secret of the First Emperor",
+    "programme": "Gala Presentations",
+    "directors": "Nguyễn Phan Quang Binh",
+    "countries": [
+      "Vietnam"
+    ],
+    "languages": [
+      "Vietnamese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "Vietnamese fantasy epic. Big swing."
+    },
+    "slug": "spirit-guardians-the-last-secret-of-the-first-emperor"
+  },
+  {
+    "id": 125,
+    "title": "Spring in a Small Town",
+    "programme": "TIFF Classics",
+    "directors": "Fei Mu",
+    "countries": [
+      "China"
+    ],
+    "languages": [
+      "Mandarin"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 46,
+      "reason": "The canonical Chinese masterpiece, 1948. Slow — but it's the one classic worth the exception."
+    },
+    "slug": "spring-in-a-small-town"
+  },
+  {
+    "id": 126,
+    "title": "Ten Dark Women",
+    "programme": "TIFF Classics",
+    "directors": "Kon Ichikawa",
+    "countries": [
+      "Japan"
+    ],
+    "languages": [
+      "Japanese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 46,
+      "reason": "Kon Ichikawa, 1961. Stylish black-comic revenge. Old, but sharp and funny, not museum-slow."
+    },
+    "slug": "ten-dark-women"
+  },
+  {
+    "id": 127,
+    "title": "Tender Loving Care",
+    "programme": "Special Presentations",
+    "directors": "Mike Leigh",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "Mike Leigh. Warm and humane, but talky and unhurried."
+    },
+    "slug": "tender-loving-care"
+  },
+  {
+    "id": 128,
+    "title": "The Julia Set",
+    "programme": "Special Presentations",
+    "directors": "Niki Byrne",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "US Special Presentation, unknown quantity."
+    },
+    "slug": "the-julia-set"
+  },
+  {
+    "id": 129,
+    "title": "The Man I Love",
+    "programme": "Special Presentations",
+    "directors": "Ira Sachs",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 46,
+      "reason": "Ira Sachs. Quiet queer drama — good, but one of several LGBTQ options; pick the strongest."
+    },
+    "slug": "the-man-i-love"
+  },
+  {
+    "id": 130,
+    "title": "A Common Story",
+    "programme": "Discovery",
+    "directors": "Anna Foglietta",
+    "countries": [
+      "Italy"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Anna Foglietta's directing debut, Italy."
+    },
+    "slug": "a-common-story"
+  },
+  {
+    "id": 131,
+    "title": "Arne Goes to Space",
+    "programme": "Discovery",
+    "directors": "Lars Vega",
+    "countries": [
+      "Sweden"
+    ],
+    "languages": [
+      "Swedish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Swedish deadpan comedy."
+    },
+    "slug": "arne-goes-to-space"
+  },
+  {
+    "id": 132,
+    "title": "Bedford Park",
+    "programme": "Discovery",
+    "directors": "Stephanie Ahn",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English",
+      "Korean"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "US/Korean indie."
+    },
+    "slug": "bedford-park"
+  },
+  {
+    "id": 133,
+    "title": "Children Untold",
+    "programme": "Platform",
+    "directors": "Miwa Nishikawa",
+    "countries": [
+      "Japan"
+    ],
+    "languages": [
+      "Japanese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Miwa Nishikawa. Quiet Japanese drama."
+    },
+    "slug": "children-untold"
+  },
+  {
+    "id": 134,
+    "title": "Head to Head",
+    "programme": "Discovery",
+    "directors": "Ghasideh Golmakani",
+    "countries": [
+      "Iran",
+      "Germany"
+    ],
+    "languages": [
+      "Persian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Iranian drama."
+    },
+    "slug": "head-to-head"
+  },
+  {
+    "id": 135,
+    "title": "I Am Mario",
+    "programme": "Discovery",
+    "directors": "Sharon Kleinberg",
+    "countries": [
+      "Mexico"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Mexican Discovery title."
+    },
+    "slug": "i-am-mario"
+  },
+  {
+    "id": 136,
+    "title": "Idda",
+    "programme": "Platform",
+    "directors": "Irene Dionisio",
+    "countries": [
+      "Italy"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Italian Platform title."
+    },
+    "slug": "idda"
+  },
+  {
+    "id": 137,
+    "title": "In Conversation With... Andrew Scott",
+    "programme": "In Conversation With...",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 45,
+      "reason": "Not a film. Andrew Scott on craft."
+    },
+    "slug": "in-conversation-with-andrew-scott"
+  },
+  {
+    "id": 138,
+    "title": "In Conversation With... Chris Rock",
+    "programme": "In Conversation With...",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 45,
+      "reason": "Not a film — Chris Rock talking for 90 minutes. Great date-night curveball."
+    },
+    "slug": "in-conversation-with-chris-rock"
+  },
+  {
+    "id": 139,
+    "title": "Krux",
+    "programme": "Discovery",
+    "directors": "Tony Vahl",
+    "countries": [
+      "Germany",
+      "Poland"
+    ],
+    "languages": [
+      "German"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "German Discovery title."
+    },
+    "slug": "krux"
+  },
+  {
+    "id": 140,
+    "title": "Memories of a Forest",
+    "programme": "Discovery",
+    "directors": "Katharina Rabl",
+    "countries": [
+      "Germany",
+      "Austria"
+    ],
+    "languages": [
+      "German"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "German/Austrian Discovery title."
+    },
+    "slug": "memories-of-a-forest"
+  },
+  {
+    "id": 141,
+    "title": "Nosotros",
+    "programme": "Discovery",
+    "directors": "Joaquín Ruano",
+    "countries": [
+      "Guatemala",
+      "Mexico"
+    ],
+    "languages": [
+      "Spanish",
+      "Maya K'iche'"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Maya K'iche'-language, Guatemala. Unfamiliar territory."
+    },
+    "slug": "nosotros"
+  },
+  {
+    "id": 142,
+    "title": "On Behalf of My Son",
+    "programme": "Platform",
+    "directors": "Gabriel Martins",
+    "countries": [
+      "Brazil"
+    ],
+    "languages": [
+      "Portuguese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Gabriel Martins, Brazil."
+    },
+    "slug": "on-behalf-of-my-son"
+  },
+  {
+    "id": 143,
+    "title": "Seventeen",
+    "programme": "Discovery",
+    "directors": "Justin Ducharme",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "Cree"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Cree-language Indigenous queer drama."
+    },
+    "slug": "seventeen"
+  },
+  {
+    "id": 144,
+    "title": "Silenced Nights",
+    "programme": "Platform",
+    "directors": "Lawrence Fajardo",
+    "countries": [
+      "Philippines"
+    ],
+    "languages": [
+      "Tagalog"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Filipino Platform title."
+    },
+    "slug": "silenced-nights"
+  },
+  {
+    "id": 145,
+    "title": "Sisters",
+    "programme": "Discovery",
+    "directors": "Ione Hernández",
+    "countries": [
+      "Spain"
+    ],
+    "languages": [
+      "Spanish",
+      "Basque"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Basque-language Spanish Discovery title."
+    },
+    "slug": "sisters"
+  },
+  {
+    "id": 146,
+    "title": "Strong Son",
+    "programme": "Discovery",
+    "directors": "Ian Bawa",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "Punjabi"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Ian Bawa, Punjabi-Canadian."
+    },
+    "slug": "strong-son-2"
+  },
+  {
+    "id": 147,
+    "title": "The Daughters of Abraham",
+    "programme": "Discovery",
+    "directors": "Hanaël El Yousfi",
+    "countries": [
+      "France"
+    ],
+    "languages": [
+      "French",
+      "Arabic"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "French/Arabic Discovery title."
+    },
+    "slug": "the-daughters-of-abraham"
+  },
+  {
+    "id": 148,
+    "title": "The Fortunate Isles",
+    "programme": "Discovery",
+    "directors": "Helena Girón, Samuel Delgado",
+    "countries": [
+      "Spain",
+      "Greece"
+    ],
+    "languages": [
+      "Spanish",
+      "French",
+      "Arabic"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Girón & Delgado. Beautiful but drifting — near your no-slow line."
+    },
+    "slug": "the-fortunate-isles"
+  },
+  {
+    "id": 149,
+    "title": "The World Before",
+    "programme": "Platform",
+    "directors": "Yoon Dan-bi",
+    "countries": [
+      "South Korea"
+    ],
+    "languages": [
+      "Korean"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Yoon Dan-bi. Quiet Korean observation."
+    },
+    "slug": "the-world-before"
+  },
+  {
+    "id": 150,
+    "title": "We Are Born Good",
+    "programme": "Discovery",
+    "directors": "Leung Chuen Yeung",
+    "countries": [
+      "Hong Kong"
+    ],
+    "languages": [
+      "Chinese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Hong Kong Discovery title."
+    },
+    "slug": "we-are-born-good"
+  },
+  {
+    "id": 151,
+    "title": "What Lies Between Us",
+    "programme": "Discovery",
+    "directors": "Amalie Næsby Fick",
+    "countries": [
+      "Denmark"
+    ],
+    "languages": [
+      "Danish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Danish Discovery title."
+    },
+    "slug": "what-lies-between-us"
+  },
+  {
+    "id": 152,
+    "title": "Wild Wild East",
+    "programme": "Platform",
+    "directors": "Jan Holoubek",
+    "countries": [
+      "Poland"
+    ],
+    "languages": [
+      "German",
+      "Polish",
+      "Ukrainian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Jan Holoubek, Poland."
+    },
+    "slug": "wild-wild-east"
+  },
+  {
+    "id": 153,
+    "title": "Zjili: A Story of Sisterhood and The Burdens of Excess",
+    "programme": "Discovery",
+    "directors": "Hajara Musah Chambas, Christine Boateng",
+    "countries": [
+      "Ghana"
+    ],
+    "languages": [
+      "Dagbani",
+      "Twi",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 45,
+      "reason": "Dagbani-language, Ghana. Unfamiliar territory."
+    },
+    "slug": "zjili-a-story-of-sisterhood-and-the-burdens-of-excess"
+  },
+  {
+    "id": 154,
+    "title": "A Girl Unknown",
+    "programme": "Centrepiece",
+    "directors": "Zou Jing",
+    "countries": [
+      "China"
+    ],
+    "languages": [
+      "Chinese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Chinese Centrepiece drama."
+    },
+    "slug": "a-girl-unknown"
+  },
+  {
+    "id": 155,
+    "title": "After Elena",
+    "programme": "Centrepiece",
+    "directors": "Shawn Garry",
+    "countries": [
+      "Chile",
+      "Colombia",
+      "Italy"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Chilean grief drama."
+    },
+    "slug": "after-elena"
+  },
+  {
+    "id": 156,
+    "title": "Ah Girl",
+    "programme": "Centrepiece",
+    "directors": "Ang Geck Geck Priscilla",
+    "countries": [
+      "Singapore"
+    ],
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Singaporean Centrepiece."
+    },
+    "slug": "ah-girl"
+  },
+  {
+    "id": 157,
+    "title": "Ashes",
+    "programme": "Centrepiece",
+    "directors": "Diego Luna",
+    "countries": [
+      "Mexico",
+      "Spain"
+    ],
+    "languages": [
+      "Catalan",
+      "English",
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Diego Luna directing."
+    },
+    "slug": "ashes"
+  },
+  {
+    "id": 158,
+    "title": "Babies",
+    "programme": "Gala Presentations",
+    "directors": "Lauren Miller Rogen",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "US comedy."
+    },
+    "slug": "babies"
+  },
+  {
+    "id": 159,
+    "title": "Ben'Imana",
+    "programme": "Centrepiece",
+    "directors": "Marie-Clémentine Dusabejambo",
+    "countries": [
+      "Rwanda",
+      "Gabon",
+      "France",
+      "Norway"
+    ],
+    "languages": [
+      "Kinyarwanda"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Rwandan drama."
+    },
+    "slug": "ben-imana"
+  },
+  {
+    "id": 160,
+    "title": "Congo Boy",
+    "programme": "Centrepiece",
+    "directors": "Rafiki Fariala",
+    "countries": [
+      "Central African Republic",
+      "France",
+      "Democratic Republic of Congo",
+      "Italy"
+    ],
+    "languages": [
+      "Sango",
+      "French",
+      "Lingala",
+      "Swahili"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Central African Republic, docufiction feel."
+    },
+    "slug": "congo-boy"
+  },
+  {
+    "id": 161,
+    "title": "Eklipse",
+    "programme": "Centrepiece",
+    "directors": "Manuel Wetscher",
+    "countries": [
+      "Austria",
+      "Italy"
+    ],
+    "languages": [
+      "German"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Austrian Centrepiece."
+    },
+    "slug": "eklipse"
+  },
+  {
+    "id": 162,
+    "title": "Elephants in the Fog",
+    "programme": "Centrepiece",
+    "directors": "Abinash Bikram Shah",
+    "countries": [
+      "Nepal",
+      "France",
+      "Germany",
+      "Brazil",
+      "Norway"
+    ],
+    "languages": [
+      "Nepali"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Nepali drama."
+    },
+    "slug": "elephants-in-the-fog"
+  },
+  {
+    "id": 163,
+    "title": "Evil Genius",
+    "programme": "Gala Presentations",
+    "directors": "Courteney Cox",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Courteney Cox directing a comedy."
+    },
+    "slug": "evil-genius"
+  },
+  {
+    "id": 164,
+    "title": "Four Seasons in Java",
+    "programme": "Centrepiece",
+    "directors": "Kamila Andini",
+    "countries": [
+      "Indonesia",
+      "France",
+      "Netherlands",
+      "Norway",
+      "Poland",
+      "Saudi Arabia",
+      "Singapore"
+    ],
+    "languages": [
+      "Indonesian",
+      "Javanese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Kamila Andini. Lyrical Indonesian — gorgeous but unhurried."
+    },
+    "slug": "four-seasons-in-java"
+  },
+  {
+    "id": 165,
+    "title": "Furies",
+    "programme": "Centrepiece",
+    "directors": "Rami Kodeih",
+    "countries": [
+      "Lebanon",
+      "Brazil"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Lebanese Centrepiece."
+    },
+    "slug": "furies"
+  },
+  {
+    "id": 166,
+    "title": "Future Tense",
+    "programme": "Centrepiece",
+    "directors": "Jenna Cato Bass",
+    "countries": [
+      "South Africa",
+      "Australia"
+    ],
+    "languages": [
+      "English",
+      "Xhosa",
+      "Afrikaans",
+      "Dutch"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Jenna Cato Bass, South Africa. Inventive."
+    },
+    "slug": "future-tense"
+  },
+  {
+    "id": 167,
+    "title": "Girl Group",
+    "programme": "Gala Presentations",
+    "directors": "Rebel Wilson",
+    "countries": [
+      "United States of America",
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Rebel Wilson comedy. Broad."
+    },
+    "slug": "girl-group"
+  },
+  {
+    "id": 168,
+    "title": "God Bless You, Mr Kopu",
+    "programme": "Centrepiece",
+    "directors": "Alex Liu",
+    "countries": [
+      "New Zealand",
+      "Australia"
+    ],
+    "languages": [
+      "English",
+      "Tongan"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "NZ/Tongan Centrepiece."
+    },
+    "slug": "god-bless-you-mr-kopu"
+  },
+  {
+    "id": 169,
+    "title": "Ha-Chan, Shake Your Booty!",
+    "programme": "Centrepiece",
+    "directors": "Josef Kubota Wladyka",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English",
+      "Japanese",
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Energetic US/Japanese Centrepiece."
+    },
+    "slug": "ha-chan-shake-your-booty"
+  },
+  {
+    "id": 170,
+    "title": "Iron Boy",
+    "programme": "Centrepiece",
+    "directors": "Louis Clichy",
+    "countries": [
+      "France",
+      "Belgium"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "French animation, family-leaning."
+    },
+    "slug": "iron-boy"
+  },
+  {
+    "id": 171,
+    "title": "Ken Russell's The Devils",
+    "programme": "TIFF Classics",
+    "directors": "Ken Russell",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 44,
+      "reason": "The most notorious censored film ever made, on a big screen. Not your usual — but nobody regrets seeing it."
+    },
+    "slug": "ken-russells-the-devils"
+  },
+  {
+    "id": 172,
+    "title": "Kissed",
+    "programme": "TIFF Classics",
+    "directors": "Lynne Stopkewich",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 44,
+      "reason": "Canadian cult classic about a necrophiliac mortician. Genuinely transgressive, 90 minutes."
+    },
+    "slug": "kissed"
+  },
+  {
+    "id": 173,
+    "title": "L'AUTRE",
+    "programme": "Centrepiece",
+    "directors": "Alexandre Franchi",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Québécois Centrepiece."
+    },
+    "slug": "lautre"
+  },
+  {
+    "id": 174,
+    "title": "La Gradiva",
+    "programme": "Centrepiece",
+    "directors": "Marine Atlan",
+    "countries": [
+      "France",
+      "Italy"
+    ],
+    "languages": [
+      "French",
+      "Italian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "French arthouse, formally arty."
+    },
+    "slug": "la-gradiva"
+  },
+  {
+    "id": 175,
+    "title": "Light Pillar",
+    "programme": "Centrepiece",
+    "directors": "Xu Zao",
+    "countries": [
+      "China"
+    ],
+    "languages": [
+      "Chinese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Chinese Centrepiece."
+    },
+    "slug": "light-pillar"
+  },
+  {
+    "id": 176,
+    "title": "Long Long Night",
+    "programme": "Centrepiece",
+    "directors": "Kyu Bock Youm",
+    "countries": [
+      "South Korea"
+    ],
+    "languages": [
+      "Korean"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Korean Centrepiece."
+    },
+    "slug": "long-long-night"
+  },
+  {
+    "id": 177,
+    "title": "Love is the monster",
+    "programme": "Centrepiece",
+    "directors": "Neto Villalobos Brenes",
+    "countries": [
+      "Costa Rica",
+      "Peru",
+      "Panama",
+      "Chile",
+      "Mexico"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Costa Rican Centrepiece."
+    },
+    "slug": "love-is-the-monster"
+  },
+  {
+    "id": 178,
+    "title": "Muyi",
+    "programme": "Centrepiece",
+    "directors": "Julien Chheng",
+    "countries": [
+      "France"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "French animation."
+    },
+    "slug": "muyi"
+  },
+  {
+    "id": 179,
+    "title": "Onwards and Sideways",
+    "programme": "Gala Presentations",
+    "directors": "John Madden",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "John Madden. Comfortable British crowd-pleaser."
+    },
+    "slug": "onwards-and-sideways"
+  },
+  {
+    "id": 180,
+    "title": "Our Loves",
+    "programme": "Centrepiece",
+    "directors": "Avi Nesher",
+    "countries": [
+      "Israel"
+    ],
+    "languages": [
+      "Hebrew",
+      "Arabic"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Avi Nesher, Israel."
+    },
+    "slug": "our-loves"
+  },
+  {
+    "id": 181,
+    "title": "Pretenders",
+    "programme": "Gala Presentations",
+    "directors": "Joss Crowley",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "UK Gala, unknown quantity."
+    },
+    "slug": "pretenders"
+  },
+  {
+    "id": 182,
+    "title": "Soumsoum, The Night of the Stars",
+    "programme": "Centrepiece",
+    "directors": "Mahamat-Saleh Haroun",
+    "countries": [
+      "Chad",
+      "France"
+    ],
+    "languages": [
+      "Arabic",
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Mahamat-Saleh Haroun, Chad. Measured but rich."
+    },
+    "slug": "soumsoum-the-night-of-the-stars"
+  },
+  {
+    "id": 183,
+    "title": "The Difficult Bride",
+    "programme": "Centrepiece",
+    "directors": "Rubaiyat Hossain",
+    "countries": [
+      "France",
+      "Bangladesh",
+      "Germany",
+      "Norway",
+      "Portugal"
+    ],
+    "languages": [
+      "Bengali",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Rubaiyat Hossain, Bangladesh."
+    },
+    "slug": "the-difficult-bride"
+  },
+  {
+    "id": 184,
+    "title": "The Dreamed Adventure",
+    "programme": "Centrepiece",
+    "directors": "Valeska Grisebach",
+    "countries": [
+      "Germany",
+      "France",
+      "Bulgaria",
+      "Austria"
+    ],
+    "languages": [
+      "Bulgarian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Valeska Grisebach (Western). Naturalistic and very slow-burning."
+    },
+    "slug": "the-dreamed-adventure"
+  },
+  {
+    "id": 185,
+    "title": "The Life and Deaths of Wilson Shedd",
+    "programme": "Gala Presentations",
+    "directors": "Tim Blake Nelson",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Tim Blake Nelson. Quirky Americana."
+    },
+    "slug": "the-life-and-deaths-of-wilson-shedd"
+  },
+  {
+    "id": 186,
+    "title": "The Only Living Pickpocket in New York",
+    "programme": "Gala Presentations",
+    "directors": "Noah Segan",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Noah Segan indie crime comedy."
+    },
+    "slug": "the-only-living-pickpocket-in-new-york"
+  },
+  {
+    "id": 187,
+    "title": "The Violinist",
+    "programme": "Centrepiece",
+    "directors": "Ervin Han, Raúl García",
+    "countries": [
+      "Singapore",
+      "Spain",
+      "Italy"
+    ],
+    "languages": [
+      "English",
+      "Japanese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Animated Singapore/Spain co-production."
+    },
+    "slug": "the-violinist"
+  },
+  {
+    "id": 188,
+    "title": "The bovine with the curved horns",
+    "programme": "Centrepiece",
+    "directors": "Omar E. Ospina Giraldo",
+    "countries": [
+      "Colombia"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Colombian Centrepiece."
+    },
+    "slug": "the-bovine-with-the-curved-horns"
+  },
+  {
+    "id": 189,
+    "title": "Toy Gun Bandit",
+    "programme": "Centrepiece",
+    "directors": "Rémi St-Michel",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Québécois comedy."
+    },
+    "slug": "toy-gun-bandit"
+  },
+  {
+    "id": 190,
+    "title": "Up Against It",
+    "programme": "Gala Presentations",
+    "directors": "Trudie Styler",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Trudie Styler, UK."
+    },
+    "slug": "up-against-it"
+  },
+  {
+    "id": 191,
+    "title": "We Are All Strangers",
+    "programme": "Centrepiece",
+    "directors": "Anthony Chen",
+    "countries": [
+      "Singapore"
+    ],
+    "languages": [
+      "Mandarin",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Anthony Chen. Good, but restrained."
+    },
+    "slug": "we-are-all-strangers"
+  },
+  {
+    "id": 192,
+    "title": "Where the River Begins",
+    "programme": "Centrepiece",
+    "directors": "Juan Andrés Arango",
+    "countries": [
+      "Canada",
+      "Colombia",
+      "Norway"
+    ],
+    "languages": [
+      "Spanish",
+      "Emberá"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 44,
+      "reason": "Emberá-language, Canada/Colombia."
+    },
+    "slug": "where-the-river-begins"
+  },
+  {
+    "id": 193,
+    "title": "Ancestors",
+    "programme": "Discovery",
+    "directors": "David Turpin",
+    "countries": [
+      "Ireland",
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 43,
+      "reason": "Irish horror-adjacent Discovery title."
+    },
+    "slug": "ancestors"
+  },
+  {
+    "id": 194,
+    "title": "Magazine",
+    "programme": "Discovery",
+    "directors": "Alexandra Pechman",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 43,
+      "reason": "US Discovery title."
+    },
+    "slug": "magazine"
+  },
+  {
+    "id": 195,
+    "title": "Masc",
+    "programme": "Platform",
+    "directors": "Bertil Nilsson",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 43,
+      "reason": "Doc-essay on masculinity and the queer body."
+    },
+    "slug": "masc"
+  },
+  {
+    "id": 196,
+    "title": "Purgatory",
+    "programme": "Discovery",
+    "directors": "Lindsay Lanzillotta",
+    "countries": [
+      "Canada",
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 43,
+      "reason": "Canadian/US Discovery title."
+    },
+    "slug": "purgatory"
+  },
+  {
+    "id": 197,
+    "title": "Salvation",
+    "programme": "Discovery",
+    "directors": "Tom Nicoll",
+    "countries": [
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 43,
+      "reason": "UK Discovery title."
+    },
+    "slug": "salvation"
+  },
+  {
+    "id": 198,
+    "title": "Voices",
+    "programme": "Discovery",
+    "directors": "Deanté Gray",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 43,
+      "reason": "US Discovery title."
+    },
+    "slug": "voices"
+  },
+  {
+    "id": 199,
+    "title": "Back in Black",
+    "programme": "Centrepiece",
+    "directors": "Ron Murphy",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Canadian Centrepiece."
+    },
+    "slug": "back-in-black"
+  },
+  {
+    "id": 200,
+    "title": "How We Stand",
+    "programme": "Centrepiece",
+    "directors": "Marie Clements",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Marie Clements, Indigenous Canadian."
+    },
+    "slug": "how-we-stand"
+  },
+  {
+    "id": 201,
+    "title": "Lemonade",
+    "programme": "Centrepiece",
+    "directors": "Kim Bartley",
+    "countries": [
+      "Ireland",
+      "United Kingdom"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Irish Centrepiece."
+    },
+    "slug": "lemonade"
+  },
+  {
+    "id": 202,
+    "title": "Neverman",
+    "programme": "Centrepiece",
+    "directors": "Rodrigo Barriuso",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Rodrigo Barriuso, Canada."
+    },
+    "slug": "neverman"
+  },
+  {
+    "id": 203,
+    "title": "Smudge the Blades",
+    "programme": "Centrepiece",
+    "directors": "Cody Lightning",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Cody Lightning, comedic Indigenous Canadian."
+    },
+    "slug": "smudge-the-blades"
+  },
+  {
+    "id": 204,
+    "title": "Sunburn",
+    "programme": "Centrepiece",
+    "directors": "Serville Poblete",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Canadian Centrepiece."
+    },
+    "slug": "sunburn"
+  },
+  {
+    "id": 205,
+    "title": "Tangles",
+    "programme": "Centrepiece",
+    "directors": "Leah Nelson",
+    "countries": [
+      "Canada",
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Canadian/US Centrepiece."
+    },
+    "slug": "tangles"
+  },
+  {
+    "id": 206,
+    "title": "The Betrayers",
+    "programme": "Centrepiece",
+    "directors": "David Bezmozgis",
+    "countries": [
+      "Canada",
+      "Ukraine"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Bezmozgis adapting his own novel, Canada/Ukraine."
+    },
+    "slug": "the-betrayers"
+  },
+  {
+    "id": 207,
+    "title": "The Surgeon",
+    "programme": "Centrepiece",
+    "directors": "Roshan Sethi",
+    "countries": [
+      "Ireland"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Roshan Sethi, Ireland."
+    },
+    "slug": "the-surgeon"
+  },
+  {
+    "id": 208,
+    "title": "Trash Mountain",
+    "programme": "Centrepiece",
+    "directors": "Kris Rey",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 42,
+      "reason": "Kris Rey US indie comedy."
+    },
+    "slug": "trash-mountain"
+  },
+  {
+    "id": 209,
+    "title": "Alice",
+    "programme": "Primetime",
+    "directors": "Virginie Verrier, Guillaume Lonergan",
+    "countries": [
+      "France",
+      "Canada"
+    ],
+    "languages": [
+      "French",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 41,
+      "reason": "French-Canadian Primetime series."
+    },
+    "slug": "alice"
+  },
+  {
+    "id": 210,
+    "title": "Blindspot Berlin",
+    "programme": "Primetime",
+    "directors": "David Nawrath",
+    "countries": [
+      "Germany"
+    ],
+    "languages": [
+      "German",
+      "Arabic",
+      "Turkish",
+      "Polish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 41,
+      "reason": "German crime series."
+    },
+    "slug": "blindspot-berlin"
+  },
+  {
+    "id": 211,
+    "title": "Oxygen Masks Will (Not) Drop Automatically",
+    "programme": "Primetime",
+    "directors": "Marcelo Gomes, Carol Minêm",
+    "countries": [
+      "Brazil"
+    ],
+    "languages": [
+      "Portuguese"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 41,
+      "reason": "Brazilian Primetime series."
+    },
+    "slug": "oxygen-masks-will-not-drop-automatically"
+  },
+  {
+    "id": 212,
+    "title": "YAGA",
+    "programme": "Primetime",
+    "directors": "Rachel Talalay, David Frazee",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English",
+      "Ukrainian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 41,
+      "reason": "Baba Yaga genre series, Canada/Ukrainian."
+    },
+    "slug": "yaga"
+  },
+  {
+    "id": 213,
+    "title": "American Hostage",
+    "programme": "Primetime",
+    "directors": "Adam Arkin",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 39,
+      "reason": "US Primetime series."
+    },
+    "slug": "american-hostage"
+  },
+  {
+    "id": 214,
+    "title": "Below",
+    "programme": "Primetime",
+    "directors": "Jamie Childs",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 39,
+      "reason": "Canadian genre series."
+    },
+    "slug": "below"
+  },
+  {
+    "id": 215,
+    "title": "Crystal Lake",
+    "programme": "Primetime",
+    "directors": "",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 39,
+      "reason": "The Friday the 13th series. Genre, but it's TV."
+    },
+    "slug": "crystal-lake"
+  },
+  {
+    "id": 216,
+    "title": "Slow Horses",
+    "programme": "Primetime",
+    "directors": "Adam Randall",
+    "countries": [
+      "United Kingdom",
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "maybe",
+      "score": 39,
+      "reason": "Slow Horses episodes on a big screen. One public screening only."
+    },
+    "slug": "slow-horses"
+  },
+  {
+    "id": 217,
+    "title": "The Diary of a Chambermaid",
+    "programme": "Wavelengths",
+    "directors": "Radu Jude",
+    "countries": [
+      "France",
+      "Romania"
+    ],
+    "languages": [
+      "French",
+      "Romanian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 30,
+      "reason": "Radu Jude is filed under Wavelengths but he's crude, funny and confrontational — the opposite of boring."
+    },
+    "slug": "the-diary-of-a-chambermaid"
+  },
+  {
+    "id": 218,
+    "title": "Once Upon a Time in Harlem",
+    "programme": "Wavelengths",
+    "directors": "William Greaves, David Greaves",
+    "countries": [
+      "United States of America"
+    ],
+    "languages": [
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "wild",
+      "score": 28,
+      "reason": "Unfinished William Greaves project. Archival and loose, but historically real."
+    },
+    "slug": "once-upon-a-time-in-harlem"
+  },
+  {
+    "id": 219,
+    "title": "Growth of the Soil",
+    "programme": "Special Presentations",
+    "directors": "Hans Petter Moland",
+    "countries": [
+      "Norway"
+    ],
+    "languages": [
+      "Norwegian"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "no",
+      "note": "Prefer not slow",
+      "why": "Adaptation of Knut Hamsun's Nobel-winning novel -- slow literary period drama"
+    },
+    "legacy": {
+      "verdict": "no",
+      "score": 18,
+      "reason": "Your pick. Slow literary period drama — you said no."
+    },
+    "slug": "growth-of-the-soil"
+  },
+  {
+    "id": 220,
+    "title": "Making Waves With... Hudson Williams",
+    "programme": "In Conversation With...",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": true,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 9,
+      "reason": "Emerging-talent talk."
+    },
+    "slug": "making-waves-with-hudson-williams"
+  },
+  {
+    "id": 221,
+    "title": "Pelechian Project",
+    "programme": "TIFF Classics",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 8,
+      "reason": "Artavazd Pelechian montage. Pure formal experiment."
+    },
+    "slug": "pelechian-project"
+  },
+  {
+    "id": 222,
+    "title": "In Conversation With... Lee Min-ho",
+    "programme": "In Conversation With...",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 6,
+      "reason": "Fan-event talk, not a film."
+    },
+    "slug": "in-conversation-with-lee-min-ho"
+  },
+  {
+    "id": 223,
+    "title": "In Conversation With... Rachel Morrison",
+    "programme": "In Conversation With...",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 6,
+      "reason": "Industry craft talk."
+    },
+    "slug": "in-conversation-with-rachel-morrison"
+  },
+  {
+    "id": 224,
+    "title": "At Night",
+    "programme": "Wavelengths",
+    "directors": "Beatrice Gibson",
+    "countries": [
+      "United Kingdom",
+      "France"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "Bambara",
+      "Tibetan"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Wavelengths. Experimental, non-narrative — the category you rejected."
+    },
+    "slug": "at-night"
+  },
+  {
+    "id": 225,
+    "title": "Double Freedom",
+    "programme": "Wavelengths",
+    "directors": "Lisandro Alonso",
+    "countries": [
+      "Chile",
+      "Argentina",
+      "Luxembourg",
+      "Germany",
+      "United Kingdom"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": {
+      "reaction": "no",
+      "note": "slow and boring looking",
+      "why": "Lisandro Alonso -- slow, formally experimental, minimal dialogue"
+    },
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Your pick. Slow, formally experimental — you said no."
+    },
+    "slug": "double-freedom"
+  },
+  {
+    "id": 226,
+    "title": "Everything Else is Noise",
+    "programme": "Wavelengths",
+    "directors": "Nicolás Pereda",
+    "countries": [
+      "Germany",
+      "Canada",
+      "Mexico"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Wavelengths. Nicolás Pereda's deadpan minimalism."
+    },
+    "slug": "everything-else-is-noise"
+  },
+  {
+    "id": 227,
+    "title": "Life of Jorge Luis Borges",
+    "programme": "Wavelengths",
+    "directors": "Mariano Llinás",
+    "countries": [
+      "Argentina"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Wavelengths. Mariano Llinás — brilliant, and enormously long."
+    },
+    "slug": "life-of-jorge-luis-borges"
+  },
+  {
+    "id": 228,
+    "title": "London",
+    "programme": "Wavelengths",
+    "directors": "Sebastian Brameshuber",
+    "countries": [
+      "Austria"
+    ],
+    "languages": [
+      "German",
+      "English",
+      "Romanian"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Wavelengths. Slow observational essay."
+    },
+    "slug": "london"
+  },
+  {
+    "id": 229,
+    "title": "My Wife Cries",
+    "programme": "Wavelengths",
+    "directors": "Angela Schanelec",
+    "countries": [
+      "Germany",
+      "France"
+    ],
+    "languages": [
+      "German"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Wavelengths. Angela Schanelec is the definition of slow cinema."
+    },
+    "slug": "my-wife-cries"
+  },
+  {
+    "id": 230,
+    "title": "Nobody's Violence",
+    "programme": "Wavelengths",
+    "directors": "Denis Côté",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "French"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Wavelengths. Denis Côté in experimental mode."
+    },
+    "slug": "nobodys-violence"
+  },
+  {
+    "id": 231,
+    "title": "REDEFINED | Short Film Showcase",
+    "programme": "TIFF Next Wave Selects",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Youth shorts showcase."
+    },
+    "slug": "redefined-short-film-showcase"
+  },
+  {
+    "id": 232,
+    "title": "Short Cuts 2026 / Strange Cuts",
+    "programme": "Short Cuts",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Shorts programme."
+    },
+    "slug": "short-cuts-2026-strange-cuts",
+    "noNotePublished": true
+  },
+  {
+    "id": 233,
+    "title": "Short Cuts 2026 Programme 01",
+    "programme": "Short Cuts",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Shorts programme."
+    },
+    "slug": "short-cuts-2026-programme-01",
+    "noNotePublished": true
+  },
+  {
+    "id": 234,
+    "title": "Short Cuts 2026 Programme 02",
+    "programme": "Short Cuts",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Shorts programme."
+    },
+    "slug": "short-cuts-2026-programme-02",
+    "noNotePublished": true
+  },
+  {
+    "id": 235,
+    "title": "Short Cuts 2026 Programme 03",
+    "programme": "Short Cuts",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Shorts programme."
+    },
+    "slug": "short-cuts-2026-programme-03",
+    "noNotePublished": true
+  },
+  {
+    "id": 236,
+    "title": "Short Cuts 2026 Programme 04",
+    "programme": "Short Cuts",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Shorts programme."
+    },
+    "slug": "short-cuts-2026-programme-04",
+    "noNotePublished": true
+  },
+  {
+    "id": 237,
+    "title": "Short Cuts 2026 Programme 05",
+    "programme": "Short Cuts",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Shorts programme."
+    },
+    "slug": "short-cuts-2026-programme-05",
+    "noNotePublished": true
+  },
+  {
+    "id": 238,
+    "title": "Short Cuts 2026 Programme 06",
+    "programme": "Short Cuts",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Shorts programme."
+    },
+    "slug": "short-cuts-2026-programme-06",
+    "noNotePublished": true
+  },
+  {
+    "id": 239,
+    "title": "The Black Box is Orange",
+    "programme": "Wavelengths",
+    "directors": "Yuula Benivolski",
+    "countries": [
+      "Canada"
+    ],
+    "languages": [
+      "Arabic",
+      "English",
+      "Hebrew"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Wavelengths. Essay film."
+    },
+    "slug": "the-black-box-is-orange"
+  },
+  {
+    "id": 240,
+    "title": "The Remotes",
+    "programme": "Wavelengths",
+    "directors": "John Torres",
+    "countries": [
+      "Philippines"
+    ],
+    "languages": [
+      "Tagalog",
+      "English"
+    ],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Wavelengths. John Torres, elliptical and slow."
+    },
+    "slug": "the-remotes"
+  },
+  {
+    "id": 241,
+    "title": "Wavelengths 1: House and Home",
+    "programme": "Wavelengths",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Experimental shorts programme."
+    },
+    "slug": "wavelengths-1-house-and-home"
+  },
+  {
+    "id": 242,
+    "title": "Wavelengths 2: This Suffocating Now",
+    "programme": "Wavelengths",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Experimental shorts programme."
+    },
+    "slug": "wavelengths-2-this-suffocating-now"
+  },
+  {
+    "id": 243,
+    "title": "Wavelengths 3: Time and Tide",
+    "programme": "Wavelengths",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Experimental shorts programme."
+    },
+    "slug": "wavelengths-3-time-and-tide"
+  },
+  {
+    "id": 244,
+    "title": "Wavelengths: Anoushahpour/Aljafari",
+    "programme": "Wavelengths",
+    "directors": "",
+    "countries": [],
+    "languages": [],
+    "premium": false,
+    "probe": null,
+    "legacy": {
+      "verdict": "no",
+      "score": 0,
+      "reason": "Experimental shorts programme."
+    },
+    "slug": "wavelengths-anoushahpour-aljafari"
+  }
+]

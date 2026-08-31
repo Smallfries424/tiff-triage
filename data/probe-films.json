@@ -1,0 +1,94 @@
+{
+  "_doc": "The taste probe. Established, widely-seen films chosen so a reaction to each reveals something a festival premiere never could. Each film carries loadings on the axes that actually vary across a festival lineup; a user's reactions are combined into a taste vector, and the 244 lineup films are scored against it. Films are resolved to TMDB at build time by title + year, never by hardcoded id.",
+
+  "axes": {
+    "pace": "-1 contemplative and slow, +1 propulsive and kinetic",
+    "form": "-1 conventional narrative, +1 formally experimental or non-narrative",
+    "genre": "0-1 heightened genre stylization (horror, action, thriller violence)",
+    "weight": "0-1 emotional heaviness and bleakness",
+    "comedy": "0-1 comic register, weighted toward absurdist and deadpan",
+    "nonfiction": "0-1 documentary",
+    "intl": "0-1 non-English and subtitled",
+    "duration": "0-1 demands endurance (roughly 150 min and up)"
+  },
+
+  "_reactions": "love +2, like +1, meh 0, dislike -1, and a mandatory 'haven't seen' that contributes nothing. Several of these are canonical rather than universally watched, which is fine precisely because skipping is free.",
+
+  "films": [
+    {
+      "title": "Parasite", "year": 2019,
+      "axes": { "pace": 0.4, "form": 0.1, "genre": 0.6, "weight": 0.6, "comedy": 0.4, "nonfiction": 0, "intl": 1, "duration": 0.2 },
+      "probes": "Whether subtitles are a barrier at all. The lowest-friction international pick in the set, so a 'no' here is a strong signal."
+    },
+    {
+      "title": "Mad Max: Fury Road", "year": 2015,
+      "axes": { "pace": 1, "form": 0.3, "genre": 1, "weight": 0.2, "comedy": 0.1, "nonfiction": 0, "intl": 0, "duration": 0 },
+      "probes": "Appetite for pure kinetic craft with almost no dialogue. Anchors the propulsive end of the pace axis."
+    },
+    {
+      "title": "The Tree of Life", "year": 2011,
+      "axes": { "pace": -1, "form": 1, "genre": 0, "weight": 0.7, "comedy": 0, "nonfiction": 0, "intl": 0, "duration": 0.6 },
+      "probes": "The single best discriminator for formal experimentation. People who love this will sit through Wavelengths; people who hate it should never be sent there."
+    },
+    {
+      "title": "Everything Everywhere All at Once", "year": 2022,
+      "axes": { "pace": 0.9, "form": 0.6, "genre": 0.7, "weight": 0.5, "comedy": 1, "nonfiction": 0, "intl": 0.3, "duration": 0.3 },
+      "probes": "Absurdist maximalism and tonal whiplash. Separates people who want a film to commit to one register from people who want it to try everything."
+    },
+    {
+      "title": "Drive My Car", "year": 2021,
+      "axes": { "pace": -1, "form": 0.3, "genre": 0, "weight": 0.8, "comedy": 0, "nonfiction": 0, "intl": 1, "duration": 1 },
+      "probes": "Three hours, quiet, subtitled. Loads patience, runtime tolerance and international appetite at once, which makes it the most informative single film here."
+    },
+    {
+      "title": "Hereditary", "year": 2018,
+      "axes": { "pace": 0.3, "form": 0.3, "genre": 1, "weight": 0.9, "comedy": 0, "nonfiction": 0, "intl": 0, "duration": 0.3 },
+      "probes": "Horror appetite specifically at the dread-and-grief end rather than the fun end. Gates Midnight Madness."
+    },
+    {
+      "title": "The Grand Budapest Hotel", "year": 2014,
+      "axes": { "pace": 0.6, "form": 0.7, "genre": 0.3, "weight": 0.3, "comedy": 0.9, "nonfiction": 0, "intl": 0.2, "duration": 0 },
+      "probes": "Stylization as pleasure rather than as difficulty — deadpan, symmetrical, artificial. Distinguishes formal play from formal rigor, which Tree of Life covers."
+    },
+    {
+      "title": "Uncut Gems", "year": 2019,
+      "axes": { "pace": 1, "form": 0.4, "genre": 0.5, "weight": 0.7, "comedy": 0.2, "nonfiction": 0, "intl": 0, "duration": 0.2 },
+      "probes": "Tolerance for abrasion and sustained anxiety. Reliably splits an audience, which is exactly what a probe film should do."
+    },
+    {
+      "title": "The Zone of Interest", "year": 2023,
+      "axes": { "pace": -0.8, "form": 0.9, "genre": 0.2, "weight": 1, "comedy": 0, "nonfiction": 0, "intl": 1, "duration": 0.2 },
+      "probes": "Formal coldness applied to unbearable material. Catches people who want rigor and people who want to be kept at a distance from feeling."
+    },
+    {
+      "title": "Free Solo", "year": 2018,
+      "axes": { "pace": 0.7, "form": 0, "genre": 0.4, "weight": 0.4, "comedy": 0.1, "nonfiction": 1, "intl": 0, "duration": 0 },
+      "probes": "Documentary at the accessible, thrilling, character-driven end."
+    },
+    {
+      "title": "The Act of Killing", "year": 2012,
+      "axes": { "pace": -0.4, "form": 1, "genre": 0.3, "weight": 1, "comedy": 0, "nonfiction": 1, "intl": 1, "duration": 0.5 },
+      "probes": "Documentary as formal and moral argument. Paired with Free Solo it splits 'docs about people doing remarkable things' from 'docs that are essays', which is the real fault line running through TIFF Docs."
+    },
+    {
+      "title": "Anatomy of a Fall", "year": 2023,
+      "axes": { "pace": -0.3, "form": 0, "genre": 0.3, "weight": 0.7, "comedy": 0, "nonfiction": 0, "intl": 0.8, "duration": 0.8 },
+      "probes": "Long, talky, naturalistic, ambiguous. Patience for dialogue rather than patience for images, which Tree of Life and Drive My Car do not distinguish."
+    },
+    {
+      "title": "Portrait of a Lady on Fire", "year": 2019,
+      "axes": { "pace": -0.8, "form": 0.2, "genre": 0, "weight": 0.6, "comedy": 0, "nonfiction": 0, "intl": 1, "duration": 0.3 },
+      "probes": "Slow, painterly, restrained period romance — a large and distinct cluster in any festival lineup that none of the other picks reaches."
+    },
+    {
+      "title": "Get Out", "year": 2017,
+      "axes": { "pace": 0.6, "form": 0.2, "genre": 0.8, "weight": 0.5, "comedy": 0.4, "nonfiction": 0, "intl": 0, "duration": 0 },
+      "probes": "Genre as social argument, in its most widely-seen form. Very high seen-rate makes it a dependable anchor when someone skips several others."
+    },
+    {
+      "title": "Aftersun", "year": 2022,
+      "axes": { "pace": -0.9, "form": 0.6, "genre": 0, "weight": 0.9, "comedy": 0.1, "nonfiction": 0, "intl": 0.2, "duration": 0 },
+      "probes": "Elliptical, plotless, quietly devastating. The 'nothing happens and it wrecked me' axis, which Discovery and Platform are full of."
+    }
+  ]
+}

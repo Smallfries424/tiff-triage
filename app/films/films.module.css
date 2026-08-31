@@ -1,0 +1,83 @@
+.loading, .count { font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin: 24px 0 12px; }
+
+.head { padding: 40px 0 24px; border-bottom: 1px solid var(--line); }
+
+.gate { margin: 80px auto; max-width: 520px; text-align: center; }
+.gateTitle { font-family: var(--serif); font-size: 30px; font-weight: 700; margin: 0 0 10px;
+  font-variation-settings: "SOFT" 40; }
+.cta { display: inline-block; margin-top: 16px; background: var(--accent); color: var(--on-accent);
+  text-decoration: none; font: 600 13.5px/1 var(--sans); padding: 12px 20px; border-radius: 8px; }
+
+.tally { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px;
+  background: var(--line); border: 1px solid var(--line); border-radius: 10px;
+  overflow: hidden; margin: 22px 0 0; }
+.tallyCell { background: var(--surface); padding: 12px 14px; }
+.tallyN { font-family: var(--mono); font-size: 24px; font-weight: 600; line-height: 1.1;
+  font-variant-numeric: tabular-nums; color: var(--vc); }
+.tallyK { font-family: var(--mono); font-size: 10.5px; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--muted); margin-top: 3px; }
+
+.bar { position: sticky; top: 0; z-index: 30; padding: 12px 0; margin-bottom: 20px;
+  background: color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.barIn { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.spacer { flex: 1 1 40px; }
+
+.list { display: flex; flex-direction: column; gap: 12px; padding-bottom: 60px; }
+
+.card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  border-left: 3px solid var(--vc); }
+.main { padding: 16px 18px 17px; min-width: 0; }
+
+.titlerow { display: flex; align-items: flex-start; gap: 10px; }
+.title { font-family: var(--serif); font-weight: 600; font-size: 21px; line-height: 1.18;
+  letter-spacing: -.01em; margin: 0; flex: 1; text-wrap: balance;
+  font-variation-settings: "SOFT" 30; }
+.title a { color: inherit; text-decoration: none; }
+.title a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.pill { margin-top: 3px; text-transform: uppercase; }
+.fit { font-family: var(--mono); font-size: 15px; font-weight: 600; color: var(--vc);
+  font-variant-numeric: tabular-nums; margin-top: 2px; }
+
+.prog { color: var(--ink-2); font-weight: 500; }
+.why { margin: 10px 0 0; color: var(--ink-2); font-size: 14.5px; max-width: 62ch; }
+.nonote { margin: 10px 0 0; padding: 9px 12px; border-radius: 8px; background: var(--surface-2);
+  border: 1px dashed var(--line-2); font-size: 13.5px; color: var(--muted); max-width: 62ch; }
+
+.drivers { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+.driverPos, .driverNeg { font: 600 10px/1 var(--mono); letter-spacing: .1em;
+  text-transform: uppercase; padding: 5px 8px; border-radius: 4px; }
+.driverPos { background: var(--accent-soft); color: var(--accent); }
+.driverNeg { background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+
+.times { border-left: 1px solid var(--line); padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.times h3 { font: 600 10px/1 var(--mono); letter-spacing: .13em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 5px; }
+.slot { display: flex; align-items: center; gap: 8px; padding: 4px 7px; border-radius: 7px;
+  font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums;
+  color: var(--ink-2); border: 1px solid transparent; }
+.prime { background: var(--accent-soft); }
+.prime .d { color: var(--accent); }
+.d { width: 46px; flex: none; color: var(--muted); }
+.t { font-weight: 600; color: var(--ink); }
+.rm { flex: 1; text-align: right; font-size: 10.5px; color: var(--muted);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.none, .more { font-size: 12px; color: var(--muted); margin: 2px 0 0; }
+
+@media (max-width: 860px) {
+  .card { grid-template-columns: 1fr; }
+  .times { border-left: none; border-top: 1px solid var(--line); }
+}
+
+/* Showtimes are buttons now: clicking one puts it in the plan. */
+.slot { width: 100%; text-align: left; cursor: pointer; background: none;
+  font-family: var(--mono); transition: background .12s, border-color .12s; }
+.slot:hover { background: var(--surface-2); border-color: var(--line); }
+.slot[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.slot[aria-pressed="true"] .d { color: var(--accent); }
+.slot[aria-pressed="true"]::after { content: "IN PLAN"; font-size: 9px; letter-spacing: .1em;
+  color: var(--accent); font-weight: 600; flex: none; }
+.planLink { color: var(--accent); }

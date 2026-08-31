@@ -1,0 +1,46 @@
+.loading { font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin: 30px 0; }
+
+.head { padding: 40px 0 26px; }
+.bad { color: var(--maybe); }
+.warn { color: var(--maybe); }
+
+.gate { margin: 80px auto; max-width: 520px; text-align: center; }
+.gateTitle { font-family: var(--serif); font-size: 30px; font-weight: 700; margin: 0 0 10px;
+  font-variation-settings: "SOFT" 40; }
+.cta { display: inline-block; margin-top: 16px; background: var(--accent); color: var(--on-accent);
+  text-decoration: none; font: 600 13.5px/1 var(--sans); padding: 12px 20px; border-radius: 8px; }
+
+.day { margin: 0 0 28px; }
+.dayHead { font-family: var(--serif); font-size: 20px; font-weight: 600; margin: 0 0 10px;
+  padding-bottom: 7px; border-bottom: 1px solid var(--line);
+  display: flex; align-items: baseline; gap: 12px; }
+.dayMeta { font: 500 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase;
+  color: var(--muted); }
+
+.item { display: grid; grid-template-columns: 116px minmax(0, 1fr) auto auto; gap: 14px;
+  align-items: center; padding: 12px 14px; margin-bottom: 7px; }
+.clash { border-color: var(--maybe); background: var(--maybe-bg); }
+.tightRow { border-color: var(--line-2); }
+
+.when { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.time { font-size: 14px; font-weight: 600; color: var(--ink); }
+.till { font-size: 11px; color: var(--muted); margin-left: 5px; }
+
+.what { min-width: 0; }
+.itemTitle { font-family: var(--serif); font-size: 17px; font-weight: 600; color: var(--ink);
+  text-decoration: none; font-variation-settings: "SOFT" 30; }
+.itemTitle:hover { text-decoration: underline; text-underline-offset: 3px; }
+.where { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin: 3px 0 0; }
+.issueBad, .issueWarn { font: 600 10.5px/1.4 var(--mono); letter-spacing: .04em; margin: 6px 0 0; }
+.issueBad { color: var(--maybe); }
+.issueWarn { color: var(--muted); }
+
+.drop { background: none; border: 1px solid var(--line-2); border-radius: 6px; color: var(--muted);
+  cursor: pointer; font: 500 11px var(--sans); padding: 5px 9px; }
+.drop:hover { color: var(--ink); border-color: var(--muted); }
+
+@media (max-width: 720px) {
+  .item { grid-template-columns: 1fr auto; gap: 6px 10px; }
+  .when { grid-column: 1 / -1; }
+}
