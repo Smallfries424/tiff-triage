@@ -173,17 +173,17 @@ export default function AccountPage() {
           <>
             <p><b>Check your email.</b></p>
             <p className={styles.muted}>
-              We sent a six-digit code to {email}. Type it in below &mdash; that works even if your
-              mail provider mangles links.
+              We sent a code to {email}. Type it in below &mdash; that works even if your mail
+              provider mangles links.
             </p>
             <form onSubmit={submitCode} className={styles.form}>
               <input
                 value={code}
-                onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 10))}
                 inputMode="numeric"
                 autoComplete="one-time-code"
-                placeholder="123456"
-                aria-label="Six-digit code"
+                placeholder="Code from the email"
+                aria-label="Code from the email"
                 className={`${styles.input} ${styles.codeInput}`}
               />
               <button className="toggle" disabled={busy || code.length < 6}>
