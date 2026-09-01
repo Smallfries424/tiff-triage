@@ -10,12 +10,13 @@ import { createShareToken, getShareToken, regenerateShareToken, revokeShareToken
 import styles from "./account.module.css";
 
 export default function AccountPage() {
-  const { user, loading, signIn, signOut, isConfigured } = useAuth();
+  const { user, loading, signIn, verifyCode, signOut, isConfigured } = useAuth();
   const { reactions, replaceAll: replaceProbe } = useProbe();
   const { keys, replaceAll: replacePlan } = usePlan();
 
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
+  const [code, setCode] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [syncNote, setSyncNote] = useState<string | null>(null);
@@ -92,6 +93,16 @@ export default function AccountPage() {
     else setSent(true);
   };
 
+  const submitCode = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
+    setError(null);
+    const { error } = await verifyCode(email.trim(), code);
+    setBusy(false);
+    if (error) setError(error.message);
+    // On success useAuth's listener flips `user`, and the page re-renders itself.
+  };
+
   return (
     <main className="wrap">
       <header className={styles.head}>
@@ -162,8 +173,32 @@ export default function AccountPage() {
           <>
             <p><b>Check your email.</b></p>
             <p className={styles.muted}>
-              We sent a sign-in link to {email}. It expires in an hour. No password needed.
+              We sent a six-digit code to {email}. Type it in below &mdash; that works even if your
+              mail provider mangles links.
             </p>
+            <form onSubmit={submitCode} className={styles.form}>
+              <input
+                value={code}
+                onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                inputMode="numeric"
+                autoComplete="one-time-code"
+                placeholder="123456"
+                aria-label="Six-digit code"
+                className={`${styles.input} ${styles.codeInput}`}
+              />
+              <button className="toggle" disabled={busy || code.length < 6}>
+                {busy ? "Checking…" : "Sign in"}
+              </button>
+            </form>
+            {error && <p className={styles.error}>{error}</p>}
+            <p className={styles.fine}>
+              The same email also contains a link, if you'd rather click that. Codes are more
+              reliable &mdash; some corporate mail scanners follow links and use them up before you
+              get there.
+            </p>
+            <button className={styles.linkish} onClick={() => { setSent(false); setCode(""); setError(null); }}>
+              Use a different email
+            </button>
           </>
         ) : (
           <>

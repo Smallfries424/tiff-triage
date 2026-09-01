@@ -30,6 +30,16 @@ export function useAuth() {
     return () => sub.subscription.unsubscribe();
   }, []);
 
+  /**
+   * Send a six-digit code rather than a magic link.
+   *
+   * Links are single-use, and corporate mail scanners (Microsoft Safe Links and
+   * friends) follow every URL they see — consuming the token before the person
+   * ever clicks. A code cannot be consumed by being looked at, needs no redirect
+   * allowlist, and works when the email is read on a different device from the
+   * one signing in. emailRedirectTo is still sent so the link in the same email
+   * keeps working for anyone who prefers it.
+   */
   const signIn = async (email: string) => {
     const supabase = createClient();
     return supabase.auth.signInWithOtp({
@@ -38,10 +48,15 @@ export function useAuth() {
     });
   };
 
+  const verifyCode = async (email: string, token: string) => {
+    const supabase = createClient();
+    return supabase.auth.verifyOtp({ email, token: token.trim(), type: "email" });
+  };
+
   const signOut = async () => {
     await createClient().auth.signOut();
     setSession(null);
   };
 
-  return { session, user: session?.user ?? null, loading, signIn, signOut, isConfigured };
+  return { session, user: session?.user ?? null, loading, signIn, verifyCode, signOut, isConfigured };
 }
