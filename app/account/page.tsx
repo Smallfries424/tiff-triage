@@ -6,6 +6,7 @@ import { useAuth } from "@/lib/useAuth";
 import { usePlan } from "@/lib/usePlan";
 import { useProbe } from "@/lib/useProbe";
 import { pushMerged } from "@/lib/sync";
+import { createShareToken, getShareToken, regenerateShareToken, revokeShareToken } from "@/lib/share";
 import styles from "./account.module.css";
 
 export default function AccountPage() {
@@ -18,6 +19,9 @@ export default function AccountPage() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [syncNote, setSyncNote] = useState<string | null>(null);
+  const [shareToken, setShareToken] = useState<string | null>(null);
+  const [shareBusy, setShareBusy] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   // On first sign-in, fold whatever is on this device into the account rather
   // than letting either side clobber the other.
@@ -43,6 +47,30 @@ export default function AccountPage() {
     // Runs on sign-in only; local edits sync individually after that.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.id]);
+
+  // Load any existing share link once signed in.
+  useEffect(() => {
+    if (!user) return;
+    getShareToken(createClient(), user.id)
+      .then(setShareToken)
+      .catch(() => {});
+  }, [user]);
+
+  const shareUrl = shareToken
+    ? `${typeof window === "undefined" ? "" : window.location.origin}/plan/shared/${shareToken}`
+    : null;
+
+  const withShare = async (fn: () => Promise<string | null>) => {
+    setShareBusy(true);
+    try {
+      setShareToken(await fn());
+      setCopied(false);
+    } catch {
+      /* leave the previous state; the button can simply be pressed again */
+    } finally {
+      setShareBusy(false);
+    }
+  };
 
   if (!isConfigured) {
     return (
@@ -82,6 +110,53 @@ export default function AccountPage() {
             <p className={styles.fine}>
               Signing out leaves your answers on this device — it doesn&rsquo;t erase them.
             </p>
+
+            <div className={styles.share}>
+              <p className="eyebrow">Share your plan</p>
+              {shareUrl ? (
+                <>
+                  <div className={styles.shareRow}>
+                    <input className={styles.shareInput} readOnly value={shareUrl}
+                      onFocus={(e) => e.currentTarget.select()} aria-label="Your share link" />
+                    <button className="toggle" onClick={() => {
+                      void navigator.clipboard?.writeText(shareUrl).then(() => setCopied(true)).catch(() => {});
+                    }}>
+                      {copied ? "Copied" : "Copy"}
+                    </button>
+                  </div>
+                  <p className={styles.fine}>
+                    Anyone with this link can see your schedule &mdash; the films and times, nothing
+                    else. They can&rsquo;t change it, and it doesn&rsquo;t show your name or your taste.
+                  </p>
+                  <div className={styles.shareRow}>
+                    <button className="toggle" disabled={shareBusy}
+                      onClick={() => void withShare(() => regenerateShareToken(createClient(), user.id))}>
+                      New link
+                    </button>
+                    <button className="toggle" disabled={shareBusy}
+                      onClick={() => void withShare(async () => {
+                        await revokeShareToken(createClient(), user.id);
+                        return null;
+                      })}>
+                      Revoke
+                    </button>
+                  </div>
+                  <p className={styles.fine}>
+                    &ldquo;New link&rdquo; stops the old one working.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className={styles.muted}>
+                    Make a read-only link to send to whoever you&rsquo;re going with.
+                  </p>
+                  <button className="toggle" disabled={shareBusy}
+                    onClick={() => void withShare(() => createShareToken(createClient(), user.id))}>
+                    {shareBusy ? "Creating…" : "Create share link"}
+                  </button>
+                </>
+              )}
+            </div>
           </>
         ) : sent ? (
           <>

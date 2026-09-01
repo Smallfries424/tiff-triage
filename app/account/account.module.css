@@ -7,3 +7,12 @@
   border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); min-width: 240px; flex: 1; }
 .error { color: var(--maybe); font-size: 13px; margin-top: 10px; }
 .fine { color: var(--muted); font-size: 12.5px; margin: 12px 0 0; }
+
+.share { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.shareRow { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
+.shareInput {
+  flex: 1; min-width: 220px;
+  font: 400 12px var(--mono);
+  padding: 9px 11px; border-radius: 8px;
+  border: 1px solid var(--line-2); background: var(--surface-2); color: var(--ink-2);
+}
