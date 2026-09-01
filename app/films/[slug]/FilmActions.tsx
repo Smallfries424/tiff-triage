@@ -10,8 +10,9 @@ import { useProbe } from "@/lib/useProbe";
 import styles from "./film.module.css";
 
 type Screening = { d: string; s: string; e: string; st: number; en: number; v: string; r: string; ev: number; wk: number };
-type Film = { id: number; slug: string; title: string; axes: AxisVector; notability: number;
-  confidence: number; screenings: Screening[] };
+type Similar = { id: number; shared: string[] };
+type Film = { id: number; slug: string; title: string; programme: string; axes: AxisVector;
+  notability: number; confidence: number; screenings: Screening[]; similar?: Similar[] };
 
 const LINEUP = lineupData as unknown as Film[];
 const PROBE_FILMS = probeData.films as { title: string; axes: AxisVector }[];
@@ -32,6 +33,17 @@ export default function FilmActions({ filmId }: { filmId: number }) {
   const { toggle, has, loaded } = usePlan();
 
   const me = LINEUP.find((f) => f.id === filmId);
+  const byId = useMemo(() => new Map(LINEUP.map((f) => [f.id, f])), []);
+
+  const scoredById = useMemo(() => {
+    if (!Object.keys(reactions).length) return new Map<number, { fit: number; verdict: string }>();
+    const { scored } = scoreLineup(
+      reactions,
+      PROBE_FILMS,
+      LINEUP.map((f) => ({ id: f.id, title: f.title, axes: f.axes, notability: f.notability, confidence: f.confidence })),
+    );
+    return new Map(scored.map((s) => [s.id, { fit: s.fit, verdict: s.verdict }]));
+  }, [reactions]);
 
   const mine = useMemo(() => {
     if (!Object.keys(reactions).length) return null;
@@ -71,6 +83,33 @@ export default function FilmActions({ filmId }: { filmId: number }) {
           </p>
         )}
       </section>
+
+      {me.similar && me.similar.length > 0 && (
+        <section className={styles.similar}>
+          <h2 className={styles.h2}>More like this</h2>
+          <ul className={styles.simList}>
+            {me.similar.map((s) => {
+              const other = byId.get(s.id);
+              if (!other) return null;
+              const verdict = mine ? scoredById.get(s.id) : null;
+              return (
+                <li key={s.id}>
+                  <Link href={`/films/${other.slug}`} className={styles.simLink}>
+                    <span className={styles.simTitle}>{other.title}</span>
+                    <span className={styles.simMeta}>
+                      {other.programme}
+                      {s.shared.length > 0 && <> · {s.shared.join(", ")}</>}
+                    </span>
+                  </Link>
+                  {verdict && (
+                    <span className={`pill v-${verdict.verdict} ${styles.simPill}`}>{verdict.fit}</span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
 
       <section className={styles.showtimes}>
         <h2 className={styles.h2}>All screenings</h2>
