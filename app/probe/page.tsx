@@ -1,20 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import probeData from "@/data/probe-films.json";
-import { AXES, tasteVector, type Axis, type Reaction } from "@/lib/scoring";
+import probeTmdb from "@/data/probe-tmdb.json";
+import { AXES, tasteVector, type Axis, type Reaction, type ReactionSource } from "@/lib/scoring";
 import { useProbe } from "@/lib/useProbe";
 import styles from "./probe.module.css";
 
-const FILMS = probeData.films as { title: string; year: number; axes: Record<Axis, number>; probes: string }[];
+const FILMS = probeData.films as { title: string; year: number; axes: Record<Axis, number> }[];
+const TMDB = probeTmdb as Record<string, { trailerKey?: string | null; poster?: string | null }>;
 
 const CHOICES: { value: Reaction; label: string }[] = [
   { value: "love", label: "Loved it" },
   { value: "like", label: "Liked it" },
   { value: "meh", label: "Meh" },
   { value: "dislike", label: "Not for me" },
-  { value: "unseen", label: "Haven't seen it" },
 ];
 
 // Plain-language readings of each pole, so the summary says something a person
@@ -32,15 +33,13 @@ const AXIS_COPY: Record<Axis, [low: string, high: string]> = {
 
 export default function ProbePage() {
   const { reactions, setReaction } = useProbe();
+  const [openTrailer, setOpenTrailer] = useState<string | null>(null);
 
-  const { taste, answered, confidence } = useMemo(
+  const { taste, answered, seen, fromTrailer, confidence } = useMemo(
     () => tasteVector(reactions, FILMS),
     [reactions],
   );
 
-  const scored = Object.values(reactions).filter((r) => r !== "unseen").length;
-
-  // Only surface axes the answers actually spoke to.
   const readings = AXES.map((axis) => ({ axis, value: taste[axis] }))
     .filter((r) => Math.abs(r.value) > 0.15)
     .sort((a, b) => Math.abs(b.value) - Math.abs(a.value));
@@ -52,48 +51,114 @@ export default function ProbePage() {
         <h1>Films you&rsquo;ve already seen</h1>
         <p className="lede">
           Nobody has seen this year&rsquo;s lineup yet &mdash; that&rsquo;s the point of a festival. So the
-          questions are about films you <b>have</b> seen. Answer honestly rather than
-          aspirationally; <b>Haven&rsquo;t seen it</b> costs nothing and is always the right answer when
-          it&rsquo;s true.
+          questions are about films you <b>have</b> seen. Haven&rsquo;t seen one? Watch the trailer and
+          go on the vibe &mdash; that counts too, just for a bit less.
         </p>
       </header>
 
       <div className={styles.progress} role="status">
         <div className={styles.bar}>
-          <div className={styles.fill} style={{ width: `${Math.min(100, (scored / 6) * 100)}%` }} />
+          <div className={styles.fill} style={{ width: `${Math.round(confidence * 100)}%` }} />
         </div>
         <span className={styles.count}>
-          {scored === 0
+          {answered === 0
             ? "Answer about six to get a useful sort"
-            : scored < 6
-              ? `${scored} answered — about ${6 - scored} more for a useful sort`
-              : `${scored} answered — enough to sort the lineup`}
+            : confidence < 1
+              ? `${answered} answered — a few more for a useful sort`
+              : `${answered} answered — enough to sort the lineup`}
         </span>
       </div>
 
       <ol className={styles.list}>
         {FILMS.map((film) => {
           const current = reactions[film.title];
+          const source: ReactionSource = current?.source ?? "seen";
+          const trailerKey = TMDB[film.title]?.trailerKey ?? null;
+          const showTrailer = openTrailer === film.title;
+
           return (
             <li key={film.title} className={`card ${styles.item} ${current ? styles.done : ""}`}>
               <div className={styles.filmhead}>
                 <h2 className={styles.title}>
                   {film.title} <span className={styles.year}>{film.year}</span>
                 </h2>
+                {current && source === "trailer" && (
+                  <span className={styles.trailerBadge}>from the trailer</span>
+                )}
               </div>
+
               <div className={styles.choices} role="group" aria-label={`Your reaction to ${film.title}`}>
                 {CHOICES.map((c) => (
                   <button
                     key={c.value}
                     type="button"
-                    className={`${styles.choice} ${c.value === "unseen" ? styles.unseen : ""}`}
-                    aria-pressed={current === c.value}
-                    onClick={() => setReaction(film.title, c.value)}
+                    className={styles.choice}
+                    aria-pressed={current?.reaction === c.value && source === "seen"}
+                    onClick={() => setReaction(film.title, c.value, "seen")}
                   >
                     {c.label}
                   </button>
                 ))}
+                <button
+                  type="button"
+                  className={`${styles.choice} ${styles.unseen}`}
+                  aria-pressed={current?.reaction === "unseen"}
+                  onClick={() => {
+                    setReaction(film.title, "unseen", "seen");
+                    if (trailerKey) setOpenTrailer(showTrailer ? null : film.title);
+                  }}
+                >
+                  Haven&rsquo;t seen it
+                </button>
               </div>
+
+              {/* Not seeing a film is the common case with canonical picks, so the
+                  trailer is offered as a way back in rather than a dead end. */}
+              {trailerKey && (current?.reaction === "unseen" || source === "trailer" || showTrailer) && (
+                <div className={styles.trailerBlock}>
+                  {!showTrailer ? (
+                    <button
+                      type="button"
+                      className={styles.trailerToggle}
+                      onClick={() => setOpenTrailer(film.title)}
+                    >
+                      ▶ Watch the trailer and judge from that
+                    </button>
+                  ) : (
+                    <>
+                      <div className={styles.trailer}>
+                        <iframe
+                          src={`https://www.youtube-nocookie.com/embed/${trailerKey}`}
+                          title={`${film.title} trailer`}
+                          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          loading="lazy"
+                        />
+                      </div>
+                      <p className={styles.trailerPrompt}>
+                        Going on the trailer alone &mdash; counts for about half as much as having
+                        seen it.
+                      </p>
+                      <div className={styles.choices} role="group" aria-label={`Trailer reaction to ${film.title}`}>
+                        {CHOICES.map((c) => (
+                          <button
+                            key={c.value}
+                            type="button"
+                            className={`${styles.choice} ${styles.trailerChoice}`}
+                            aria-pressed={current?.reaction === c.value && source === "trailer"}
+                            onClick={() => setReaction(film.title, c.value, "trailer")}
+                          >
+                            {c.label}
+                          </button>
+                        ))}
+                        <button type="button" className={styles.trailerClose} onClick={() => setOpenTrailer(null)}>
+                          Close
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
             </li>
           );
         })}
@@ -102,9 +167,7 @@ export default function ProbePage() {
       <section className={`card ${styles.summary}`} aria-live="polite">
         <p className="eyebrow">What that says about you</p>
         {readings.length === 0 ? (
-          <p className={styles.pending}>
-            Nothing yet. Answer a few and this fills in.
-          </p>
+          <p className={styles.pending}>Nothing yet. Answer a few and this fills in.</p>
         ) : (
           <>
             <ul className={styles.readings}>
@@ -119,10 +182,11 @@ export default function ProbePage() {
               ))}
             </ul>
             <p className={styles.meta}>
-              {answered} answered · confidence {Math.round(confidence * 100)}%
+              {seen} seen{fromTrailer > 0 ? ` · ${fromTrailer} from trailers` : ""} · confidence{" "}
+              {Math.round(confidence * 100)}%
               {confidence < 1 ? " — the bands stay wide until you answer a few more" : ""}
             </p>
-            {scored >= 3 && (
+            {answered >= 3 && (
               <Link href="/films" className={styles.cta}>
                 See your lineup →
               </Link>

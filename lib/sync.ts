@@ -1,7 +1,7 @@
 "use client";
 
 import type { SupabaseClient } from "@supabase/supabase-js";
-import type { Reaction } from "./scoring";
+import type { Answer, Reaction, ReactionSource } from "./scoring";
 import type { Reactions } from "./useProbe";
 import type { PlanKey } from "./usePlan";
 
@@ -17,14 +17,18 @@ import type { PlanKey } from "./usePlan";
 
 export async function pullRemote(supabase: SupabaseClient, userId: string) {
   const [{ data: probeRows, error: probeErr }, { data: planRows, error: planErr }] = await Promise.all([
-    supabase.from("probe_answers").select("film_title, reaction").eq("user_id", userId),
+    supabase.from("probe_answers").select("film_title, reaction, source").eq("user_id", userId),
     supabase.from("plan_items").select("film_id, screening_idx").eq("user_id", userId),
   ]);
   if (probeErr) throw probeErr;
   if (planErr) throw planErr;
 
   const reactions: Reactions = {};
-  for (const r of probeRows ?? []) reactions[r.film_title] = r.reaction as Reaction;
+  for (const r of probeRows ?? [])
+    reactions[r.film_title] = {
+      reaction: r.reaction as Reaction,
+      source: (r.source ?? "seen") as ReactionSource,
+    };
   const plan = (planRows ?? []).map((p) => `${p.film_id}:${p.screening_idx}` as PlanKey);
 
   return { reactions, plan };
@@ -42,10 +46,11 @@ export async function pushMerged(
   const mergedReactions: Reactions = { ...remote.reactions, ...localReactions };
   const mergedPlan = [...new Set([...remote.plan, ...localPlan])];
 
-  const probeRows = Object.entries(mergedReactions).map(([film_title, reaction]) => ({
+  const probeRows = Object.entries(mergedReactions).map(([film_title, a]) => ({
     user_id: userId,
     film_title,
-    reaction,
+    reaction: a.reaction,
+    source: a.source ?? "seen",
     updated_at: new Date().toISOString(),
   }));
 
@@ -73,16 +78,22 @@ export async function pushMerged(
 
 /** Individual writes, once signed in — cheaper than re-pushing everything. */
 export async function saveReaction(
-  supabase: SupabaseClient, userId: string, filmTitle: string, reaction: Reaction | null,
+  supabase: SupabaseClient, userId: string, filmTitle: string, answer: Answer | null,
 ) {
-  if (reaction === null) {
+  if (answer === null) {
     const { error } = await supabase
       .from("probe_answers").delete().eq("user_id", userId).eq("film_title", filmTitle);
     if (error) throw error;
     return;
   }
   const { error } = await supabase.from("probe_answers").upsert(
-    { user_id: userId, film_title: filmTitle, reaction, updated_at: new Date().toISOString() },
+    {
+      user_id: userId,
+      film_title: filmTitle,
+      reaction: answer.reaction,
+      source: answer.source ?? "seen",
+      updated_at: new Date().toISOString(),
+    },
     { onConflict: "user_id,film_title" },
   );
   if (error) throw error;

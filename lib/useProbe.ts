@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import type { Reaction } from "./scoring";
+import type { Answer, Reaction, ReactionSource } from "./scoring";
 import { createClient } from "./supabase/client";
 import { saveReaction } from "./sync";
 import { useAuth } from "./useAuth";
@@ -16,12 +16,22 @@ import { useAuth } from "./useAuth";
  */
 export const PROBE_KEY = "tiff-probe-v1";
 
-export type Reactions = Record<string, Reaction>;
+export type Reactions = Record<string, Answer>;
+
+/** Older saves stored a bare string; normalise so nobody's probe is lost. */
+const normalise = (raw: unknown): Reactions => {
+  const out: Reactions = {};
+  for (const [title, v] of Object.entries((raw ?? {}) as Record<string, unknown>)) {
+    if (typeof v === "string") out[title] = { reaction: v as Reaction, source: "seen" };
+    else if (v && typeof v === "object" && "reaction" in v) out[title] = v as Answer;
+  }
+  return out;
+};
 
 const read = (): Reactions => {
   try {
     const raw = localStorage.getItem(PROBE_KEY);
-    return raw ? (JSON.parse(raw) as Reactions) : {};
+    return raw ? normalise(JSON.parse(raw)) : {};
   } catch {
     // private window or blocked storage — an empty probe is a valid state
     return {};
@@ -50,15 +60,17 @@ export function useProbe() {
   }, [reactions, loaded]);
 
   const setReaction = useCallback(
-    (title: string, value: Reaction | null) => {
-      let next: Reaction | null = value;
+    (title: string, value: Reaction | null, source: ReactionSource = "seen") => {
+      let next: Answer | null = value === null ? null : { reaction: value, source };
       setReactions((prev) => {
-        if (value === null || prev[title] === value) {
+        const current = prev[title];
+        const same = current && current.reaction === value && (current.source ?? "seen") === source;
+        if (value === null || same) {
           next = null;
           const { [title]: _drop, ...rest } = prev;
           return rest;
         }
-        return { ...prev, [title]: value };
+        return { ...prev, [title]: { reaction: value, source } };
       });
 
       // Local state is the source of truth for the UI; the write-through is

@@ -48,7 +48,7 @@ for (const film of probe.films) {
     continue;
   }
 
-  const detail = await get(`/movie/${hit.id}`, { append_to_response: "keywords" });
+  const detail = await get(`/movie/${hit.id}`, { append_to_response: "keywords,videos" });
   out[film.title] = {
     tmdbId: hit.id,
     title: detail.title,
@@ -59,11 +59,21 @@ for (const film of probe.films) {
     voteAverage: detail.vote_average,
     originalLanguage: detail.original_language,
     poster: detail.poster_path,
+    backdrop: detail.backdrop_path,
+    // Probe films are established, so a trailer almost always exists. It lets
+    // someone who hasn't seen the film still react to its register.
+    trailerKey:
+      (detail.videos?.results ?? []).find(
+        (v) => v.site === "YouTube" && v.type === "Trailer" && v.official,
+      )?.key ??
+      (detail.videos?.results ?? []).find((v) => v.site === "YouTube" && v.type === "Trailer")?.key ??
+      (detail.videos?.results ?? []).find((v) => v.site === "YouTube")?.key ??
+      null,
   };
 
   const flag = exact ? " " : "~";
   console.log(
-    `${flag} ${detail.title} (${out[film.title].year}) — ${detail.runtime}min, ${out[film.title].genres.join("/")}, ${out[film.title].keywords.length} keywords`,
+    `${flag} ${detail.title.padEnd(34)} ${out[film.title].trailerKey ? "trailer ✓" : "NO TRAILER"}`,
   );
   await new Promise((r) => setTimeout(r, 120));
 }

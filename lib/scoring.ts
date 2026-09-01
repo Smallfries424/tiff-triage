@@ -24,6 +24,25 @@ export type AxisVector = Record<Axis, number>;
 export type Reaction = "love" | "like" | "meh" | "dislike" | "unseen";
 
 /**
+ * Where a reaction came from.
+ *
+ * "seen" means they watched the film. "trailer" means they watched two minutes
+ * of marketing and formed an impression. Both are real signal — a trailer
+ * carries tone, pace and register in a way a logline never could — but they are
+ * not equal evidence, and treating them as equal would reintroduce the exact
+ * flaw the probe redesign fixed: taste inferred from promotional material.
+ */
+export type ReactionSource = "seen" | "trailer";
+
+export interface Answer {
+  reaction: Reaction;
+  source?: ReactionSource;
+}
+
+/** A trailer impression counts, at roughly half the strength of having watched it. */
+export const TRAILER_WEIGHT = 0.5;
+
+/**
  * "meh" is deliberately 0 rather than slightly negative: it means the film did
  * not move them, which is evidence of nothing about the axes it loads on.
  * "unseen" is dropped entirely rather than scored, so skipping stays free.
@@ -55,25 +74,38 @@ const zero = (): AxisVector => Object.fromEntries(AXES.map((a) => [a, 0])) as Ax
  * more than it should.
  */
 export function tasteVector(
-  reactions: Record<string, Reaction>,
+  reactions: Record<string, Reaction | Answer>,
   probeFilms: ProbeFilm[],
-): { taste: AxisVector; answered: number; confidence: number } {
+): { taste: AxisVector; answered: number; seen: number; fromTrailer: number; confidence: number } {
   const taste = zero();
   const mass = zero();
   let answered = 0;
+  let seen = 0;
+  let fromTrailer = 0;
 
   for (const film of probeFilms) {
-    const reaction = reactions[film.title];
-    if (!reaction || !SCORED.includes(reaction)) continue;
-    answered++;
+    const raw = reactions[film.title];
+    if (!raw) continue;
 
-    const w = WEIGHT[reaction];
+    // Stored answers used to be a bare string; both shapes must keep working so
+    // an existing probe is not silently discarded.
+    const reaction: Reaction = typeof raw === "string" ? raw : raw.reaction;
+    const source: ReactionSource = typeof raw === "string" ? "seen" : (raw.source ?? "seen");
+    if (!SCORED.includes(reaction)) continue;
+
+    answered++;
+    if (source === "trailer") fromTrailer++;
+    else seen++;
+
+    const scale = source === "trailer" ? TRAILER_WEIGHT : 1;
+    const w = WEIGHT[reaction] * scale;
+
     for (const axis of AXES) {
       const loading = film.axes[axis] ?? 0;
       taste[axis] += w * loading;
       // A "meh" still tells us the axis was probed, so magnitude accumulates
       // even at weight 0 — otherwise indifference would read as a strong signal.
-      mass[axis] += Math.abs(loading) * Math.max(Math.abs(w), 0.5);
+      mass[axis] += Math.abs(loading) * Math.max(Math.abs(w), 0.5 * scale);
     }
   }
 
@@ -81,11 +113,13 @@ export function tasteVector(
     taste[axis] = mass[axis] > 0 ? taste[axis] / mass[axis] : 0;
   }
 
-  // Six of fifteen is enough to sort a lineup usefully; below that the bands
-  // widen rather than the app pretending to be sure.
-  const confidence = Math.min(1, answered / 6);
+  // Six answers is enough to sort a lineup usefully. Trailer impressions count
+  // toward that too, but at the same discount — six trailer reactions should not
+  // make the app as sure of itself as six films actually watched.
+  const effective = seen + fromTrailer * TRAILER_WEIGHT;
+  const confidence = Math.min(1, effective / 6);
 
-  return { taste, answered, confidence };
+  return { taste, answered, seen, fromTrailer, confidence };
 }
 
 export interface LineupFilm {
@@ -179,11 +213,18 @@ export function verdictFor(fit: number, bands: Bands, notability = 0): Verdict {
 }
 
 export function scoreLineup(
-  reactions: Record<string, Reaction>,
+  reactions: Record<string, Reaction | Answer>,
   probeFilms: ProbeFilm[],
   lineup: LineupFilm[],
-): { scored: Scored[]; answered: number; confidence: number; bands: Bands } {
-  const { taste, answered, confidence } = tasteVector(reactions, probeFilms);
+): {
+  scored: Scored[];
+  answered: number;
+  seen: number;
+  fromTrailer: number;
+  confidence: number;
+  bands: Bands;
+} {
+  const { taste, answered, seen, fromTrailer, confidence } = tasteVector(reactions, probeFilms);
 
   const raw = lineup.map((film) => scoreFilm(taste, film, confidence));
   const bands = computeBands(raw.map((s) => s.fit));
@@ -193,5 +234,5 @@ export function scoreLineup(
     .map((s) => ({ ...s, verdict: verdictFor(s.fit, bands, notabilityBySlug.get(s.id) ?? 0) }))
     .sort((a, b) => b.fit - a.fit);
 
-  return { scored, answered, confidence, bands };
+  return { scored, answered, seen, fromTrailer, confidence, bands };
 }
