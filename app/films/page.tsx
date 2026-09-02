@@ -56,6 +56,7 @@ export default function FilmsPage() {
   const [programme, setProgramme] = useState("");
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"fit" | "title" | "date">("fit");
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const { scored, answered, confidence } = useMemo(() => {
     const lineup = LINEUP.map((f) => ({
@@ -126,6 +127,14 @@ export default function FilmsPage() {
       return next;
     });
 
+  // How far the list has been narrowed past its default, so a collapsed bar can say
+  // that something is on without listing what. Yes-only is the default, so it does
+  // not count; sort is not a filter and does not either.
+  const narrowedBy =
+    (days.size > 0 ? 1 : 0) + (evening ? 1 : 0) + (weekend ? 1 : 0) +
+    (programme ? 1 : 0) + (query.trim() ? 1 : 0) +
+    (active.size === 1 && active.has("yes") ? 0 : 1);
+
   const toggleVerdict = (v: Verdict) =>
     setActive((prev) => {
       const next = new Set(prev);
@@ -133,6 +142,20 @@ export default function FilmsPage() {
       else next.add(v);
       return next.size ? next : new Set<Verdict>([v]);
     });
+
+  const resultCount = (
+    <>
+      {visible.length} film{visible.length === 1 ? "" : "s"}
+      {count > 0 && (
+        <>
+          {" · "}
+          <Link href="/plan" className={styles.planLink}>
+            {count} in your plan
+          </Link>
+        </>
+      )}
+    </>
+  );
 
   if (!loaded) return <main className="wrap"><p className={styles.loading}>Loading your lineup&hellip;</p></main>;
 
@@ -174,8 +197,28 @@ export default function FilmsPage() {
         </div>
       </header>
 
-      <div className={styles.bar}>
-        <div className={`wrap ${styles.barIn}`}>
+      <div className={styles.bar} data-open={filtersOpen}>
+        {/* On a phone the controls are seven wrapped rows, which is most of the
+            screen for a bar that sits above a list you are scrolling. They collapse
+            behind this summary, which keeps the two things worth watching while you
+            scroll — how many films are left, and whether a filter is on — and costs
+            one row instead of seven. Above 620px it is not rendered and the panel is
+            always open. */}
+        <div className={`wrap ${styles.summary}`}>
+          <button
+            type="button"
+            className={styles.filtersBtn}
+            aria-expanded={filtersOpen}
+            aria-controls="lineup-filters"
+            onClick={() => setFiltersOpen((v) => !v)}
+          >
+            Filters
+            {narrowedBy > 0 && <span className={styles.badge}>{narrowedBy}</span>}
+            <span aria-hidden="true" className={styles.chev}>{filtersOpen ? "\u2303" : "\u2304"}</span>
+          </button>
+          <span className={styles.summaryCount}>{resultCount}</span>
+        </div>
+        <div id="lineup-filters" className={`wrap ${styles.barIn}`}>
           <div className={styles.chips}>
             {VERDICTS.map((v) => (
               <button key={v.key} className={`chip v-${v.key}`} aria-pressed={active.has(v.key)}
@@ -223,17 +266,7 @@ export default function FilmsPage() {
       </div>
 
       <div className="wrap">
-        <p className={styles.count}>
-          {visible.length} film{visible.length === 1 ? "" : "s"}
-          {count > 0 && (
-            <>
-              {" · "}
-              <Link href="/plan" className={styles.planLink}>
-                {count} in your plan
-              </Link>
-            </>
-          )}
-        </p>
+        <p className={styles.count}>{resultCount}</p>
         <div className={styles.list}>
           {visible.map((f) => {
             const s = byId.get(f.id)!;

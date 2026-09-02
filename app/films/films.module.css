@@ -18,6 +18,20 @@
 .tallyK { font-family: var(--mono); font-size: 10.5px; letter-spacing: .13em;
   text-transform: uppercase; color: var(--muted); margin-top: 3px; }
 
+/* Collapsed-bar summary: only rendered below 620px, where the full control set is
+   seven wrapped rows. */
+.summary { display: none; align-items: center; justify-content: space-between; gap: 12px; }
+.filtersBtn { font: 600 12.5px/1 var(--sans); padding: 9px 13px; border-radius: 999px;
+  border: 1px solid var(--line-2); background: var(--surface); color: var(--ink);
+  cursor: pointer; display: inline-flex; align-items: center; gap: 7px; }
+.badge { font-family: var(--mono); font-size: 11px; font-variant-numeric: tabular-nums;
+  min-width: 17px; height: 17px; padding: 0 4px; border-radius: 999px;
+  background: var(--accent); color: var(--on-accent);
+  display: inline-flex; align-items: center; justify-content: center; }
+.chev { font-size: 13px; line-height: 1; opacity: .55; }
+.summaryCount { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); text-align: right; }
+
 .bar { position: sticky; top: 0; z-index: 30; padding: 12px 0; margin-bottom: 20px;
   background: color-mix(in srgb, var(--ground) 88%, transparent);
   backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
@@ -27,6 +41,16 @@
 /* Once the row wraps there is nothing left to push apart, and the spacer only
    strands whichever control lands on its line. */
 @media (max-width: 620px) { .spacer { display: none; } }
+
+@media (max-width: 620px) {
+  .summary { display: flex; }
+  .barIn { display: none; }
+  /* Open, the panel is still taller than some phones, so it scrolls inside itself
+     rather than pushing the list off the screen it is meant to filter. */
+  .bar[data-open="true"] .barIn { display: flex; margin-top: 10px;
+    max-height: 62vh; overflow-y: auto; overscroll-behavior: contain; }
+  .count { display: none; }
+}
 
 /* The "when" controls take a row of their own. The day strip scrolls sideways
    rather than wrapping, so a sticky bar that has to stay out of the way costs the
