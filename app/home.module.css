@@ -1,0 +1,53 @@
+/* Landing call to action.
+   One dominant action — starting the probe — with signing in kept deliberately
+   quiet beside it. Signing in is for people coming back to answers they already
+   gave; it is never a gate in front of the probe, so it must not read as the
+   other half of a choice the visitor has to make before they can begin. */
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  margin: 28px 0 0;
+}
+
+.primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--on-accent);
+  text-decoration: none;
+  font: 600 15px/1 var(--sans);
+  padding: 15px 26px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.primary:hover {
+  filter: brightness(1.08);
+}
+
+.secondary {
+  color: var(--muted);
+  font: 500 13.5px/1 var(--sans);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-2);
+  padding-bottom: 2px;
+}
+
+.secondary:hover {
+  color: var(--ink-2);
+  border-bottom-color: var(--ink-2);
+}
+
+/* The expectation-setting line under the button: how long this takes, and that
+   nothing is being asked of them first. Both are the questions someone weighs
+   before clicking, so they belong next to the click, not further down. */
+.reassure {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 54ch;
+  margin: 16px 0 0;
+}
