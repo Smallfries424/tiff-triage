@@ -16,8 +16,15 @@ import type { EmailOtpType } from "@supabase/supabase-js";
  */
 export async function GET(request: Request) {
   const url = new URL(request.url);
-  const next = url.searchParams.get("next") ?? "/films";
   const supabase = await createClient();
+
+  // Only a path on this site. Resolving against url.origin is not enough on its
+  // own: new URL("//evil.com", origin) is evil.com, and so is a leading "/\",
+  // which some parsers fold to "//". A sign-in redirect is worth the paranoia —
+  // it is exactly the hop a phishing link wants, since the victim has just been
+  // told to expect a redirect after logging in.
+  const requested = url.searchParams.get("next");
+  const next = requested && /^\/[^/\\]/.test(requested) ? requested : "/films";
 
   const fail = (reason: string) =>
     NextResponse.redirect(new URL(`/auth/failed?reason=${encodeURIComponent(reason)}`, url.origin));
