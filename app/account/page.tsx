@@ -176,6 +176,11 @@ export default function AccountPage() {
               We sent a code to {email}. Type it in below &mdash; that works even if your mail
               provider mangles links.
             </p>
+            <p className={styles.muted}>
+              <b>Not there? Check your junk or spam folder.</b> A first email from an address you
+              have never written to often lands there, and marking it &ldquo;not spam&rdquo; means
+              the next one won&rsquo;t.
+            </p>
             <form onSubmit={submitCode} className={styles.form}>
               <input
                 value={code}
@@ -206,6 +211,10 @@ export default function AccountPage() {
               You don&rsquo;t need an account to use this. Sign in only if you want your probe and
               plan on more than one device — handy when you&rsquo;re at the festival with your phone.
             </p>
+            <p className={styles.fine}>
+              We&rsquo;ll email you a six-digit code. If it doesn&rsquo;t arrive within a minute,
+              check your junk folder.
+            </p>
             <form onSubmit={submit} className={styles.form}>
               <input
                 type="email" required value={email} placeholder="you@example.com"
@@ -213,7 +222,7 @@ export default function AccountPage() {
                 className={styles.input}
               />
               <button className="toggle" disabled={busy || !email.trim()}>
-                {busy ? "Sending…" : "Send sign-in link"}
+                {busy ? "Sending…" : "Email me a code"}
               </button>
             </form>
             {error && <p className={styles.error}>{error}</p>}

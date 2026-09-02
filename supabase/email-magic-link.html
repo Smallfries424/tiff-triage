@@ -1,0 +1,121 @@
+<!--
+  Supabase auth email — Magic Link template.
+
+  Paste into Supabase → Authentication → Emails → Magic Link. Kept in the repo
+  because it is part of the sign-in flow, not a stray asset: the code below is
+  {{ .Token }}, the same value verifyOtp() checks in lib/useAuth.ts, and the link
+  is the token_hash form that /auth/callback verifies server-side. Changing either
+  half without the other breaks sign-in.
+
+  Written the way email has to be written rather than the way the app is: tables,
+  inline styles, no external fonts, no flexbox. The <style> block only carries
+  dark-mode overrides, which clients that ignore it simply don't apply — the inline
+  light styles stand on their own.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .bg { background: #0f1217 !important; }
+        .card { background: #171b22 !important; border-color: #272d37 !important; }
+        .ink { color: #e9ebef !important; }
+        .ink2 { color: #c3c8d2 !important; }
+        .muted { color: #8e96a3 !important; }
+        .rule { border-color: #272d37 !important; }
+        .codebox { background: #1d222b !important; border-color: #39414e !important; }
+        .code { color: #e9ebef !important; }
+        .link { color: #93a5d6 !important; }
+      }
+      @media (max-width: 600px) {
+        .pad { padding: 28px 22px !important; }
+        .code { font-size: 30px !important; letter-spacing: 8px !important; }
+      }
+    </style>
+  </head>
+  <body class="bg" style="margin:0;padding:0;background:#edeff3;">
+    <!-- Preheader: the grey line mail clients show beside the subject. Hidden in the body itself. -->
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;">
+      Your sign-in code for Festival Triage. It expires in an hour.
+    </div>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+           class="bg" style="background:#edeff3;">
+      <tr>
+        <td align="center" style="padding:32px 16px;">
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                 style="max-width:520px;width:100%;">
+
+            <tr>
+              <td style="padding:0 4px 14px;">
+                <span class="ink" style="font-family:Georgia,'Times New Roman',serif;font-size:17px;
+                             font-weight:700;color:#14171c;letter-spacing:-0.01em;">
+                  Festival&nbsp;Triage
+                </span>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="card pad"
+                  style="background:#ffffff;border:1px solid #d8dbe3;border-radius:12px;padding:32px 30px;">
+
+                <h1 class="ink" style="margin:0 0 6px;font-family:Georgia,'Times New Roman',serif;
+                           font-size:24px;line-height:1.25;font-weight:700;color:#14171c;">
+                  Your sign-in code
+                </h1>
+                <p class="ink2" style="margin:0 0 22px;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+                          font-size:15px;line-height:1.55;color:#3d4450;">
+                  Type this into Festival Triage to finish signing in.
+                </p>
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="codebox" align="center"
+                        style="background:#f5f6f9;border:1px solid #c3c8d3;border-radius:10px;padding:18px 12px;">
+                      <span class="code"
+                            style="font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+                                   font-size:34px;line-height:1.1;font-weight:700;letter-spacing:10px;
+                                   padding-left:10px;color:#14171c;">{{ .Token }}</span>
+                    </td>
+                  </tr>
+                </table>
+
+                <p class="muted" style="margin:14px 0 0;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+                          font-size:13px;line-height:1.5;color:#666d7a;">
+                  It expires in an hour and can only be used once.
+                </p>
+
+                <hr class="rule" style="border:0;border-top:1px solid #d8dbe3;margin:26px 0 20px;" />
+
+                <p class="muted" style="margin:0 0 4px;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+                          font-size:13px;line-height:1.6;color:#666d7a;">
+                  Or
+                  <a class="link" href="{{ .SiteURL }}/auth/callback?token_hash={{ .TokenHash }}&amp;type=magiclink"
+                     style="color:#33405f;text-decoration:underline;">sign in with this link</a>
+                  instead. The code is the more reliable of the two — some mail systems
+                  open every link they see, which uses it up before you get there.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:16px 6px 0;">
+                <p class="muted" style="margin:0;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+                          font-size:12px;line-height:1.55;color:#666d7a;">
+                  If you didn't ask to sign in, you can ignore this — nothing happens until
+                  the code is used.
+                </p>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
