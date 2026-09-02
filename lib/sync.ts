@@ -10,7 +10,7 @@ import type { PlanKey } from "./usePlan";
  *
  * The rule that matters: signing in must never destroy work. Someone can answer
  * the probe on a laptop, sign in on a phone that already has answers, and both
- * sets have to survive. So this is a union, not a replace — and for the probe,
+ * sets have to survive. So this is a union, not a replace, and for the probe,
  * where the same film may carry different answers on each device, the local one
  * wins because it is the one they just gave.
  */
@@ -76,7 +76,7 @@ export async function pushMerged(
   return { reactions: mergedReactions, plan: mergedPlan };
 }
 
-/** Individual writes, once signed in — cheaper than re-pushing everything. */
+/** Individual writes, once signed in: cheaper than re-pushing everything. */
 export async function saveReaction(
   supabase: SupabaseClient, userId: string, filmTitle: string, answer: Answer | null,
 ) {

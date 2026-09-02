@@ -89,19 +89,19 @@ for (const f of thin) {
     });
 
     if (r.synopsis.length >= 300) {
-      // The page does have a note — record it and count the scrape as wrong.
+      // The page does have a note: record it and count the scrape as wrong.
       synopses[f.slug] = { ...(synopses[f.slug] ?? {}), synopsis: r.synopsis, paragraphs: r.synopsis.split("\n\n").length, recoveredAt: new Date().toISOString() };
       verdicts.recovered.push(`${f.slug} (${r.synopsis.length}ch)`);
     } else if (r.editorialParas === 0) {
       // No prose beyond the membership boilerplate every page carries. Shorts
-      // packages and talk events use a template with no note at all — an absent
+      // packages and talk events use a template with no note at all. An absent
       // wrapper is the signal for that, not evidence the scrape failed.
       verdicts.genuinelyEmpty.push(`${f.slug} [${f.programme}]`);
     } else {
       verdicts.stillFailing.push(`${f.slug} (wrappers=${r.wrappers}, longPs=${r.anyLongP})`);
     }
   } catch (err) {
-    verdicts.stillFailing.push(`${f.slug} — ${err.message}`);
+    verdicts.stillFailing.push(`${f.slug}: ${err.message}`);
   } finally {
     await page.close().catch(() => {});
   }

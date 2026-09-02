@@ -36,7 +36,7 @@ export default function AccountPage() {
         replaceProbe(merged.reactions);
         replacePlan(merged.plan);
         setSyncNote(
-          `Synced — ${Object.keys(merged.reactions).length} answers, ${merged.plan.length} planned screenings.`,
+          `Synced: ${Object.keys(merged.reactions).length} answers, ${merged.plan.length} planned screenings.`,
         );
       } catch (e) {
         if (!cancelled) setSyncNote(`Sync failed: ${(e as Error).message}`);
@@ -119,7 +119,7 @@ export default function AccountPage() {
             {syncNote && <p className={styles.muted}>{syncNote}</p>}
             <button className="toggle" onClick={() => void signOut()}>Sign out</button>
             <p className={styles.fine}>
-              Signing out leaves your answers on this device — it doesn&rsquo;t erase them.
+              Signing out leaves your answers on this device. It doesn&rsquo;t erase them.
             </p>
 
             <div className={styles.share}>
@@ -136,7 +136,7 @@ export default function AccountPage() {
                     </button>
                   </div>
                   <p className={styles.fine}>
-                    Anyone with this link can see your schedule &mdash; the films and times, nothing
+                    Anyone with this link can see your schedule: the films and times, nothing
                     else. They can&rsquo;t change it, and it doesn&rsquo;t show your name or your taste.
                   </p>
                   <div className={styles.shareRow}>
@@ -173,7 +173,7 @@ export default function AccountPage() {
           <>
             <p><b>Check your email.</b></p>
             <p className={styles.muted}>
-              We sent a code to {email}. Type it in below &mdash; that works even if your mail
+              We sent a code to {email}. Type it in below. That works even if your mail
               provider mangles links.
             </p>
             <p className={styles.muted}>
@@ -198,7 +198,7 @@ export default function AccountPage() {
             {error && <p className={styles.error}>{error}</p>}
             <p className={styles.fine}>
               The same email also contains a link, if you'd rather click that. Codes are more
-              reliable &mdash; some corporate mail scanners follow links and use them up before you
+              reliable: some corporate mail scanners follow links and use them up before you
               get there.
             </p>
             <button className={styles.linkish} onClick={() => { setSent(false); setCode(""); setError(null); }}>
@@ -209,7 +209,7 @@ export default function AccountPage() {
           <>
             <p className={styles.muted}>
               You don&rsquo;t need an account to use this. Sign in only if you want your answers and
-              plan on more than one device — handy when you&rsquo;re at the festival with your phone.
+              plan on more than one device. Handy when you&rsquo;re at the festival with your phone.
             </p>
             <p className={styles.fine}>
               We&rsquo;ll email you a six-digit code. If it doesn&rsquo;t arrive within a minute,

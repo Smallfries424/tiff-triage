@@ -1,14 +1,14 @@
 -- Read-only plan sharing.
 --
 -- The problem: an anonymous visitor must be able to read exactly one person's
--- plan, and no one else's. RLS cannot express that on its own — the anon key is
+-- plan, and no one else's. RLS cannot express that on its own, because the anon key is
 -- public, so any policy permissive enough to let a stranger read a shared plan
 -- would let them read every plan.
 --
 -- The answer is a narrow SECURITY DEFINER function. plan_items stays fully locked
 -- down; the function is the only way in, it takes an unguessable token, and it
 -- returns nothing but film ids and screening indexes. No emails, no user ids, no
--- probe answers — nothing that identifies whose plan it is.
+-- probe answers, nothing that identifies whose plan it is.
 --
 -- Safe to re-run.
 
@@ -39,7 +39,7 @@ create policy shares_delete on public.plan_shares
 
 -- The only route a stranger has to a plan.
 --
--- security definer runs as the owner, bypassing RLS — which is exactly why the
+-- security definer runs as the owner, bypassing RLS, which is exactly why the
 -- body is kept to one join and the return type carries no identifying columns.
 -- search_path is pinned so the function cannot be redirected at a shadowed table.
 create or replace function public.shared_plan(share_token uuid)

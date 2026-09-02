@@ -8,7 +8,7 @@ for (;;) {
   const b = await client.messages.batches.retrieve(id);
   const c = b.request_counts;
   if (b.processing_status === "ended") {
-    console.log(`BATCH ENDED — succeeded ${c.succeeded}, errored ${c.errored}, expired ${c.expired}, canceled ${c.canceled}`);
+    console.log(`BATCH ENDED: succeeded ${c.succeeded}, errored ${c.errored}, expired ${c.expired}, canceled ${c.canceled}`);
     break;
   }
   console.log(`still ${b.processing_status}: processing ${c.processing}, succeeded ${c.succeeded}, errored ${c.errored}`);

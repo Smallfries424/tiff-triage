@@ -4,7 +4,7 @@
  * The original rubric asked for a sentence "quoting the note's own language where
  * possible", which made the rationales vivid and made them TIFF's writing. 237 of
  * 244 came back with quoted fragments in them, and those rationales ship to the
- * browser as the `why` line on every card — so publishing this repo would publish
+ * browser as the `why` line on every card, so publishing this repo would publish
  * TIFF's editorial prose, which is exactly what data/synopses.json is gitignored
  * to avoid.
  *
@@ -53,7 +53,7 @@ const OutputFormat = zodOutputFormat(Rewrite);
 const SYSTEM = `You rewrite one-sentence descriptions of festival films so they carry none of the source note's wording.
 
 Each sentence you are given was written by quoting a film festival's programmer's
-note. Your job is to say the same thing in different words — not to summarise it
+note. Your job is to say the same thing in different words, not to summarise it
 more, not to soften it, not to make it blander. The sentence has a job: it appears
 under a film's title and tells someone why the film was placed where it was.
 
@@ -67,7 +67,8 @@ Rules:
   substance of one, but state it as description rather than as a borrowed verdict.
 - Proper nouns stay: names of directors, films, places, festivals.
 - One sentence, under 240 characters, no trailing full stop needed if it runs long.
-- Plain words. No marketing register, no "a searing portrait of", no em-dash pile-ups.`;
+- No em dashes anywhere. Use a period, a comma, or a colon instead.
+- Plain words. No marketing register, no "a searing portrait of".`;
 
 const words = (s) =>
   s
@@ -92,6 +93,7 @@ const liftedRuns = (rewrite, note) => {
 
 const validate = (text, note) => {
   if (/["“”«»]/.test(text)) return "it still contains quotation marks";
+  if (/—/.test(text)) return "it contains an em dash, which this project never uses";
   if (text.length > 240) return `it is ${text.length} characters, over the 240 limit`;
   const lifted = liftedRuns(text, note);
   if (lifted.length) return `this run is lifted from the note verbatim: "${lifted[0]}"`;
@@ -110,7 +112,7 @@ const userContent = (slug, entry, complaint) => {
     `Film: ${film?.title ?? slug}${film?.programme ? ` [${film.programme}]` : ""}`,
     "",
     "The note it was written from:",
-    note || "(no note — work from the sentence alone)",
+    note || "(no note, work from the sentence alone)",
     "",
     "The sentence to rewrite:",
     entry.rationale,
@@ -148,12 +150,12 @@ if (process.argv.includes("--one")) {
   if (!entry) throw new Error(`no such slug: ${one}`);
   console.log(`before: ${entry.rationale}\n`);
   const r = await rewriteOne(one, entry);
-  console.log(`after:  ${r.rationale ?? `FAILED — ${r.failure}`}`);
+  console.log(`after:  ${r.rationale ?? `FAILED: ${r.failure}`}`);
   process.exit(0);
 }
 
-const targets = Object.entries(axes).filter(([, v]) => v.rationale && /["“”]/.test(v.rationale));
-console.log(`${targets.length} rationales carry quoted wording, of ${Object.keys(axes).length} total.\n`);
+const targets = Object.entries(axes).filter(([, v]) => v.rationale && /["“”—]/.test(v.rationale));
+console.log(`${targets.length} rationales need rewriting, of ${Object.keys(axes).length} total.\n`);
 
 const failures = [];
 let done = 0;

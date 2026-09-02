@@ -183,7 +183,7 @@ export default function FilmsPage() {
           Sorted against {answered} answer{answered === 1 ? "" : "s"}.{" "}
           {confidence < 1 && (
             <>
-              Still a bit uncertain &mdash; <Link href="/probe">answer a few more</Link> to sharpen it.
+              Still a bit uncertain. <Link href="/probe">Answer a few more</Link> to sharpen it.
             </>
           )}
         </p>
@@ -201,7 +201,7 @@ export default function FilmsPage() {
         {/* On a phone the controls are seven wrapped rows, which is most of the
             screen for a bar that sits above a list you are scrolling. They collapse
             behind this summary, which keeps the two things worth watching while you
-            scroll — how many films are left, and whether a filter is on — and costs
+            scroll, how many films are left and whether a filter is on, and costs
             one row instead of seven. Above 620px it is not rendered and the panel is
             always open. */}
         <div className={`wrap ${styles.summary}`}>
@@ -271,7 +271,7 @@ export default function FilmsPage() {
           {visible.map((f) => {
             const s = byId.get(f.id)!;
             // Only five showtimes fit on a card, so when a filter is on, the ones it
-            // matched lead — otherwise a film listed under "Fri Sep 11" can show five
+            // matched lead. Otherwise a film listed under "Fri Sep 11" can show five
             // dates that aren't Friday. The original index rides along because that is
             // what the plan stores; reordering without it would move the wrong slot.
             const slots = f.screenings.map((sc, i) => ({ sc, i }));
@@ -298,7 +298,7 @@ export default function FilmsPage() {
 
                   {f.noNote ? (
                     <p className={styles.nonote}>
-                      A shorts programme &mdash; TIFF publishes no note for these, so this placement is a guess.
+                      A shorts programme. TIFF publishes no note for these, so this placement is a guess.
                     </p>
                   ) : (
                     f.why && <p className={styles.why}>{f.why}</p>

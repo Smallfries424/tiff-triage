@@ -2,7 +2,7 @@
 
 **[tiff-triage.vercel.app](https://tiff-triage.vercel.app)**
 
-TIFF programmes 244 films across eleven days. Nobody has seen any of them — that is what a festival
+TIFF programmes 244 films across eleven days. Nobody has seen any of them. That is what a festival
 is. So the usual recommender trick of "films like ones you liked" has nothing to work with.
 
 This app asks about fifteen films you *have* seen, and sorts the lineup from that.
@@ -16,16 +16,16 @@ unreleased premieres, so the answers were really only reactions to loglines. The
 nothing.
 
 The fix is to probe with established films and project that taste onto the unseen lineup. Both sets
-then have to live in the same feature space — which is where the second problem appears.
+then have to live in the same feature space, which is where the second problem appears.
 
 **TMDB was the obvious source and it does not work.** Of the 244 films, 222 match a TMDB record, but
 only 115 carry keywords and 89 a trailer: more than half the lineup would have had nothing to score
-against. Its genres are also far too coarse — it files *The Tree of Life* as "Drama/Fantasy", which
+against. Its genres are also far too coarse: it files *The Tree of Life* as "Drama/Fantasy", which
 says nothing about the most formally experimental film in the probe set.
 
 **What works is TIFF's own programmer's notes.** They average 1,581 characters, name the director's
-previous films, and describe how a film actually plays — "shameless sensationalism", "dances between
-the macabre and the heartfelt" — which is the vocabulary the axes are built from. Scraped for 237 of
+previous films, and describe how a film actually plays: "shameless sensationalism", "dances between
+the macabre and the heartfelt". That is the vocabulary the axes are built from. Scraped for 237 of
 244 films; the seven exceptions are shorts packages, for which TIFF publishes no note at all.
 
 ## How the sort works
@@ -35,7 +35,7 @@ Eight axes, chosen because they are what actually varies across a festival lineu
 `pace` · `form` · `genre` · `weight` · `comedy` · `nonfiction` · `intl` · `duration`
 
 1. **Fifteen probe films** carry hand-authored loadings on those axes. They are picked to be
-   *discriminating* rather than beloved — a film everyone likes carries no information. *Drive My
+   *discriminating* rather than beloved. A film everyone likes carries no information. *Drive My
    Car* (three hours, quiet, subtitled) separates people more usefully than *The Godfather* does.
 2. **Every lineup film** is placed on the same axes by an Opus 5 pass over its programmer's note,
    with the probe films supplied as calibration anchors so both sets share one scale.
@@ -66,7 +66,7 @@ app only ever confirms what you already like, which is the opposite of what a fe
 
 Next.js 16 · TypeScript · Supabase (auth + Postgres + RLS) · Vercel
 
-The lineup is a build-time static artifact — it is fixed for eleven days, so a database would add
+The lineup is a build-time static artifact. It is fixed for eleven days, so a database would add
 latency and operations for nothing. Postgres holds only per-user state. Scoring runs client-side, so
 changing an answer re-sorts all 244 films with no round trip.
 
@@ -84,14 +84,14 @@ scripts/assign-axes.mjs      Batch API rubric pass -> data/axes.json
 scripts/build-lineup.mjs     merge -> data/lineup.json
 ```
 
-Outputs are committed, so the app builds without re-running any of it — with one exception.
+Outputs are committed, so the app builds without re-running any of it, with one exception.
 `data/synopses.json` holds TIFF's programmer's notes verbatim and is **not** committed: that is
 TIFF's editorial writing, not this project's data. It is read from disk rather than imported, so a
 clone without it builds and runs; film pages simply omit the note and link to tiff.net instead. To
 populate it locally, run `scripts/scrape-synopses.mjs`.
 
 The one-line rationale under each film in the lineup is written in this project's own words, not
-quoted from the note. It did quote, once — see the comment on `rationale` in `scripts/assign-axes.mjs`
+quoted from the note. It did quote, once. See the comment on `rationale` in `scripts/assign-axes.mjs`
 and `scripts/paraphrase-rationales.mjs`, which rewrote all 237 that did.
 
 ## Running it
@@ -107,10 +107,10 @@ regenerating data, which is already committed.
 
 ## License
 
-The code is MIT — see [LICENSE](LICENSE).
+The code is MIT. See [LICENSE](LICENSE).
 
 That covers what this project wrote, which is not everything in the repository. The festival
 schedule and lineup are TIFF's; posters, trailers and overviews under `data/*-tmdb.json` come from
 [TMDB](https://www.themoviedb.org), which this project is not endorsed or certified by. Neither is
-mine to sublicense, so the MIT grant does not reach them — if you fork this for another festival,
+mine to sublicense, so the MIT grant does not reach them. If you fork this for another festival,
 bring your own data and the code will be the useful part anyway.

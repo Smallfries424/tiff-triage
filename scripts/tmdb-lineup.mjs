@@ -87,7 +87,7 @@ for (const [i, film] of todo.entries()) {
   } catch (err) {
     done[film.slug] = { matched: false, error: String(err.message) };
     miss++;
-    console.log(`${String(i + 1).padStart(3)}  ERR    ${film.title} — ${err.message}`);
+    console.log(`${String(i + 1).padStart(3)}  ERR    ${film.title}: ${err.message}`);
   }
 
   fs.writeFileSync(OUT, JSON.stringify(done, null, 2));

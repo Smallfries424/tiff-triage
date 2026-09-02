@@ -2,7 +2,7 @@
 --
 -- "seen" means they watched the film; "trailer" means they watched the trailer
 -- and went on the vibe. Both are stored, but a trailer impression is weighted at
--- about half in lib/scoring.ts — it is real signal, just weaker evidence, and
+-- about half in lib/scoring.ts. It is real signal, just weaker evidence, and
 -- treating the two as equal would be the same mistake as probing with loglines.
 --
 -- Existing rows predate the distinction and were all "seen", which the default

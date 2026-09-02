@@ -33,7 +33,7 @@ const read = (): Reactions => {
     const raw = localStorage.getItem(PROBE_KEY);
     return raw ? normalise(JSON.parse(raw)) : {};
   } catch {
-    // private window or blocked storage — an empty probe is a valid state
+    // private window or blocked storage. An empty probe is a valid state
     return {};
   }
 };

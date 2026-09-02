@@ -3,7 +3,7 @@
  *
  * This is the rubric. TMDB's genre list is far too coarse to separate "a doc
  * that plays like a thriller" from "a thriller about a documentarian", which is
- * exactly the edge case that matters at a festival — so the input is TIFF's own
+ * exactly the edge case that matters at a festival, so the input is TIFF's own
  * programmer's note, which describes tone in the terms the axes are made of.
  *
  * Runs through the Batch API: 244 independent classifications with no ordering
@@ -27,7 +27,7 @@ const films = JSON.parse(fs.readFileSync("data/films.json", "utf8"));
 const synopses = JSON.parse(fs.readFileSync("data/synopses.json", "utf8"));
 const probe = JSON.parse(fs.readFileSync("data/probe-films.json", "utf8"));
 
-// Runtime is carried on screenings, not films — every screening of a film repeats it.
+// Runtime is carried on screenings, not films: every screening of a film repeats it.
 const screenings = JSON.parse(fs.readFileSync("data/screenings.json", "utf8"));
 const runtimeById = new Map();
 for (const s of screenings) if (s.runtime) runtimeById.set(s.film_id, s.runtime);
@@ -48,7 +48,7 @@ const Axes = z.object({
     .min(0)
     .max(1)
     .describe(
-      "Independent of taste: how much this film would be a loss to miss — major director, significant premiere, festival centrepiece. Drives the Wildcard bucket.",
+      "Independent of taste: how much this film would be a loss to miss: major director, significant premiere, festival centrepiece. Drives the Wildcard bucket.",
     ),
   confidence: z.number().min(0).max(1).describe("How well the note actually supports these placements."),
   // Deliberately NOT "quote the note's own language". An earlier version asked for
@@ -60,7 +60,7 @@ const Axes = z.object({
     .string()
     .max(240)
     .describe(
-      "One sentence, concrete, in your own words. No quotation marks and no phrases carried over from the note — if a run of four or more words would appear in both, rewrite it.",
+      "One sentence, concrete, in your own words. No quotation marks, no em dashes, and no phrases carried over from the note. If a run of four or more words would appear in both, rewrite it.",
     ),
 });
 
@@ -71,7 +71,7 @@ const OutputFormat = zodOutputFormat(Axes);
 const anchors = probe.films
   .map((f) => {
     const a = f.axes;
-    return `  ${f.title} (${f.year}) — pace ${a.pace}, form ${a.form}, genre ${a.genre}, weight ${a.weight}, comedy ${a.comedy}, nonfiction ${a.nonfiction}, intl ${a.intl}, duration ${a.duration}`;
+    return `  ${f.title} (${f.year}): pace ${a.pace}, form ${a.form}, genre ${a.genre}, weight ${a.weight}, comedy ${a.comedy}, nonfiction ${a.nonfiction}, intl ${a.intl}, duration ${a.duration}`;
   })
   .join("\n");
 
@@ -82,7 +82,7 @@ ${Object.entries(probe.axes)
   .map(([k, v]) => `  ${k}: ${v}`)
   .join("\n")}
 
-These films define the scale. Match their calibration exactly — a film you rate
+These films define the scale. Match their calibration exactly. A film you rate
 "pace 0.9" must genuinely be as propulsive as Mad Max: Fury Road:
 
 ${anchors}
@@ -91,7 +91,7 @@ Rules that matter:
 - Judge the film described, not the film you would expect from its genre. A
   documentary shot like a thriller is high genre and high nonfiction at once.
 - "duration" is about endurance demanded, which correlates with runtime but is
-  not the same thing — a taut 150 minutes is lower than a static 110.
+  not the same thing. A taut 150 minutes is lower than a static 110.
 - "intl" is about subtitles and cultural distance for an English-speaking
   audience, not the country of the production company.
 - Programme is a strong prior: Wavelengths is formally experimental, Midnight
@@ -113,7 +113,7 @@ const userContent = (film) => {
     film.premium ? `Premium screening (red carpet / major premiere)` : null,
     "",
     "TIFF's programmer's note:",
-    s?.synopsis ?? s?.teaser ?? "(none available — infer from the metadata above and lower your confidence accordingly)",
+    s?.synopsis ?? s?.teaser ?? "(none available, infer from the metadata above and lower your confidence accordingly)",
   ]
     .filter(Boolean)
     .join("\n");
@@ -155,7 +155,7 @@ if (process.argv.includes("--collect")) {
   let ok = 0;
   let bad = 0;
 
-  // Results come back in arbitrary order — key by custom_id, never by position.
+  // Results come back in arbitrary order: key by custom_id, never by position.
   for await (const entry of await client.messages.batches.results(batchId)) {
     if (entry.result.type !== "succeeded") {
       console.log(`  ${entry.custom_id}: ${entry.result.type}`);
@@ -167,7 +167,7 @@ if (process.argv.includes("--collect")) {
       out[entry.custom_id] = Axes.parse(JSON.parse(text));
       ok++;
     } catch (err) {
-      console.log(`  ${entry.custom_id}: unparseable — ${err.message}`);
+      console.log(`  ${entry.custom_id}: unparseable: ${err.message}`);
       bad++;
     }
   }
@@ -194,5 +194,5 @@ console.log(`submitting ${requests.length} films (${withNote} with a full note)`
 
 const batch = await client.messages.batches.create({ requests });
 fs.writeFileSync(BATCH_REF, batch.id);
-console.log(`batch ${batch.id} — ${batch.processing_status}`);
+console.log(`batch ${batch.id}: ${batch.processing_status}`);
 console.log(`collect with: node scripts/assign-axes.mjs --collect`);

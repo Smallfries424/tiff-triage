@@ -8,7 +8,7 @@ import { createClient } from "@/lib/supabase/client";
 /**
  * Where an implicit-flow magic link lands.
  *
- * The tokens arrive in the URL fragment, which never reaches the server — so
+ * The tokens arrive in the URL fragment, which never reaches the server, so
  * unlike /auth/callback this has to be a client page. It consumes them, clears
  * them out of the address bar, and moves on.
  */

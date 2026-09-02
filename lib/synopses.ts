@@ -11,8 +11,8 @@ export type Synopsis = {
 /**
  * TIFF's programmer's notes, if this checkout has them.
  *
- * They are gitignored — they are TIFF's editorial writing, not this project's
- * data — so a fresh clone does not have the file, and `import synopses from
+ * They are gitignored, being TIFF's editorial writing rather than this project's
+ * data, so a fresh clone does not have the file, and `import synopses from
  * "@/data/synopses.json"` would fail the build outright. The README has always
  * said film pages fall back to the short rationale without it; this is what makes
  * that true rather than aspirational.

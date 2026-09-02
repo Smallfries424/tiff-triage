@@ -70,7 +70,7 @@ const lineup = films.map((f) => {
 // viewers see the same neighbours and only the fit badge differs.
 //
 // The two bipolar axes (pace, form) span -1..1 while the rest span 0..1, so they
-// are rescaled first — otherwise they would count double in the distance and
+// are rescaled first. Otherwise they would count double in the distance and
 // "similar" would mostly mean "similar pace".
 const norm = (f) =>
   AX.map((k) => {
@@ -81,7 +81,7 @@ const norm = (f) =>
 const vectors = new Map(lineup.map((f) => [f.id, norm(f)]));
 
 // Films whose own placement was a guess (the shorts packages, ~0.15) should not
-// be recommended — suggesting a film we could not read is worse than suggesting
+// be recommended: suggesting a film we could not read is worse than suggesting
 // nothing. They still receive recommendations.
 const RECOMMENDABLE_CONFIDENCE = 0.4;
 

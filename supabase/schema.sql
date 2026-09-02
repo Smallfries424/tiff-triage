@@ -1,4 +1,4 @@
--- Festival Triage — user data schema.
+-- Festival Triage: user data schema.
 --
 -- The 244-film lineup is NOT here: it is fixed reference data for a ten-day
 -- festival and ships as a static build-time artifact. Only per-user state lives
@@ -28,7 +28,7 @@ create table if not exists public.plan_items (
 
 -- ------------------------------------------------------------------------- RLS
 --
--- The anon key is public by design — it ships in the browser bundle. These
+-- The anon key is public by design: it ships in the browser bundle. These
 -- policies are the only thing standing between that and every user reading every
 -- other user's data, so they are written per-operation rather than as a blanket
 -- "for all", and WITH CHECK is set on writes so nobody can insert a row owned by

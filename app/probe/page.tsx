@@ -50,9 +50,9 @@ export default function ProbePage() {
         <p className="eyebrow">Fifteen questions</p>
         <h1>Films you&rsquo;ve already seen</h1>
         <p className="lede">
-          Nobody has seen this year&rsquo;s lineup yet &mdash; that&rsquo;s the point of a festival. So the
+          Nobody has seen this year&rsquo;s lineup yet. That&rsquo;s the point of a festival. So the
           questions are about films you <b>have</b> seen. Haven&rsquo;t seen one? Watch the trailer and
-          go on the vibe &mdash; that counts too, just for a bit less.
+          go on the vibe. That counts too, just for a bit less.
         </p>
       </header>
 
@@ -64,8 +64,8 @@ export default function ProbePage() {
           {answered === 0
             ? "Answer about six to get a useful sort"
             : confidence < 1
-              ? `${answered} answered — a few more for a useful sort`
-              : `${answered} answered — enough to sort the lineup`}
+              ? `${answered} answered, a few more for a useful sort`
+              : `${answered} answered, enough to sort the lineup`}
         </span>
       </div>
 
@@ -136,7 +136,7 @@ export default function ProbePage() {
                         />
                       </div>
                       <p className={styles.trailerPrompt}>
-                        Going on the trailer alone &mdash; counts for about half as much as having
+                        Going on the trailer alone counts for about half as much as having
                         seen it.
                       </p>
                       <div className={styles.choices} role="group" aria-label={`Trailer reaction to ${film.title}`}>
@@ -184,7 +184,7 @@ export default function ProbePage() {
             <p className={styles.meta}>
               {seen} seen{fromTrailer > 0 ? ` · ${fromTrailer} from trailers` : ""} · confidence{" "}
               {Math.round(confidence * 100)}%
-              {confidence < 1 ? " — the bands stay wide until you answer a few more" : ""}
+              {confidence < 1 ? ". The bands stay wide until you answer a few more." : ""}
             </p>
             {answered >= 3 && (
               <Link href="/films" className={styles.cta}>

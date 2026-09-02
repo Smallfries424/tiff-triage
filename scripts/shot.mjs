@@ -2,7 +2,7 @@
 //   node scripts/shot.mjs /probe [outdir]
 //
 // Chrome here is the Flatpak build, which cannot write into the repo or /tmp
-// scratchpad — so shots land in ~/Downloads unless told otherwise. Themes are
+// scratchpad, so shots land in ~/Downloads unless told otherwise. Themes are
 // switched with CDP media emulation rather than a Chrome flag, since
 // prefers-color-scheme has no reliable command-line override.
 import { spawn } from "node:child_process";

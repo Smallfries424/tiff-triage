@@ -1,5 +1,5 @@
 <!--
-  Supabase auth email — Magic Link template.
+  Supabase auth email: Magic Link template.
 
   Paste into Supabase → Authentication → Emails → Magic Link. Kept in the repo
   because it is part of the sign-in flow, not a stray asset: the code below is
@@ -9,7 +9,7 @@
 
   Written the way email has to be written rather than the way the app is: tables,
   inline styles, no external fonts, no flexbox. The <style> block only carries
-  dark-mode overrides, which clients that ignore it simply don't apply — the inline
+  dark-mode overrides, which clients that ignore it simply don't apply. The inline
   light styles stand on their own.
 -->
 <!doctype html>
@@ -97,7 +97,7 @@
                   Or
                   <a class="link" href="{{ .SiteURL }}/auth/callback?token_hash={{ .TokenHash }}&amp;type=magiclink"
                      style="color:#33405f;text-decoration:underline;">sign in with this link</a>
-                  instead. The code is the more reliable of the two — some mail systems
+                  instead. The code is the more reliable of the two, because some mail systems
                   open every link they see, which uses it up before you get there.
                 </p>
               </td>
@@ -107,7 +107,7 @@
               <td style="padding:16px 6px 0;">
                 <p class="muted" style="margin:0;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
                           font-size:12px;line-height:1.55;color:#666d7a;">
-                  If you didn't ask to sign in, you can ignore this — nothing happens until
+                  If you didn't ask to sign in, you can ignore this. Nothing happens until
                   the code is used.
                 </p>
               </td>

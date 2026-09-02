@@ -74,9 +74,9 @@ export default function PlanPage() {
         <h1>The plan</h1>
         <p className="lede">
           {total} screening{total === 1 ? "" : "s"} across {days.length} day{days.length === 1 ? "" : "s"}
-          {overlaps > 0 && <> &mdash; <b className={styles.bad}>{overlaps} clash{overlaps === 1 ? "" : "es"}</b> you can&rsquo;t attend both of</>}
-          {tight > 0 && <> &mdash; <b className={styles.warn}>{tight} tight turnaround{tight === 1 ? "" : "s"}</b></>}
-          {overlaps === 0 && tight === 0 && <> &mdash; no conflicts.</>}
+          {overlaps > 0 && <>, <b className={styles.bad}>{overlaps} clash{overlaps === 1 ? "" : "es"}</b> you can&rsquo;t attend both of</>}
+          {tight > 0 && <>, <b className={styles.warn}>{tight} tight turnaround{tight === 1 ? "" : "s"}</b></>}
+          {overlaps === 0 && tight === 0 && <>, no conflicts.</>}
         </p>
       </header>
 
@@ -106,13 +106,13 @@ export default function PlanPage() {
                   </p>
                   {overlap && (
                     <p className={styles.issueBad}>
-                      Overlaps {overlap.withTitle} — you can&rsquo;t make both.
+                      Overlaps {overlap.withTitle}. You can&rsquo;t make both.
                     </p>
                   )}
                   {!overlap && tightIssue && tightIssue.kind === "tight" && (
                     <p className={styles.issueWarn}>
                       Only {tightIssue.gap} min after {tightIssue.withTitle}
-                      {tightIssue.needed > 15 ? " — and it's a different venue." : "."}
+                      {tightIssue.needed > 15 ? ". It's a different venue." : "."}
                     </p>
                   )}
                 </div>

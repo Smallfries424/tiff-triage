@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps<"/films/[slug]">) {
   if (!film) return {};
   const s = SYN[slug];
   const description = (s?.teaser ?? s?.synopsis ?? "").replace(/<[^>]+>/g, "").slice(0, 200);
-  return { title: `${film.title} — Festival Triage`, description };
+  return { title: `${film.title} · Festival Triage`, description };
 }
 
 export default async function FilmPage({ params }: PageProps<"/films/[slug]">) {
@@ -44,7 +44,7 @@ export default async function FilmPage({ params }: PageProps<"/films/[slug]">) {
   const runtime = (screeningsData as { film_id: number; runtime?: number }[])
     .find((x) => x.film_id === film.id)?.runtime;
 
-  // Only trust artwork from an exact title match — a fuzzy hit would put a
+  // Only trust artwork from an exact title match. A fuzzy hit would put a
   // completely different film's poster on the page.
   const art = t.matched && t.exact ? t : {};
   const paragraphs = (s.synopsis ?? "").split("\n\n").filter(Boolean);
@@ -84,7 +84,7 @@ export default async function FilmPage({ params }: PageProps<"/films/[slug]">) {
               <h2 className={styles.h2}>TIFF&rsquo;s note</h2>
               <p className={styles.missing}>
                 TIFF doesn&rsquo;t publish a programmer&rsquo;s note for this one
-                {film.noNotePublished ? " — it's a shorts package rather than a single film" : ""}.
+                {film.noNotePublished ? ": it's a shorts package rather than a single film" : ""}.
                 {t.overview ? " The summary below comes from TMDB instead." : ""}
               </p>
               {t.overview && <p>{t.overview}</p>}

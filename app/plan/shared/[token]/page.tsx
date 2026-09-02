@@ -85,7 +85,7 @@ export default function SharedPlanPage({ params }: PageProps<"/plan/shared/[toke
         <h1>Their festival</h1>
         <p className="lede">
           {total} screening{total === 1 ? "" : "s"} across {days.length} day{days.length === 1 ? "" : "s"}
-          {overlaps > 0 && <> &mdash; including {overlaps} clash{overlaps === 1 ? "" : "es"}</>}.{" "}
+          {overlaps > 0 && <>, including {overlaps} clash{overlaps === 1 ? "" : "es"}</>}.{" "}
           <Link href="/probe">Build your own</Link> to see how these fit your taste.
         </p>
       </header>

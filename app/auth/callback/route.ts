@@ -7,11 +7,11 @@ import type { EmailOtpType } from "@supabase/supabase-js";
  *
  * Two shapes arrive here, and both are supported deliberately:
  *
- *   ?token_hash=…&type=magiclink — verifyOtp. Works from ANY device, because
+ *   ?token_hash=…&type=magiclink: verifyOtp. Works from ANY device, because
  *     nothing device-local is needed. This is what makes a link forwarded to a
  *     friend's phone actually work, and it is the preferred path.
  *
- *   ?code=…                      — PKCE exchange. Only succeeds in the browser
+ *   ?code=…                      : PKCE exchange. Only succeeds in the browser
  *     that requested the link, since the verifier cookie lives there.
  */
 export async function GET(request: Request) {
@@ -20,7 +20,7 @@ export async function GET(request: Request) {
 
   // Only a path on this site. Resolving against url.origin is not enough on its
   // own: new URL("//evil.com", origin) is evil.com, and so is a leading "/\",
-  // which some parsers fold to "//". A sign-in redirect is worth the paranoia —
+  // which some parsers fold to "//". A sign-in redirect is worth the paranoia,
   // it is exactly the hop a phishing link wants, since the victim has just been
   // told to expect a redirect after logging in.
   const requested = url.searchParams.get("next");

@@ -6,7 +6,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
  * Read-only plan sharing.
  *
  * A share link is a bearer token: anyone holding the URL can see the schedule.
- * That is the intent — you send it to whoever you're going with — but it means
+ * That is the intent, since you send it to whoever you're going with, but it means
  * revoking has to be real, so revoke deletes the row rather than hiding it, and
  * regenerating issues a genuinely new token rather than reusing the old one.
  */

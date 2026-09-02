@@ -556,7 +556,7 @@
     "duration": 0.1,
     "notability": 0.5,
     "confidence": 0.8,
-    "rationale": "A gleefully morbid comic satire with bite: Walken plays a profane undertaker whose granddaughter arranges fatal mishaps to keep the family funeral home busy — straightforward storytelling, broad laughs, only mildly dark genre edges"
+    "rationale": "Sharp-toothed dark comedy: Walken is a foul-tongued mortician whose granddaughter engineers deadly accidents to bring business to the family funeral parlour, told plainly with big laughs and only a light macabre streak"
   },
   "cheyenne": {
     "pace": 0.6,
@@ -686,7 +686,7 @@
     "duration": 0.1,
     "notability": 0.3,
     "confidence": 0.15,
-    "rationale": "Note is boilerplate mission statement with no film detail; placements are generic Short Cuts averages — mixed forms, some subtitled work, anthology of varied registers."
+    "rationale": "The source text is only TIFF's standard mission blurb and says nothing about the films, so the placement defaults to typical Short Cuts patterns: a mix of forms, a few titles with subtitles, and a compilation spanning different tones."
   },
   "in-conversation-with-lee-min-ho": {
     "pace": 0,
@@ -842,7 +842,7 @@
     "duration": 0.1,
     "notability": 0.4,
     "confidence": 0.8,
-    "rationale": "A bubbly, warm, up-to-date romantic comedy that plays sexy and funny — a familiar crowd-pleaser whose emotional stakes stay light."
+    "rationale": "Light on its feet, affectionate and contemporary, this romantic comedy delivers on sex and laughs while staying within well-worn crowd-pleasing shapes, its feelings never cutting very deep."
   },
   "up-against-it": {
     "pace": 0.4,
@@ -1193,7 +1193,7 @@
     "duration": 0.1,
     "notability": 0.3,
     "confidence": 0.15,
-    "rationale": "Note is boilerplate mission statement with no content; placements are generic Short Cuts averages — mixed-form shorts anthology at 130 min."
+    "rationale": "The programmer text is just TIFF's standard institutional mission language and says nothing about the films, so this 130-minute mixed-form shorts collection sits at the default Short Cuts values."
   },
   "the-black-box-is-orange": {
     "pace": -0.8,
@@ -1765,7 +1765,7 @@
     "duration": 0.3,
     "notability": 0.5,
     "confidence": 0.8,
-    "rationale": "Wavelengths shorts programme of 65mm formalism, Baroque illusionism, archival 8mm Roma footage and a Duras/Conrad-inspired essay — avowedly experimental and contemplative."
+    "rationale": "A Wavelengths short-film selection spanning 65mm formal experiment, Baroque trompe l'oeil, salvaged 8mm footage of Roma migration, and an essay drawing on Duras and Conrad: openly avant-garde, meditative work."
   },
   "being-heumann": {
     "pace": 0.3,
@@ -3039,7 +3039,7 @@
     "duration": 0.1,
     "notability": 0.3,
     "confidence": 0.1,
-    "rationale": "Note is boilerplate mission statement with no content; placements are Short Cuts programme priors — mixed shorts, some formal play and international work."
+    "rationale": "The source text is only TIFF's generic organizational blurb and says nothing about the films, so the slot rests on standard Short Cuts expectations: a varied shorts block with some experimental technique and entries from abroad."
   },
   "iron-boy": {
     "pace": -0.3,

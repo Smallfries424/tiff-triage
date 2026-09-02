@@ -27,8 +27,8 @@ export type Reaction = "love" | "like" | "meh" | "dislike" | "unseen";
  * Where a reaction came from.
  *
  * "seen" means they watched the film. "trailer" means they watched two minutes
- * of marketing and formed an impression. Both are real signal — a trailer
- * carries tone, pace and register in a way a logline never could — but they are
+ * of marketing and formed an impression. Both are real signal, since a trailer
+ * carries tone, pace and register in a way a logline never could, but they are
  * not equal evidence, and treating them as equal would reintroduce the exact
  * flaw the probe redesign fixed: taste inferred from promotional material.
  */
@@ -68,7 +68,7 @@ const zero = (): AxisVector => Object.fromEntries(AXES.map((a) => [a, 0])) as Ax
  * Build the taste vector.
  *
  * Each axis is a weighted average rather than a sum, so someone who answers five
- * questions and someone who answers fifteen land on the same scale — only their
+ * questions and someone who answers fifteen land on the same scale. Only their
  * confidence differs. Dividing by the summed magnitude of the weights (not the
  * count) keeps a single passionate "love" from outweighing several mild "like"s
  * more than it should.
@@ -104,7 +104,7 @@ export function tasteVector(
       const loading = film.axes[axis] ?? 0;
       taste[axis] += w * loading;
       // A "meh" still tells us the axis was probed, so magnitude accumulates
-      // even at weight 0 — otherwise indifference would read as a strong signal.
+      // even at weight 0. Otherwise indifference would read as a strong signal.
       mass[axis] += Math.abs(loading) * Math.max(Math.abs(w), 0.5 * scale);
     }
   }
@@ -114,7 +114,7 @@ export function tasteVector(
   }
 
   // Six answers is enough to sort a lineup usefully. Trailer impressions count
-  // toward that too, but at the same discount — six trailer reactions should not
+  // toward that too, but at the same discount: six trailer reactions should not
   // make the app as sure of itself as six films actually watched.
   const effective = seen + fromTrailer * TRAILER_WEIGHT;
   const confidence = Math.min(1, effective / 6);
@@ -143,7 +143,7 @@ export interface Scored {
   title: string;
   fit: number; // 0-100
   verdict: Verdict;
-  /** The axes that drove this result, strongest first — the "why" shown on the card. */
+  /** The axes that drove this result, strongest first: the "why" shown on the card. */
   drivers: { axis: Axis; contribution: number }[];
 }
 
@@ -183,7 +183,7 @@ export function scoreFilm(taste: AxisVector, film: LineupFilm, userConfidence: n
  *
  * Absolute cutoffs do not work here. Six of the eight axes run 0..1 rather than
  * -1..+1, so a film can only score negatively on an axis the viewer actively
- * dislikes — fits bunch between roughly 45 and 90 and almost never reach a fixed
+ * dislikes, fits bunch between roughly 45 and 90 and almost never reach a fixed
  * "no" threshold. Ranking against the lineup instead guarantees a usable triage
  * for every viewer, which is the whole job.
  *

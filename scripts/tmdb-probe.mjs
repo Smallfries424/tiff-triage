@@ -1,7 +1,7 @@
 /**
  * Resolve the 15 probe films to TMDB and pull the fields the rubric can use.
  *
- * These are established, widely-seen films, so coverage here should be total —
+ * These are established, widely-seen films, so coverage here should be total.
  * which is exactly why this is the first TMDB call: a miss means the key or the
  * matching is wrong, not that the data is missing.
  */
@@ -20,10 +20,10 @@ const get = async (path, params = {}) => {
   return r.json();
 };
 
-// Auth check first — cheapest possible call, and its failure is unambiguous.
+// Auth check first: cheapest possible call, and its failure is unambiguous.
 try {
   const cfg = await get("/configuration");
-  console.log("AUTH OK — image base:", cfg.images.secure_base_url, "\n");
+  console.log("AUTH OK, image base:", cfg.images.secure_base_url, "\n");
 } catch (e) {
   console.log("AUTH FAILED:", e.message);
   process.exit(1);

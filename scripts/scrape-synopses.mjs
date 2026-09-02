@@ -17,7 +17,7 @@ const PORT = 9444;
 const UA =
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36";
 
-// A single Chrome starts returning empty notes after roughly 50 films — the page
+// A single Chrome starts returning empty notes after roughly 50 films. The page
 // loads, the DOM is there, but the note never paints. Recycling the whole browser
 // process on a fixed interval is the only thing that reliably clears it.
 const RECYCLE_EVERY = 40;
@@ -37,7 +37,7 @@ if (!todo.length) process.exit(0);
 let chrome = null;
 let browser = null;
 // Each generation gets its own port. `flatpak run` is a wrapper, so killing the
-// pid we spawned does not reliably reach the sandboxed Chrome — an old instance
+// pid we spawned does not reliably reach the sandboxed Chrome, so an old instance
 // can outlive its kill and keep holding the port, at which point the "new"
 // browser never binds and puppeteer silently reconnects to the dead one. That is
 // exactly the failure that looked like page-level flakiness. A fresh port makes
@@ -78,7 +78,7 @@ const startBrowser = async () => {
 };
 
 const stopBrowser = async () => {
-  // close(), not disconnect() — disconnect detaches and deliberately leaves the
+  // close(), not disconnect(): disconnect detaches and deliberately leaves the
   // browser running, which is how generations piled up in the first place.
   try {
     await browser?.close();
@@ -93,8 +93,8 @@ const stopBrowser = async () => {
 
 // A page is opened and closed per film rather than reused. Reusing one page
 // across many navigations with request interception attached silently returned
-// empty notes for about a third of them — networkidle2 resolving against the
-// previous document — while a fresh page is reliable.
+// empty notes for about a third of them, networkidle2 resolving against the
+// previous document, while a fresh page is reliable.
 const newPage = async () => {
   const page = await browser.newPage();
   await page.setUserAgent(UA);
