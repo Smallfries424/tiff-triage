@@ -24,6 +24,36 @@
 .barIn { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .chips { display: flex; gap: 6px; flex-wrap: wrap; }
 .spacer { flex: 1 1 40px; }
+/* Once the row wraps there is nothing left to push apart, and the spacer only
+   strands whichever control lands on its line. */
+@media (max-width: 620px) { .spacer { display: none; } }
+
+/* The "when" controls take a row of their own. The day strip scrolls sideways
+   rather than wrapping, so a sticky bar that has to stay out of the way costs the
+   same one row at 1180px as it does on a phone. */
+.when { flex: 0 0 100%; display: flex; align-items: center; gap: 8px;
+  min-width: 0; padding-top: 2px; }
+.when .toggle, .when > button { white-space: nowrap; }
+.days { display: flex; gap: 5px; overflow-x: auto; scrollbar-width: none;
+  padding: 2px 0; min-width: 0; }
+.days::-webkit-scrollbar { display: none; }
+/* Sized so all twelve days clear the toggles on a full-width row: the point of a
+   strip over a menu is seeing the whole festival at once, and a clipped Sunday
+   would give that up. Below 620px it scrolls instead. */
+.allDays, .day { flex: none; }
+.day { padding-inline: 8px; gap: 5px; }
+/* Dimmed by opacity, not colour, so the weekday reads the same against the
+   surface and against the accent fill a pressed chip takes. */
+.dow { opacity: .62; }
+.dnum { font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums; }
+
+/* The toggles only leave room for all twelve days on a full-width row. Below that
+   the strip takes a row of its own, which is enough to keep the whole festival
+   visible down to about 900px; narrower than that it scrolls. */
+@media (max-width: 1179px) {
+  .when { flex-wrap: wrap; }
+  .days { flex: 0 0 100%; order: -1; }
+}
 
 .list { display: flex; flex-direction: column; gap: 12px; padding-bottom: 60px; }
 

@@ -52,7 +52,7 @@ export default function FilmsPage() {
   const [active, setActive] = useState<Set<Verdict>>(new Set<Verdict>(["yes"]));
   const [evening, setEvening] = useState(false);
   const [weekend, setWeekend] = useState(false);
-  const [day, setDay] = useState("");
+  const [days, setDays] = useState<Set<string>>(new Set<string>());
   const [programme, setProgramme] = useState("");
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"fit" | "title" | "date">("fit");
@@ -76,10 +76,11 @@ export default function FilmsPage() {
   // one screening at a time. Testing them independently would let a film through on
   // a Friday evening show and a Sunday matinee when "Fri Sep 11" and "Evening" are
   // both on, and neither of its screenings is what was asked for.
-  const slotFilter = day !== "" || evening || weekend;
+  const slotFilter = days.size > 0 || evening || weekend;
   const matchesSlot = useCallback(
-    (sc: Screening) => (!day || sc.d === day) && (!evening || sc.ev === 1) && (!weekend || sc.wk === 1),
-    [day, evening, weekend],
+    (sc: Screening) =>
+      (days.size === 0 || days.has(sc.d)) && (!evening || sc.ev === 1) && (!weekend || sc.wk === 1),
+    [days, evening, weekend],
   );
 
   const visible = useMemo(() => {
@@ -113,6 +114,17 @@ export default function FilmsPage() {
     });
     return rows;
   }, [byId, active, slotFilter, matchesSlot, programme, query, sort]);
+
+  // No days picked means every day, so unpicking the last one is a way back to the
+  // whole festival rather than an empty page. That is why this can empty, where
+  // toggleVerdict cannot.
+  const toggleDay = (d: string) =>
+    setDays((prev) => {
+      const next = new Set(prev);
+      if (next.has(d)) next.delete(d);
+      else next.add(d);
+      return next;
+    });
 
   const toggleVerdict = (v: Verdict) =>
     setActive((prev) => {
@@ -172,13 +184,7 @@ export default function FilmsPage() {
               </button>
             ))}
           </div>
-          <button className="toggle" aria-pressed={evening} onClick={() => setEvening((v) => !v)}>Evening 17:30+</button>
-          <button className="toggle" aria-pressed={weekend} onClick={() => setWeekend((v) => !v)}>Weekend</button>
           <span className={styles.spacer} />
-          <select value={day} onChange={(e) => setDay(e.target.value)} aria-label="Filter by date">
-            <option value="">All dates</option>
-            {DAYS.map((d) => <option key={d} value={d}>{d}</option>)}
-          </select>
           <select value={programme} onChange={(e) => setProgramme(e.target.value)} aria-label="Filter by programme">
             <option value="">All programmes</option>
             {PROGRAMMES.map((p) => <option key={p} value={p}>{p}</option>)}
@@ -190,6 +196,29 @@ export default function FilmsPage() {
           </select>
           <input type="search" value={query} onChange={(e) => setQuery(e.target.value)}
             placeholder="Title, director, country&hellip;" aria-label="Search" />
+
+          {/* Everything that describes when you can go, on its own row: the whole
+              festival is visible at once, so picking the days you are in town is
+              reading a calendar rather than opening a menu twelve times. */}
+          <div className={styles.when}>
+            <div className={styles.days} role="group" aria-label="Filter by date">
+              <button className={`chip ${styles.allDays}`} aria-pressed={days.size === 0}
+                onClick={() => setDays(new Set<string>())} aria-label="All dates">
+                All
+              </button>
+              {DAYS.map((d) => (
+                // The label is split into two spans for styling, so it would otherwise
+                // be announced as "Fri11"; aria-label gives the whole date instead.
+                <button key={d} className={`chip ${styles.day}`} aria-pressed={days.has(d)}
+                  onClick={() => toggleDay(d)} aria-label={d} title={d}>
+                  <span className={styles.dow}>{d.slice(0, 3)}</span>
+                  <span className={styles.dnum}>{d.slice(-2)}</span>
+                </button>
+              ))}
+            </div>
+            <button className="toggle" aria-pressed={evening} onClick={() => setEvening((v) => !v)}>Evening 17:30+</button>
+            <button className="toggle" aria-pressed={weekend} onClick={() => setWeekend((v) => !v)}>Weekend</button>
+          </div>
         </div>
       </div>
 
