@@ -79,7 +79,7 @@ export default function FilmActions({ filmId }: { filmId: number }) {
           </>
         ) : (
           <p className={styles.noProbe}>
-            <Link href="/probe">Take the probe</Link> to see how this one fits you.
+            <Link href="/probe">Answer fifteen questions</Link> to see how this one fits you.
           </p>
         )}
       </section>

@@ -163,12 +163,12 @@ export default function FilmsPage() {
     return (
       <main className="wrap">
         <div className={`card empty ${styles.gate}`}>
-          <h1 className={styles.gateTitle}>Take the probe first</h1>
+          <h1 className={styles.gateTitle}>Tell it what you like first</h1>
           <p>
             The lineup can&rsquo;t be sorted until it knows what you like. Fifteen questions about
             films you&rsquo;ve already seen.
           </p>
-          <Link href="/probe" className={styles.cta}>Start the probe</Link>
+          <Link href="/probe" className={styles.cta}>Start with fifteen films</Link>
         </div>
       </main>
     );

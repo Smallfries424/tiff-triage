@@ -6,7 +6,7 @@ import { useAuth } from "@/lib/useAuth";
 import styles from "./nav.module.css";
 
 const LINKS = [
-  { href: "/probe", label: "Probe" },
+  { href: "/probe", label: "Start here" },
   { href: "/films", label: "Lineup" },
   { href: "/plan", label: "Plan" },
 ];

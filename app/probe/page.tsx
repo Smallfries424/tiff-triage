@@ -47,7 +47,7 @@ export default function ProbePage() {
   return (
     <main className="wrap">
       <header className={styles.head}>
-        <p className="eyebrow">The taste probe</p>
+        <p className="eyebrow">Fifteen questions</p>
         <h1>Films you&rsquo;ve already seen</h1>
         <p className="lede">
           Nobody has seen this year&rsquo;s lineup yet &mdash; that&rsquo;s the point of a festival. So the

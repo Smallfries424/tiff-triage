@@ -36,7 +36,7 @@ export default function AccountPage() {
         replaceProbe(merged.reactions);
         replacePlan(merged.plan);
         setSyncNote(
-          `Synced — ${Object.keys(merged.reactions).length} probe answers, ${merged.plan.length} planned screenings.`,
+          `Synced — ${Object.keys(merged.reactions).length} answers, ${merged.plan.length} planned screenings.`,
         );
       } catch (e) {
         if (!cancelled) setSyncNote(`Sync failed: ${(e as Error).message}`);
@@ -208,7 +208,7 @@ export default function AccountPage() {
         ) : (
           <>
             <p className={styles.muted}>
-              You don&rsquo;t need an account to use this. Sign in only if you want your probe and
+              You don&rsquo;t need an account to use this. Sign in only if you want your answers and
               plan on more than one device — handy when you&rsquo;re at the festival with your phone.
             </p>
             <p className={styles.fine}>

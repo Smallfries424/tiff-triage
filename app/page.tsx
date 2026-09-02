@@ -14,7 +14,7 @@ export default function Home() {
 
       <div className={styles.actions}>
         <Link href="/probe" className={styles.primary}>
-          Start the probe
+          Start with fifteen films
         </Link>
         {isConfigured && (
           <Link href="/account" className={styles.secondary}>
