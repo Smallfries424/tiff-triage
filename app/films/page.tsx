@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import lineupData from "@/data/lineup.json";
 import probeData from "@/data/probe-films.json";
 import { usePlan } from "@/lib/usePlan";
 import { useProbe } from "@/lib/useProbe";
 import { scoreLineup, type AxisVector, type Axis, type Verdict } from "@/lib/scoring";
+import { DAY_ORDER } from "@/lib/schedule";
 import styles from "./films.module.css";
 
 type Screening = { d: string; s: string; e: string; st: number; en: number; v: string; r: string; ev: number; wk: number };
@@ -41,8 +42,9 @@ const DRIVER_COPY: Record<Axis, [neg: string, pos: string]> = {
   duration: ["short", "a long sit"],
 };
 
-const DAY_ORDER = ["Wed Sep 09","Thu Sep 10","Fri Sep 11","Sat Sep 12","Sun Sep 13","Mon Sep 14",
-  "Tue Sep 15","Wed Sep 16","Thu Sep 17","Fri Sep 18","Sat Sep 19","Sun Sep 20"];
+// Only the days the lineup actually screens on, in festival order, so the date
+// filter can never offer a day that would empty the page.
+const DAYS = DAY_ORDER.filter((d) => LINEUP.some((f) => f.screenings.some((sc) => sc.d === d)));
 
 export default function FilmsPage() {
   const { reactions, loaded } = useProbe();
@@ -50,6 +52,7 @@ export default function FilmsPage() {
   const [active, setActive] = useState<Set<Verdict>>(new Set<Verdict>(["yes"]));
   const [evening, setEvening] = useState(false);
   const [weekend, setWeekend] = useState(false);
+  const [day, setDay] = useState("");
   const [programme, setProgramme] = useState("");
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"fit" | "title" | "date">("fit");
@@ -69,13 +72,22 @@ export default function FilmsPage() {
     return t;
   }, [scored]);
 
+  // Date, evening and weekend all describe a single screening, so they are asked of
+  // one screening at a time. Testing them independently would let a film through on
+  // a Friday evening show and a Sunday matinee when "Fri Sep 11" and "Evening" are
+  // both on, and neither of its screenings is what was asked for.
+  const slotFilter = day !== "" || evening || weekend;
+  const matchesSlot = useCallback(
+    (sc: Screening) => (!day || sc.d === day) && (!evening || sc.ev === 1) && (!weekend || sc.wk === 1),
+    [day, evening, weekend],
+  );
+
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
     const rows = LINEUP.filter((f) => {
       const s = byId.get(f.id);
       if (!s || !active.has(s.verdict)) return false;
-      if (evening && f.nEvening === 0) return false;
-      if (weekend && f.nWeekend === 0) return false;
+      if (slotFilter && !f.screenings.some(matchesSlot)) return false;
       if (programme && f.programme !== programme) return false;
       if (q) {
         const hay = `${f.title} ${f.directors ?? ""} ${f.countries.join(" ")}`.toLowerCase();
@@ -83,13 +95,24 @@ export default function FilmsPage() {
       }
       return true;
     });
+    // Sorting by date means the earliest screening you could actually attend, which
+    // is the earliest one still passing the filters, not the film's first ever show.
+    const earliest = (f: Film) => {
+      let best = Infinity;
+      for (const sc of f.screenings) {
+        if (slotFilter && !matchesSlot(sc)) continue;
+        const at = DAY_ORDER.indexOf(sc.d) * 1440 + sc.st;
+        if (at < best) best = at;
+      }
+      return best;
+    };
     rows.sort((a, b) => {
       if (sort === "title") return a.title.localeCompare(b.title);
-      if (sort === "date") return DAY_ORDER.indexOf(a.firstDate ?? "") - DAY_ORDER.indexOf(b.firstDate ?? "");
+      if (sort === "date") return earliest(a) - earliest(b);
       return (byId.get(b.id)?.fit ?? 0) - (byId.get(a.id)?.fit ?? 0);
     });
     return rows;
-  }, [byId, active, evening, weekend, programme, query, sort]);
+  }, [byId, active, slotFilter, matchesSlot, programme, query, sort]);
 
   const toggleVerdict = (v: Verdict) =>
     setActive((prev) => {
@@ -152,6 +175,10 @@ export default function FilmsPage() {
           <button className="toggle" aria-pressed={evening} onClick={() => setEvening((v) => !v)}>Evening 17:30+</button>
           <button className="toggle" aria-pressed={weekend} onClick={() => setWeekend((v) => !v)}>Weekend</button>
           <span className={styles.spacer} />
+          <select value={day} onChange={(e) => setDay(e.target.value)} aria-label="Filter by date">
+            <option value="">All dates</option>
+            {DAYS.map((d) => <option key={d} value={d}>{d}</option>)}
+          </select>
           <select value={programme} onChange={(e) => setProgramme(e.target.value)} aria-label="Filter by programme">
             <option value="">All programmes</option>
             {PROGRAMMES.map((p) => <option key={p} value={p}>{p}</option>)}
@@ -181,6 +208,14 @@ export default function FilmsPage() {
         <div className={styles.list}>
           {visible.map((f) => {
             const s = byId.get(f.id)!;
+            // Only five showtimes fit on a card, so when a filter is on, the ones it
+            // matched lead — otherwise a film listed under "Fri Sep 11" can show five
+            // dates that aren't Friday. The original index rides along because that is
+            // what the plan stores; reordering without it would move the wrong slot.
+            const slots = f.screenings.map((sc, i) => ({ sc, i }));
+            if (slotFilter) {
+              slots.sort((a, b) => Number(matchesSlot(b.sc)) - Number(matchesSlot(a.sc)));
+            }
             return (
               <article key={f.id} className={`card v-${s.verdict} ${styles.card}`}>
                 <div className={styles.main}>
@@ -221,7 +256,7 @@ export default function FilmsPage() {
                 <div className={styles.times}>
                   <h3>Showtimes</h3>
                   {f.screenings.length === 0 && <p className={styles.none}>No public screenings</p>}
-                  {f.screenings.slice(0, 5).map((sc, i) => (
+                  {slots.slice(0, 5).map(({ sc, i }) => (
                     <button
                       key={i}
                       type="button"
@@ -235,8 +270,8 @@ export default function FilmsPage() {
                       <span className={styles.rm}>{sc.v}</span>
                     </button>
                   ))}
-                  {f.screenings.length > 5 && (
-                    <p className={styles.more}>+{f.screenings.length - 5} more</p>
+                  {slots.length > 5 && (
+                    <p className={styles.more}>+{slots.length - 5} more</p>
                   )}
                 </div>
               </article>
