@@ -14,3 +14,23 @@
   white-space: nowrap; }
 .account:hover { color: var(--ink); border-color: var(--muted); }
 .account[aria-current="page"] { color: var(--ink); background: var(--surface-2); }
+
+/* One row cannot hold the wordmark, three section links and the account button
+   on a phone. Measured intrinsic width of the row is 387px, so from 320px to
+   390px the account button was pushed past the right edge and clipped — at
+   360px it rendered as "Si". Wrapping to two rows keeps every control at full
+   size and legible; shrinking type to force one row would only move the
+   problem to the next narrow device. */
+@media (max-width: 560px) {
+  .inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding-block: 9px;
+    gap: 8px 12px;
+  }
+  /* Brand and account share the top row, links take the one beneath.
+     .account keeps its margin-left:auto, which still pins it right. */
+  .account { order: 2; }
+  .links { order: 3; flex-basis: 100%; gap: 2px; }
+  .link { padding: 7px 10px; }
+}
