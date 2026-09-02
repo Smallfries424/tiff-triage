@@ -86,9 +86,13 @@ scripts/build-lineup.mjs     merge -> data/lineup.json
 
 Outputs are committed, so the app builds without re-running any of it — with one exception.
 `data/synopses.json` holds TIFF's programmer's notes verbatim and is **not** committed: that is
-TIFF's editorial writing, not this project's data. The app quotes short extracts and links back to
-tiff.net for each film. To populate it locally, run `scripts/scrape-synopses.mjs`; without it, film
-pages fall back to the short rationale.
+TIFF's editorial writing, not this project's data. It is read from disk rather than imported, so a
+clone without it builds and runs; film pages simply omit the note and link to tiff.net instead. To
+populate it locally, run `scripts/scrape-synopses.mjs`.
+
+The one-line rationale under each film in the lineup is written in this project's own words, not
+quoted from the note. It did quote, once — see the comment on `rationale` in `scripts/assign-axes.mjs`
+and `scripts/paraphrase-rationales.mjs`, which rewrote all 237 that did.
 
 ## Running it
 
@@ -100,3 +104,13 @@ npm run dev
 
 Only the Supabase variables are needed to run the app. The TMDB and Anthropic keys are for
 regenerating data, which is already committed.
+
+## License
+
+The code is MIT — see [LICENSE](LICENSE).
+
+That covers what this project wrote, which is not everything in the repository. The festival
+schedule and lineup are TIFF's; posters, trailers and overviews under `data/*-tmdb.json` come from
+[TMDB](https://www.themoviedb.org), which this project is not endorsed or certified by. Neither is
+mine to sublicense, so the MIT grant does not reach them — if you fork this for another festival,
+bring your own data and the code will be the useful part anyway.

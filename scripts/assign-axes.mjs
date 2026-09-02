@@ -51,7 +51,17 @@ const Axes = z.object({
       "Independent of taste: how much this film would be a loss to miss — major director, significant premiere, festival centrepiece. Drives the Wildcard bucket.",
     ),
   confidence: z.number().min(0).max(1).describe("How well the note actually supports these placements."),
-  rationale: z.string().max(240).describe("One sentence, concrete, quoting the note's own language where possible."),
+  // Deliberately NOT "quote the note's own language". An earlier version asked for
+  // exactly that, and it worked: the rationales were vivid, and they were TIFF's
+  // writing rather than ours. They ship to the browser as the `why` line on every
+  // card, so quoting made the app a republisher of the notes it was reading. See
+  // scripts/paraphrase-rationales.mjs, which cleaned up after that.
+  rationale: z
+    .string()
+    .max(240)
+    .describe(
+      "One sentence, concrete, in your own words. No quotation marks and no phrases carried over from the note — if a run of four or more words would appear in both, rewrite it.",
+    ),
 });
 
 const OutputFormat = zodOutputFormat(Axes);

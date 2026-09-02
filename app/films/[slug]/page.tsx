@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import films from "@/data/films.json";
-import synopses from "@/data/synopses.json";
 import tmdb from "@/data/lineup-tmdb.json";
 import screeningsData from "@/data/screenings.json";
+import { SYNOPSES, type Synopsis } from "@/lib/synopses";
 import FilmActions from "./FilmActions";
 import styles from "./film.module.css";
 
@@ -12,12 +12,11 @@ type FilmRec = {
   id: number; slug: string; title: string; programme: string; directors?: string | null;
   countries?: string[]; languages?: string[]; premium?: boolean; noNotePublished?: boolean;
 };
-type Synopsis = { synopsis?: string | null; teaser?: string | null; url?: string; noNotePublished?: boolean };
 type Tmdb = { matched?: boolean; exact?: boolean; poster?: string | null; backdrop?: string | null;
   trailerKey?: string | null; overview?: string | null; genres?: string[]; year?: number | null };
 
 const FILMS = films as FilmRec[];
-const SYN = synopses as Record<string, Synopsis>;
+const SYN: Record<string, Synopsis> = SYNOPSES;
 const TMDB = tmdb as Record<string, Tmdb>;
 
 // All 244 are prerendered: the lineup is fixed for the festival, so there is no
